@@ -86,10 +86,10 @@
       while(article!=article.replace("-"," ")){
         article = article.replace("-"," ")
       }
-      console.log("stuysurvey.com/articles/"+type+"/"+article+".pdf")
+      console.log("http://www.stuysurvey.com/articles/"+type+"/"+article+".pdf")
   		var adobeDCView = new AdobeDC.View({clientId: "fb1e3f718b1f4acead5a4f51a4769b0b", divId: "adobe-dc-view"});
   		adobeDCView.previewFile({
-  			content:{location: {url: "stuysurvey.com/articles/"+type+"/"+article+".pdf"}},
+  			content:{location: {url: "http://www.stuysurvey.com/articles/"+type+"/"+article+".pdf"}},
   			metaData:{fileName: article+".pdf"}
   		}, {
             embedMode: "IN_LINE",
