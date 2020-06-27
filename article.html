@@ -73,20 +73,33 @@
       <a class="p-2 text-muted" href="archive.html">Archive</a>
     </nav>
   </div>
-    <center><iframe id="pdf" src="applied/Coronavirus.pdf?embedded=true" style="width: 60%; height: 700px; align: center;" frameborder="0"></iframe></center>
-  <div class="col-md-12">
 
-  </div>
 
-  <script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const type = urlParams.get('type');
-    let article = urlParams.get('article')
-    while(article!=article.replace("-"," ")){
-      article = article.replace("-"," ")
-    }
-    document.getElementById("pdf").src = "articles/"+type+"/"+article+".pdf"
+  <div id="adobe-dc-view" height="500px"></div>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script type="text/javascript">
+  	document.addEventListener("adobe_dc_view_sdk.ready", function(){
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const type = urlParams.get('type');
+      let article = urlParams.get('article')
+      while(article!=article.replace("-"," ")){
+        article = article.replace("-"," ")
+      }
+      console.log("stuysurvey.com/articles/"+type+"/"+article+".pdf")
+  		var adobeDCView = new AdobeDC.View({clientId: "fb1e3f718b1f4acead5a4f51a4769b0b", divId: "adobe-dc-view"});
+  		adobeDCView.previewFile({
+  			content:{location: {url: "stuysurvey.com/articles/"+type+"/"+article+".pdf"}},
+  			metaData:{fileName: article+".pdf"}
+  		}, {
+            embedMode: "IN_LINE",
+            showDownloadPDF: false,
+            showPrintPDF: false
+        });
+  	});
+  </script>
+
+
 
 
   </script>
