@@ -1,2 +1,2 @@
 # MathSurvey
-The Stuyvesant Math Survey Website
+Stuyvesant High School's Math Survey Website
