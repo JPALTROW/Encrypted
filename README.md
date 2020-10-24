@@ -1,2 +1,2 @@
-# MathSurvey
-Stuyvesant High School's Math Survey Website
+# Math and CS Research
+Math and CS Research Publication Website
