@@ -1,2 +1,2 @@
 # Math and CS Research
-Math and CS Research Publication Website
+The Official Math and CS Research Publication Website
