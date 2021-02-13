@@ -88,10 +88,10 @@
       while(article!=article.replace("-"," ")){
         article = article.replace("-"," ")
       }
-      console.log("https://stuysurvey.com/articles/"+type+"/"+article+".pdf")
+      console.log("https://mathcsr.org/articles/"+type+"/"+article+".pdf")
   		var adobeDCView = new AdobeDC.View({clientId: "fb1e3f718b1f4acead5a4f51a4769b0b", divId: "adobe-dc-view"});
   		adobeDCView.previewFile({
-  			content:{location: {url: "https://stuysurvey.com/articles/"+type+"/"+article+".pdf"}},
+  			content:{location: {url: "https://mathcsr.org/articles/"+type+"/"+article+".pdf"}},
   			metaData:{fileName: article+".pdf"}
   		}, {
             embedMode: "IN_LINE",
