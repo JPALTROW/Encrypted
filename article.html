@@ -90,12 +90,8 @@
         article = article.replace("-"," ")
       }
       document.title = title + ' | Math and CS Research';
+      window.location.replace('mathcsr.org/' + title);
       console.log("https://mathcsr.org/articles/"+type+"/"+article+".pdf")
-      var url = new URLSearchParams(queryString);
-      url.delete('type');
-      url.delete('article');
-      var url2 = 'mathcsr.org/article.html?' + url; 
-      console.log(url2);
   		var adobeDCView = new AdobeDC.View({clientId: "66b493bfb3064861aa90c0b734fca597", divId: "adobe-dc-view"});
   		adobeDCView.previewFile({
   			content:{location: {url: "https://mathcsr.org/articles/"+type+"/"+article+".pdf"}},
