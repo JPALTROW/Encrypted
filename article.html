@@ -90,7 +90,6 @@
         article = article.replace("-"," ")
       }
       document.title = title + ' | Math and CS Research';
-      window.location.replace('mathcsr.org/' + title);
       console.log("https://mathcsr.org/articles/"+type+"/"+article+".pdf")
   		var adobeDCView = new AdobeDC.View({clientId: "66b493bfb3064861aa90c0b734fca597", divId: "adobe-dc-view"});
   		adobeDCView.previewFile({
@@ -102,6 +101,7 @@
             showPrintPDF: false
         });
   	});
+    window.location.replace(title);
   </script>
 
 
