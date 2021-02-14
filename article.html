@@ -91,6 +91,10 @@
       }
       document.title = title + ' | Math and CS Research';
       console.log("https://mathcsr.org/articles/"+type+"/"+article+".pdf")
+      var url = new URLSearchParams(queryString);
+      var url2 = removeParam("type", url);
+      var url3 = removeParam("article", url2);
+      console.log(url3);
   		var adobeDCView = new AdobeDC.View({clientId: "66b493bfb3064861aa90c0b734fca597", divId: "adobe-dc-view"});
   		adobeDCView.previewFile({
   			content:{location: {url: "https://mathcsr.org/articles/"+type+"/"+article+".pdf"}},
