@@ -84,8 +84,12 @@
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const type = urlParams.get('type');
+      type = atob(type);
+      console.log(type); // Outputs: "Hello World!"
       const title = urlParams.get('title');
       let article = urlParams.get('article')
+      article = atob(article);
+      console.log(article);
       while(article!=article.replace("-"," ")){
         article = article.replace("-"," ")
       }
