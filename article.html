@@ -88,6 +88,8 @@
       while(article!=article.replace("-"," ")){
         article = article.replace("-"," ")
       }
+      const title = url.Params.get('title');
+      document.title = title + '| Math and CS Research';
       console.log("https://mathcsr.org/articles/"+type+"/"+article+".pdf")
   		var adobeDCView = new AdobeDC.View({clientId: "66b493bfb3064861aa90c0b734fca597", divId: "adobe-dc-view"});
   		adobeDCView.previewFile({
