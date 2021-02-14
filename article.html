@@ -101,6 +101,9 @@
             showPrintPDF: false
         });
   	});
+    const url = new URL(window.location);
+    url.searchParams.set('article', '');
+    window.history.pushState({}, '', url);
     window.history.pushState({}, '', title);
     window.history.replaceState({}, '', title);
   </script>
