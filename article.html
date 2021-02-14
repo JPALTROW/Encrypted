@@ -84,14 +84,12 @@
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const type = urlParams.get('type');
+      const title = urlParams.get('title');
       let article = urlParams.get('article')
       while(article!=article.replace("-"," ")){
         article = article.replace("-"," ")
       }
-      let newTitle = url.Params.get('title')
-      if (document.title != newTitle) {
-        document.title = newTitle;
-      }
+      document.title = title + ' | Math and CS Research';
       console.log("https://mathcsr.org/articles/"+type+"/"+article+".pdf")
   		var adobeDCView = new AdobeDC.View({clientId: "66b493bfb3064861aa90c0b734fca597", divId: "adobe-dc-view"});
   		adobeDCView.previewFile({
