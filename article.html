@@ -86,8 +86,14 @@
       const type = urlParams.get('type');
       const title = urlParams.get('title');
       let article = urlParams.get('article')
-        article = return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-b64DecodeUnicode('4pyTIMOgIGxhIG1vZGU=');
+        function b64DecodeUnicode(str) {
+    // Going backwards: from bytestream, to percent-encoding, to original string.
+    return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+}
+
+article = b64DecodeUnicode(article); // "✓ à la mode"
       while(article!=article.replace("-"," ")){
         article = article.replace("-"," ")
       }
