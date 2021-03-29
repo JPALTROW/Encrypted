@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://mathcsr.org/</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/appliedmath</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/computerscience</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/features</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/problemsolving</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/research</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/staff</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/subscribe</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=applied&amp;a=bWF0aG5hdHVyZTM0&amp;v=2&amp;n=2&amp;t=TWF0aCBpbiBOYXR1cmU=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=applied&amp;a=cGhvdG92b2wybm8y&amp;v=2&amp;n=2&amp;t=VGhlIFJlYWwgV29ybGQ=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=applied&amp;a=aWFubGFubWF0aDEwMw==&amp;v=2&amp;n=1&amp;t=TWF0aCBpbiBMYW5ndWFnZQ==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=applied&amp;a=bXVza2FucGhvdG8xMjI=&amp;v=2&amp;n=1&amp;t=VGhlIFJlYWwgV29ybGQ=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=applied&amp;a=RWxlY3Rpb25z&amp;v=1&amp;n=1&amp;t=RWxlY3Rpb24gRm9yZWNhc3Rpbmc=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=applied&amp;a=Q09WSUQ=&amp;v=1&amp;n=1&amp;t=Q29yb25hdmlydXMgRXBpZGVtaWM=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=computerscience&amp;a=Y29tcGNvbXBsZXgxMA==&amp;v=2&amp;n=2&amp;t=VGV0cmlz</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=computerscience&amp;a=dHVyYWx2aW4xNA==&amp;v=2&amp;n=2&amp;t=VHVyaW5nIE1hY2hpbmVzIGFuZCB0aGUgSGFsdGluZyBQcm9ibGVt</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=computerscience&amp;a=bWFjaGNhcnM4MQ==&amp;v=2&amp;n=2&amp;t=TWFjaGluZSBMZWFybmluZyBDYXJz</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=computerscience&amp;a=ZmlvbmFkb2dzMTcy&amp;v=2&amp;n=1&amp;t=Um9ib3QgRG9ncw==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=computerscience&amp;a=c3RvY2tzc3RoZQ==&amp;v=2&amp;n=1&amp;t=VGhlIFN0b2NrIE1hcmtldA==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=feature&amp;a=MTJzdHV5Y2Nj&amp;v=2&amp;n=2&amp;t=U3R1eSBDQ0M=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=feature&amp;a=dGhlbnVtbm93MTEx&amp;v=2&amp;n=1&amp;t=VGhlIE51bWJlcnM=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=feature&amp;a=QVBDUw==&amp;v=1&amp;n=1&amp;t=QVAgQ1M=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=feature&amp;a=bWF0aA==&amp;v=1&amp;n=1&amp;t=T25saW5lIE1hdGggVGVhbQ==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=feature&amp;a=UHJlY2FsYw==&amp;v=1&amp;n=1&amp;t=UHJlY2FsYyBQYW5pYw==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=feature&amp;a=cHJpbWVz&amp;v=1&amp;n=1&amp;t=UHJpbWUgRG9udXRz</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=Y29tcGxleG51bXMyNQ==&amp;v=2&amp;n=2&amp;t=Q29tcGxleCBOdW1iZXJz</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;v=2&amp;n=2&amp;a=dHVwZXMxMDI=&amp;t=QSBDb21iaW5hdG9yaWFsIElkZW50aXR5</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=cHJvYnNldHZvMm5vMQ==&amp;v=2&amp;n=1&amp;t=TWFyYmxlcw==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=aW5mIHN1bQ==&amp;v=1&amp;n=1&amp;t=Q2FsY3VsYXRpbmcgYSBGaXhlZCBEaXN0YW5jZQ==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=cHJvYg==&amp;v=1&amp;n=1&amp;t=Q29uZGl0aW9uYWwgUHJvYmFiaWxpdHk=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=cHJvYiBwcm9ibGVt&amp;v=1&amp;n=1&amp;t=Q29uZGl0aW9uYWwgUHJvYmFiaWxpdHkgUHJvYmxlbSBTZXQ=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=Z2VuIGZ1bmM=&amp;v=1&amp;n=1&amp;t=R2VuZXJhdGluZyBGdW5jdGlvbnM=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=puzzle&amp;a=Y2hlY2tpbmc=&amp;v=2&amp;n=1&amp;t=Q2hlY2tlciBCb2FyZA==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=puzzle&amp;a=c3RlcHM=&amp;v=1&amp;n=1&amp;t=U3RlcHMgb24gdGhlIENvb3JkaW5hdGUgUGxhbg==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=puzzle&amp;a=c3Vtb2ZjdWJlcw==&amp;v=1&amp;n=1&amp;t=U3VtIG9mIEN1YmVz</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=research&amp;a=YnVja2JhbGx0aGVvMjQ=&amp;v=2&amp;n=2&amp;t=QnVja3kgQmFsbHM=</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=research&amp;v=2&amp;n=1&amp;a=cmFuZGVjbGFu&amp;t=RnJpZW5kcyBQcm9ibGVt</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=research&amp;v=1&amp;n=1&amp;a=YmFzZXM=&amp;t=QmFzZSBSdWxlcw==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=research&amp;v=1&amp;n=1&amp;a=ZXVsZXJz&amp;t=RXVsZXIncyBGb3JtdWxh</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=research&amp;v=1&amp;n=1&amp;a=aGlzdG9yeS1waQ==&amp;t=SGlzdG9yeSBvZiBQaQ==</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/aileen-ruan</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/alex-zheng</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/alice-zhu</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/alvin-li</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/andrea-khoury</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/andrew-juang</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/anna-shrestha</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/anson-lau</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/benjamin-gallai</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/benjamin-kreiswirth</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/bina-jeong</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/canol-onar</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/charles-tang</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/daniel-lyalin</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/declan-stacy</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/ezra-lee</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/finn-charest</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/fiona-chen</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/hevin-amin</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/hunter-pesin</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/ian-chen-adamczyk</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/ivan-pan</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/jacob-kirmayer</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/jacob-paltrowitz</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/jeffrey-wang</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/jennifer-sun</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/jeremy-ku-benjet</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/jerry-liang</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/jerry-teng</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/joey-chen</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/john-gupta-she</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/joshua-gao</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/josiah-moltz</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/katherine-chang-wu</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/keynan-nain</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/khizer-shahid</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/lauren-lee</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/leon-ma</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/lewis-holland</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/mandy-li</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/mario-tutuncu-macias</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/mark-zhu</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/maxwell-zen</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/michael-yang</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/milind-lalwani</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/naowal-rahman</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/priscilla-park</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/pulinda-weerasekara</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/qazi-ashikin</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/rebecca-bao</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/reya-miller</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/sebastien-beurnier</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/sydney-moy</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/theo-schiminovich</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/tiffany-leong</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/uma-sukhu</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/william-tang</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/contributors/zifei-zhao</loc>
+  <lastmod>2021-03-05</lastmod>
+  <priority>0.4</priority>
+</url>
+</urlset>
