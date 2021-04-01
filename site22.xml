@@ -8,37 +8,37 @@
 
 <url>
   <loc>https://mathcsr.org/</loc>
-  <lastmod>2021-03-05</lastmod>
+  <lastmod>2021-04-01</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://mathcsr.org/appliedmath</loc>
-  <lastmod>2021-03-05</lastmod>
+  <lastmod>2021-04-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mathcsr.org/computerscience</loc>
-  <lastmod>2021-03-05</lastmod>
+  <lastmod>2021-04-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mathcsr.org/features</loc>
-  <lastmod>2021-03-05</lastmod>
+  <lastmod>2021-04-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mathcsr.org/problemsolving</loc>
-  <lastmod>2021-03-05</lastmod>
+  <lastmod>2021-04-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mathcsr.org/puzzles</loc>
-  <lastmod>2021-03-05</lastmod>
+  <lastmod>2021-04-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mathcsr.org/research</loc>
-  <lastmod>2021-03-05</lastmod>
+  <lastmod>2021-04-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -50,6 +50,51 @@
   <loc>https://mathcsr.org/subscribe</loc>
   <lastmod>2021-03-05</lastmod>
   <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=applied&amp;a=cGhvdG8xMjA=&amp;v=2&amp;n=3&amp;t=TWF0aCBpbiB0aGUgUmVhbCBXb3JsZA==</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=aGFybW9uaWMxMDI=&amp;v=2&amp;n=3&amp;t=SGFybW9uaWMgR2VvbWV0cnk=</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=applied&amp;a=b3JiaXRzMjIy&amp;v=2&amp;n=3&amp;t=T3JiaXRz</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=computerscience&a=aHRtbDEyMg==&v=2&n=3&t=SFRNTA==</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=computerscience&amp;a=bmV1cmFsMTIz&amp;v=2&amp;n=3&amp;t=TmV1cmFsIE5ldHdvcmtz</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=research&amp;a=aGlzdG9yeTU1NA==&amp;v=2&amp;n=3&amp;t=SGlzdG9yeSBvZiBHZW9tZXRyeQ==</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=Y29uaWNqb3NpYWgxNDU=&amp;v=2&amp;n=3&amp;t=Q29uaWMgU2VjdGlvbnM=</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=computerscience&amp;a=cXVhbnR1bTUwNA==&amp;v=2&amp;n=3&amp;t=UXVhbnR1bSBDb21wdXRpbmc=</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mathcsr.org/article.html?type=problemsolving&amp;a=cG9sZXNwb2xhcjE1NA==&amp;v=2&amp;n=3&amp;t=UG9sZXMgYW5kIFBvbGFycw==</loc>
+  <lastmod>2021-04-01</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mathcsr.org/article.html?type=applied&amp;a=bWF0aG5hdHVyZTM0&amp;v=2&amp;n=2&amp;t=TWF0aCBpbiBOYXR1cmU=</loc>
