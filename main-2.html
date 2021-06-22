@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Daniel Lyalin" />
+  <title>Stock Market</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Stock Market</h1>
+<p class="author">Daniel Lyalin</p>
+</header>
+<h1 class="unnumbered" id="introduction">Introduction</h1>
+<p>Invented by Fischer Black and Myron Scholes, the Black-Scholes stock valuation model is used by many major corporations, including General Motors and 3M, to estimate the future prices of European style stock options. The model relies on a solution of the Black-Scholes partial differential equation known as the Black-Scholes Formula, a formula reliant on the properties of Brownian motion. Hence, to understand the derivation and usage of the model, we must understand Brownian motion, starting with probability distributions.</p>
+<h1 class="unnumbered" id="probability-distributions">Probability Distributions</h1>
+<p>The simplest and first major probability distribution is the Bernoulli distribution. This is characterized as a discrete random variable with boolean outcomes of <em>0</em> and <em>1</em>, corresponding to either a “failure” or “success.” The chances of success, or <em>P(1)</em>, are usually denoted with the lowercase “<em>p</em>,” which has to be a discrete, decimal number between <em>0</em> and <em>1</em>. If the probability of success is <em>p</em>, then the probability of failure, or <em>P(0)</em>, is denoted as <span class="math inline">\(1 - p\)</span>, or the decimal complementary to <em>p</em>. The mean, or expected value, of the Bernoulli distribution is hence <em>p</em>, as the expected value of a Bernoulli variable with <span class="math inline">\(P(1) = p\)</span> and <span class="math inline">\(P(0) = q\)</span> (or <span class="math inline">\(1 - p\)</span>) can be written as :</p>
+<p><span class="math display">\[E(X) = P(1)\cdot1+P(0)\cdot0=p\cdot1+q\cdot0=p\]</span></p>
+<p>The variance of a Bernoulli distribution is <span class="math inline">\(pq\)</span>, as:</p>
+<p><span class="math display">\[E[X^{2}]=P(1)\cdot 1^{2}+P(0)\cdot0^{2}=p\cdot1^{2}+q^{2}=p\]</span> <span class="math display">\[Var[X]=E[X^{2}]-E[X]^{2}=p-p^{2}=p(1-p)=pq\]</span></p>
+<p>Following from the Bernoulli distribution is the binomial distribution, a discrete random variable that measures the number of successes in a sequence of independent experiments; it is a variation of the Bernoulli distribution repeated several times, with each repetition having a boolean outcome with probabilities <em>p</em> and <span class="math inline">\(1 - p\)</span>. The binomial distribution requires a fixed number of trials n, boolean outcomes for each trial <em>p</em> and <em>q</em> (<span class="math inline">\(1 - p\)</span>), and independence. As both <em>n</em> and <em>p</em> can be controlled, the probability mass function, or the probability of the binomial distribution yielding discrete random variable with value <em>X</em>, for the binomial distribution, where <em>k</em> is the number of expected successes, is:</p>
+<p><span class="math display">\[P(k)= \begin{pmatrix}
+    n \\ k 
+    \end{pmatrix}
+    p^{k}(1-p)^{n-k}\]</span></p>
+<p>As an example, the probability of landing heads six times when tossing a fair coin <em>10</em> times is written as:</p>
+<p><span class="math display">\[P(6)= \begin{pmatrix}
+    10 \\
+    6
+    \end{pmatrix}\cdot0.5^{0.6}\cdot0.5^{4}=0.21\]</span></p>
+<p>The mean value of the binomial distribution is <em>np</em>, as it is the summation of the expected probability <em>p</em> of success for each event, of which there are <em>n</em>. Thus, <em>p</em> added to itself <em>n</em> times can be written as <em>np</em>. Similarly, the variance of the binomial distribution is the sum of the variances of each experiment. As each experiment is modeled by a Bernoulli distribution, the summation of variances is <span class="math inline">\(np(1-p)\)</span>.</p>
+<p>An expansion of the binomial distribution to continuous variables is the uniform continuous distribution, which models the probability of getting <em>X</em> in range <span class="math inline">\([a, b]\)</span> where probability is uniformly distributed along the range. The probability mass function for the uniform continuous distribution is: <span class="math display">\[P(X) = \frac{1}{b-a}\]</span> for all <em>X</em> in range <span class="math inline">\([a, b]\)</span>. For example, the probability <span class="math inline">\(P(4 &lt; X &lt; 15)\)</span> in range <span class="math inline">\([3, 40]\)</span> is:</p>
+<p><span class="math display">\[P(4\leq X\leq15)=(15-4)\cdot\frac{1}{40-3}=\frac{11}{37}\]</span></p>
+<p>The expected value of the uniform continuous distribution can be found by taking the average of <em>a</em> and <em>b</em>: <span class="math inline">\(\frac{1}{b-a}\)</span>. Finding the variance is more involved:</p>
+<div class="center">
+<p><span class="math display">\[Var[X]= E[X^{2}]-E[X]^{2}\]</span> <span class="math display">\[\begin{aligned}
+        E[X^{2}] = \int_{-\infty}^{\infty} x^{2}f(x) \,dx \\ 
+                 = \int_{a}^{b} x^{2}\cdot\frac{1}{b-a} \,dx \\
+                 = \frac{1}{b-a} \cdot \int_{a}^{b} x^{2} \,dx \\
+                 = \frac{1}{b-a}[\frac{x^{3}}{3}]_a^b \\
+                 = \frac{1}{b-a}\cdot\frac{1}{3}\cdot[b^{3}-a^{3}]\\
+                 = \frac{(b-a)(b^{2}+ab+a^{2})}{3(b-a)} \\ 
+                 = \frac{b^{2}+ab+a^{2}}{3} \\
+    \end{aligned}\]</span> <span class="math display">\[\begin{aligned}
+        E[X]^{2} = \left(\frac{b+a}{2}\right)^{2} \\ 
+                 = \frac{b^{2}+2ab+a^{2}}{4} \\ 
+    \end{aligned}\]</span> <span class="math display">\[\begin{aligned}
+        Var[X] = \frac{b^{2}+ab+a^{2}}{3}-\frac{b^{2}+2ab+a^{2}}{4} \\
+               = \frac{4b^{2}+4ab+4a^{2}-3b^{2}-6ab-3a^{2}}{12} \\ 
+               = \frac{b^{2}-2ab+a^{2}}{12} \\
+               = \frac{(b-a)^{2}}{12}
+    \end{aligned}\]</span></p>
+</div>
+<p>Expanding from the uniform continuous distribution, we arrive at the normal distribution. This is a continuous probability distribution with continuous real random variables that models data symmetric about a mean value. The probability density function of the normal distribution, or the function that gives the relative likelihood of a random value taking a certain value in its sample space, is given by:</p>
+<p><span class="math display">\[f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^{2}}\]</span></p>
+<p>where <span class="math inline">\(\sigma\)</span> is the standard deviation of the data and <span class="math inline">\(\mu\)</span> is the mean of the data. A special case of the normal distribution, known as the standard normal distribution, is characterized by <span class="math inline">\(\sigma=1\)</span> and <span class="math inline">\(\mu=0\)</span>, with the probability density function changing to be:</p>
+<p><span class="math display">\[\varphi(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^{2}}\]</span></p>
+<h1 class="unnumbered" id="using-code-and-confidence-intervals">Using Code and Confidence Intervals</h1>
+<p>To get the next element of probability necessary to understanding Brownian motion, and to see an example of how Python can be used to find values, let’s try to estimate the value of pi.</p>
+<p>If we draw a circle centered at the origin with radius <em>r</em>, then we know that its area is modelled by the equation <span class="math inline">\(A=\pi r^{2}\)</span>. Following from this, if we can find the area of the circle without using pi, we can divide that area by the <span class="math inline">\(r^{2}\)</span> to get back pi. To estimate the area of this circle, we can use Python.</p>
+<p>The first in doing this is generating two arrays of x- and y-values in the range <span class="math inline">\([-r, r]\)</span>, such that the two points furthest from the origin are <span class="math inline">\((-r, -r)\)</span> and <span class="math inline">\((r, r)\)</span>. For simplicity, we can use the unit circle, where <span class="math inline">\(r=1\)</span>. In Python, we’d write this as:</p>
+<div class="sourceCode" id="cb1" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.random.rand(<span class="dv">10000000</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> np.random.rand(<span class="dv">10000000</span>)</span></code></pre></div>
+<p>Next, we can use the distance formula to create a new array filled with the distances from each of our x-y pairs to the origin. Because the origin’s x- and y-value are <em>0</em>, the distance formula can be simplified to <span class="math inline">\(x^{2}+y^{2}\)</span>. In Python:</p>
+<div class="sourceCode" id="cb2" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> y <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<p>Finally, we can count the number of values within the array that are less than or equal to <em>r</em>, which indicates points that fall within or on the circumference of the circle. This summation returns the area of the circle, as the area equals the total amount of points enclosed within the circle. If we take the count and divide the sum by <span class="math inline">\(r^{2}\)</span>, and multiply the product by <em>4</em> to account for quadrants other than the first (by squaring our point values, we effectively limit ourselves to positive values in the first quadrant), we get <span class="math inline">\(\pi\)</span>. In Python:</p>
+<div class="sourceCode" id="cb3" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>np.count_nonzero(distance <span class="op">&lt;=</span> <span class="dv">1</span>) <span class="op">/</span> n <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
+<p>The first time I ran this, Python returned: <em>3.140942</em>, an approximation of <span class="math inline">\(\pi\)</span> accurate to the hundredth place. If you increase <em>n</em> to a greater value, the approximation will become increasingly accurate. Formulaically, this algorithm can be represented as:</p>
+<p><span class="math display">\[\pi = \lim_{r\to\infty}\frac{1}{r^{2}}\sum_{x=-r}^{r}\sum_{y=-r}^{r} \begin{cases}
+    1 &amp; \text{if $\sqrt{x^{2}+y^{2}} \leq r$} \\
+    0 &amp; \text{if $\sqrt{x^{2}+y^{2}} &gt; r$}
+    \end{cases}\]</span></p>
+<p>The first apparent issue with this approach is that, by virtue of generating random values, our answers are noisy and inconsistent. We can fix this using confidence intervals. These are ranges within which we know our answer must lie. Using the variance (<span class="math inline">\(\sigma^{2}\)</span>) of our approximations, the number of trials (<em>n</em>) we ran, and the average value of our approximations (<span class="math inline">\(\bar{x}\)</span>), the confidence intervals can be expressed as:</p>
+<p><span class="math display">\[\bar{x}-2.58\cdot\sqrt{\frac{\sigma^{2}}{n}} \text{for the lower bound}\]</span> <span class="math display">\[\bar{x}+2.58\cdot\sqrt{\frac{\sigma^{2}}{n}} \text{for the upper bound}\]</span></p>
+<p>In Python, this can be found using the following code:</p>
+<div class="sourceCode" id="cb4" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>answers <span class="op">=</span> np.empty(<span class="dv">100</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>       answers[i] <span class="op">=</span> approximate_pi()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        variance <span class="op">=</span> np.var(answers)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    mean <span class="op">=</span> np.mean(answers)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    lower <span class="op">=</span> mean <span class="op">-</span> <span class="fl">2.58</span> <span class="op">*</span> np.sqrt(variance <span class="op">/</span> <span class="dv">100</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    upper <span class="op">=</span> mean <span class="op">+</span> <span class="fl">2.58</span> <span class="op">*</span> np.sqrt(variance <span class="op">/</span> <span class="dv">100</span>)</span></code></pre></div>
+<p>Note the use of the constant in <em>2.58</em> in both equations. This value is derived from the standard distribution. In statistics, z-scores measure how many standard deviations away from the mean a data point lies; within the normal distribution, 99% of all values have a z-score between <em>-2.58</em> and <em>2.58</em> standard deviations of the mean. Hence, adding (or subtracting) <em>2.58</em> allows you to determine a range within which the value of pi lies with 99% certainty.</p>
+<h1 class="unnumbered" id="markov-chains">Markov Chains</h1>
+<p>Though we can now effectively calculate probabilities for single states, Markov Chains are useful in that they allow us to work with a sequence of states where the next state is dependent only on the current state. Because of this, the probability of getting any state next is dependent on the current state and time elapsed; the Markov property, for which Markov Chains are named, is exactly this: Markov Chains are “memory-less.” Apart from the Markov property, Markov Chains have two other essential properties: state spaces and step probabilities.</p>
+<p>The state space of a Markov Chain is the set of all possible states that the current state can transition to. In a dice roll, for example, the state space would be: <span class="math inline">\(X_{t}={1,2,3,4,5,6}\)</span>. Our current state within the Markov Chain in this example would be the value of the previous roll. As states as are ordered by time, our current state would be written as <span class="math inline">\(X_{t}\)</span> and the next two states would be <span class="math inline">\(X_{t+1}\)</span> and <span class="math inline">\(X_{t+2}\)</span>, respectfully.</p>
+<p>The step probabilities of a Markov Chain are the set of probabilities for transitioning from one state to another. Probabilities are written as <span class="math inline">\(P(X_{t+1}|X_{t})\)</span>. For example, <span class="math inline">\(P(X_{t+1}=2|1)\)</span> denotes the probability of rolling a two given we just rolled a one. For every given state, we need a set of step probabilities for transitioning from that state to every state in the state space. For example, if we rolled a one and our set of step probabilities was <span class="math inline">\((0, 1, 0, 0, 0, 0)\)</span>, then we could deduce that we are guaranteed to roll a two next. In reality, the step probabilities for transitioning from a one would be <span class="math inline">\((\frac{1}{6},\frac{1}{6},\frac{1}{6},\frac{1}{6},\frac{1}{6},\frac{1}{6})\)</span>.</p>
+<p>The step probabilities are stored in a transition matrix <span class="math inline">\(P_{t}\)</span> characterized by the state space <em>S</em> where element <span class="math inline">\((i, j)\)</span> is such that:</p>
+<p><span class="math display">\[(P_{t})_{ij} = \mathbb{P}(X_{t+1}=j|X_{t}=i)\]</span></p>
+<p>For example, <span class="math inline">\(p_{12}\)</span> would represent the probability of transitioning from a one to a two.</p>
+<p>Each row of the transition matrix is called a probability vector, and the elements of each probability vector must sum up to one. An example probability matrix, for example for transitioning from one type of weather to any other, could look like:</p>
+<p><span class="math display">\[P = \begin{bmatrix}
+    .5 &amp; .25 &amp; .25 \\
+    .5 &amp; 0 &amp; 0.5 \\
+    .25 &amp; .25 &amp; .5
+    \end{bmatrix}\]</span></p>
+<p>It should be noted that the transition matrix is not necessarily symmetric, meaning <span class="math inline">\(p_{cr}\neq p_{rc}\)</span>; this means the probability of transiting from state <em>r</em> to state <em>c</em> is not necessarily equal to the probability of transitioning from state <em>c</em> to state <em>r</em>.</p>
+<h1 class="unnumbered" id="stochastic-processes-and-brownian-motion">Stochastic Processes and Brownian Motion</h1>
+<p>Markov Chains are a discrete process in that they have a finite number of states; stochastic processes, on the other hand, are a process defined by random continuous transitions, meaning that random transitions occur between states that are elements of real, rather than integral, numbers. In stochastic processes, time is also treated as continuous.</p>
+<p>Brownian motion is a stochastic process defined by the summation of many standard, normal random variables. Mathematically, it is defined by the formula: <span class="math inline">\(Z_{t}=\sum_{i=0}^{t}N_{i}\)</span>, where <span class="math inline">\(N_{i}\)</span> is a value of the cumulative function at <em>i</em> of the standard normal distribution. Any given state in Brownian motion is defined as <span class="math inline">\(Z_{t}\)</span>, which indicates the value of <em>Z</em> at time <em>t</em>. The two defining characteristics of Brownian motion are:</p>
+<ol>
+<li><p><span class="math inline">\(Z_{0}=0\)</span></p></li>
+<li><p><span class="math inline">\(Z_{t+s}-Z_{s}=N(0, t)\)</span></p></li>
+</ol>
+<p>The first of these characteristics is an assumption used to simplify the process, though the first state can be equal to any number without violating the rules of Brownian motion. The second characteristic means that for any <span class="math inline">\(0 \leq s, t \leq \infty\)</span> the distribution of the increment <span class="math inline">\(Z_{t-s}-Z_{s}\)</span> has the same distribution as <span class="math inline">\(Z_{t}-Z_{0}=Z_{t}\)</span>, that distribution being the normal distribution with mean <em>0</em> and variance <em>t</em>. The second characteristic is best understood through its derivation.</p>
+<p>Let’s start with a set of continuous values characteristic of Brownian motion. If we were to discretize the values into <em>n</em> amounts separated by <span class="math inline">\(\Delta t\)</span> time and select two random times <em>t</em> and <span class="math inline">\(t+\Delta t\)</span>, then the change from the first state to the second could be written as:</p>
+<p><span class="math display">\[Z_{t+\Delta t}-Z_{t}=\Delta Z_{t}\]</span></p>
+<p>This means that the change between the two states is equal to the change since the first state. This <span class="math inline">\(\Delta Z_{t}\)</span> can be rewritten as the product of a random variable scaled against <span class="math inline">\(\sqrt{\Delta t}\)</span>. We chose to take the square root because it both grows and decreases at a slower rate than our time steps, preventing our function from freezing or growing too fast and preserving continuity. Our random variable will be taken from the standard normal distribution, meaning the equation will be:</p>
+<p><span class="math display">\[\Delta Z_{t}= N_{t}\sqrt{\Delta t}\]</span></p>
+<p>where <span class="math inline">\(N_{t}\)</span> represents the value of the random variable drawn from the standard normal distribution at time <em>t</em>. The change since time zero can thus be written as:</p>
+<p><span class="math display">\[\Delta Z_{0} = N_{0}\sqrt{\Delta t}\]</span></p>
+<p>Knowing this, we know that the value at our first discrete time step is equal to:</p>
+<p><span class="math display">\[Z_{\Delta t}=Z_{0}+\Delta Z_{0}\]</span></p>
+<p>In other words, the value at our first time step is equal to the value at the previous step plus the change since that step. As we’ve decided that the value of the first step is always equal to zero, the value at the first time step has to be equal solely to the change since the first time step. Hence:</p>
+<p><span class="math display">\[Z_{\Delta t} = N_{0}\sqrt{\Delta t}\]</span></p>
+<p>The value at the second step must then equal the value at the first time step before it plus the change since the first step, or:</p>
+<p><span class="math display">\[Z_{2\Delta t}=\Delta Z_{\Delta t}+Z_{\Delta t}=(N_{0}+N_{\Delta t})\sqrt{\Delta t}\]</span></p>
+<p>The value at any time step can be expressed as the summation of the values of the normal distribution at all the previous times multiplied by <span class="math inline">\(\sqrt{\Delta t}\)</span>, similarly to how the value at the second time step could be expressed as the values of the normal distribution at time one and time zero multiplied by <span class="math inline">\(\sqrt{\Delta t}\)</span>. Knowing that the change since any time step equals <span class="math inline">\(N_{t}\sqrt{\Delta t}\)</span>, the expected value of change is always zero, or the mean value of the standard normal distribution, and the variance is <span class="math inline">\(\sqrt{\Delta t}\)</span>.</p>
+<p>Our final time, <em>T</em>, can be written as the summation of all the previous random variables times <span class="math inline">\(\sqrt{\Delta t}\)</span>. While the expected value is still zero, the variance is now <span class="math inline">\((\sqrt{\Delta t})^{2}n\)</span>, or <span class="math inline">\(\Delta tn\)</span>, which is equal to <em>T</em>. Because of this, the value at <em>T</em> equals the normal distribution with mean zero and variance <em>T</em>. Working backwards from this, we can deduce the property <span class="math inline">\(Z_{t}-Z_{s}=N(0, t-s)\)</span>. This makes sense, as we would expect later times to have greater variance, as randomness accumulates over time.</p>
+<p>Another explanation of the properties of Brownian motion, as well as proofs, can be found at:<br />
+<a href="https://galton.uchicago.edu/~lalley/Courses/313/BrownianMotionCurrent.pdf">https://galton.uchicago.edu/~lalley/Courses/313/BrownianMotionCurrent.pdf</a><br />
+In differential form, Brownian motion can be expressed as:</p>
+<p><span class="math display">\[\Delta Z_{t}=Z_{t+\Delta t}-Z_{t}=N(0, \Delta t)\]</span></p>
+<p>In calculus, this is written as:</p>
+<p><span class="math display">\[dZ_{t}=N_{t}=\text{Normal}(0, dt)\]</span></p>
+<p>with <em>dt</em> approaching zero in the limit to account for continuous time. It should be noted that Brownian motion as we’ve defined it is a stationary process in that its probability distribution does not change with time; this implies that mean and variance remain constant. However, we can redefine Brownian motion such that it “drifts” depending on the mean, meaning both the mean and variance of the Normal distribution are dependent on the time. This is written as:</p>
+<p><span class="math display">\[\Delta Z_{t} = \mu \Delta t + N_{t}\]</span></p>
+<p>and alternatively as:</p>
+<p><span class="math display">\[dZ_{t}= \mu dt + N_{t}\]</span></p>
+<p>This implies:</p>
+<p><span class="math display">\[Z_{T}=\text{Normal}(\mu T, T)\]</span></p>
+<p>As we’ll be using Brownian motion to model stocks, it would be more effective to write this equation using percentages, which can be done using Geometric Brownian Motion:</p>
+<p><span class="math display">\[\frac{\Delta S_{t}}{S_{t}}=\mu \Delta t + N_{t}\]</span></p>
+<p>This is alternatively written as:</p>
+<p><span class="math display">\[\frac{dS_{t}}{S_{t}}=\mu dt + N_{t}\]</span></p>
+<p>In this equation, <span class="math inline">\(\mu\)</span> now means percentage, rather than number, growth and <span class="math inline">\(S_{t}\)</span> is now log-normal, meaning it is always positive and has a long tail. Finally, we can scale the normal term to scale deviation by multiplying it by a constant:</p>
+<p><span class="math display">\[\frac{\Delta S_{t}}{S_{t}}=\mu \Delta t + \sigma N_{t}\]</span></p>
+<p>Alternatively:</p>
+<p><span class="math display">\[\frac{dS_{t}}{S_{t}}=\mu dt + \sigma N_{t}\]</span></p>
+<p>This form can be rewritten as:</p>
+<p><span class="math display">\[dS_{t}=S_{t}(\mu dt + \sigma N_{t})\]</span></p>
+<h1 class="unnumbered" id="black-scholes-equation">Black-Scholes Equation</h1>
+<p>The Black-Scholes Equation rests on several assumptions:</p>
+<ul>
+<li><p>The system contains one risky asset.</p></li>
+<li><p>The system contains one risk-free asset.</p></li>
+<li><p>The rate of return on the risk-free asset is constant.</p></li>
+<li><p>The returns of the risky asset have a path modelled by dilated geometric Brownian motion.</p></li>
+<li><p>The risky asset does not pay a dividend.</p></li>
+<li><p>There are no other risk-free assets available.</p></li>
+<li><p>It is possible to borrow and lend any amount of cash at the same rate as the return rate of the risk-free asset.</p></li>
+<li><p>It is possible to buy and sell any amount of stock.</p></li>
+<li><p>There are no transaction costs.</p></li>
+</ul>
+<p>The Black-Scholes equation is a partial differential equation used to calculate the price evolution of European call and put options. Call options give the owner the right to buy a stock at an agreed-upon “strike price," and put options the right to sell at that strike price. If the price of the stock is above the strike price, then the call option owner can make a profit by buying at the strike price and selling at the actual, higher price; similarly, if the price of the stock is less than the strike price of a put option, then buying the stock and selling it at the option price results in profit. The variables used in the equation are:</p>
+<ul>
+<li><p><em>r</em>, the risk-free interest rate</p></li>
+<li><p><span class="math inline">\(\sigma\)</span>, the standard deviation, or <em>volatility</em>, of the returns of the stock</p></li>
+<li><p><em>S</em>, the stock price</p></li>
+<li><p><em>t</em>, time</p></li>
+<li><p><em>V</em>, the option price as a function of <em>S</em> and <em>t</em></p></li>
+<li><p><span class="math inline">\(\mu\)</span>, the average rate of growth, or <em>drift</em>, of the option</p></li>
+</ul>
+<p>The equation is written as follows:</p>
+<p><span class="math display">\[\frac{\partial V}{\partial t} + \frac{1}{2}\mu^{2}S^{2}\frac{\partial^{2} V}{\partial S^{2}}+rS\frac{\partial V}{\partial S}-rV=0\]</span></p>
+<p>It can be better understood if it is written as:</p>
+<p><span class="math display">\[\frac{\partial V}{\partial t} + \frac{1}{2}\mu^{2}S^{2}\frac{\partial^{2} V}{\partial S^{2}} = rV - rS\frac{\partial V}{\partial S}\]</span></p>
+<p>The left side of the equation models the change in the price of V with respect to time plus the convexity of the option’s value with respect to the price of the stock (convexity is the second derivative of the stock price with respect to interest rates). The right hand side is the risk-free return of a long and a short position in the option ; a long position is when one owns the stock, a short when one borrows. Over any infinitesimal time interval, the losses and gains of the various terms cancel out and result in a risk-free investment,</p>
+<p>To derive the equation, we need to use Ito’s lemma, an identity used in Ito calculus (the calculus of stochastic processes) to find the derivative of a time-dependent stochastic process. Ito’s lemma is written as:</p>
+<p><span class="math display">\[df=\left(\frac{\partial f}{\partial t}+\mu_{t}\frac{\partial f}{\partial x}+\frac{\sigma_{t}^{2}}{2}\frac{\partial^{2}f}{\partial x^{2}}\right)dt + \sigma_{t}\frac{\partial f}{\partial x}dB_{t}\]</span></p>
+<p>The derivation of Ito’s lemma begins by defining <em>f(t,x)</em> to be a twice-differentiable scalar function; the Taylor expansion of this function is written as:</p>
+<p><span class="math display">\[df = \frac{\partial f}{\partial t}dt+\frac{\partial f}{\partial x}dx+\frac{1}{2}\frac{\partial^{2}f}{\partial x^{2}}dx^{2}+\cdots\]</span></p>
+<p>If we take our equation for geometric Brownian motion <span class="math inline">\(dX_{t}=\mu_{t}dt+\sigma_{t}B_{t}\)</span> and substitute <span class="math inline">\(X_{t}\)</span> in the place of <em>x</em> and the formula for <em>dx</em>, then the Taylor expansion becomes:</p>
+<p><span class="math display">\[df=\frac{\partial f}{\partial t}dt+\frac{\partial f}{\partial x}(\mu_{t}dt+\sigma_{t}dB_{t})+\frac{1}{2}\frac{\partial^{2}f}{\partial x^{2}}(\mu_{t}^{2}dt^{2}+2\mu_{t}\sigma_{t}dtdB_{t}+\sigma_{t}^{2}dB_{t}^{2})+\cdots\]</span></p>
+<p>As we take the limit of this equation as <em>dt</em> approaches zero, the terms <span class="math inline">\(dt^{2}\)</span> and <span class="math inline">\(dtdB_{t}\)</span> approach zero faster than <span class="math inline">\(dB^{2}\)</span>, meaning we can set them equal to zero. Brownian motion has a property called quadratic variance, which means that</p>
+<p><span class="math display">\[\int_{0}^{t} (dB(s))^{2}=t\]</span></p>
+<p>and</p>
+<p><span class="math display">\[(dB(t))^{2}=dt\]</span></p>
+<p>For this reason, we can substitute the <em>dt</em> term for <span class="math inline">\(dB^{2}\)</span> and factor out the remaining <em>dt</em> and <em>dB</em> terms to be left with Ito’s lemma:</p>
+<p><span class="math display">\[df=\left(\frac{\partial f}{\partial t}+\mu_{t}\frac{\partial f}{\partial x}+\frac{\sigma_{t}^{2}}{2}\frac{\partial^{2}f}{\partial x^{2}}\right)dt+\sigma_{t}\frac{\partial f}{\partial x}dB_{t}\]</span></p>
+<p>If we take our equation for geometric Brownian motion <span class="math inline">\(\frac{dS_{t}}{S_{t}}=\mu dt\)</span> and replace <span class="math inline">\(N_{t}\)</span> with <em>dW</em> to represent any stochastic variable (a fancy name for a random variable), we get <span class="math inline">\(\frac{dS_{t}}{S_{t}}=\mu dt+\sigma dW\)</span>. To find how <em>V</em>, the payoff of a stock option, changes with respect to <em>S</em> and <em>t</em>, we can substitute Ito’s lemma to get:</p>
+<p><span class="math display">\[dV=\left(\mu S\frac{\partial V}{\partial S}+\frac{\partial V}{\partial t}+\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}\right)dt+\sigma S\frac{\partial V}{\partial S}dW\]</span></p>
+<p>An extra component we need to finish the derivation is the delta-hedge portfolio, a type of financial portfolio that remains financially stable over long periods of time and hence has a delta, or change, of zero. The portfolio hedges risk, which gives its name. The formula for the value a delta-hedge portfolio with one risky and one risk-free asset is:</p>
+<p><span class="math display">\[\Pi = -V+\frac{\partial V}{\partial S}S\]</span></p>
+<p>Over the period of time <span class="math inline">\([t,\Delta t]\)</span>, the total change in the portfolio’s value is:</p>
+<p><span class="math display">\[\Delta \Pi = -\Delta V+\frac{\partial V}{\partial S}\Delta S\]</span></p>
+<p>If we discretize both equations for <span class="math inline">\(\frac{dS}{S}\)</span> and <em>dV</em> by changing differentials, which are infinitesimally small variations, for deltas, finite minute variations, we get:</p>
+<p><span class="math display">\[\Delta S = \mu S\Delta t+\sigma S\Delta W\]</span> <span class="math display">\[\Delta V = (\mu S\frac{\partial V}{\partial S}+\frac{\partial V}{\partial t}+\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}})\Delta t + \sigma S\frac{\partial V}{\partial S}\Delta W\]</span></p>
+<p>If we now appropriately substitute these into the formula for the delta-hedge portfolio, we get:</p>
+<p><span class="math display">\[\Delta \Pi = \left(-\frac{\partial V}{\partial t}-\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}\right)
+\Delta t\]</span></p>
+<p>Because the <span class="math inline">\(\Delta W\)</span> term has disappeared from the equation, the portfolio lacks randomness, and is now effectively riskless; because of this, the rate of return of the formula can be used to model any risk-free asset. If the rate of return of the risk-free asset is <em>r</em>, then over the same time period we have:</p>
+<p><span class="math display">\[r\Pi\Delta t = \Delta\Pi\]</span></p>
+<p>If we substitute the original formula for the delta-hedge portfolio for the right side of the equation, we get:</p>
+<p><span class="math display">\[\left(-\frac{\partial V}{\partial t}-\frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}V}{\partial S^{2}}\right)\Delta t = r\left(-V+S\frac{\partial V}{\partial S}\right)\Delta t\]</span></p>
+<p>Dividing both sides by <em>t</em>, distributing the <em>r</em> on the right side, and moving the right side to the left, we get the Black-Scholes PDE.</p>
+<h1 class="unnumbered" id="black-scholes-formula">Black-Scholes Formula</h1>
+<p>The Black-Scholes Formula is a solution of the Black-Scholes Partial Differential Equation that relies on the following boundary conditions:</p>
+<p><span class="math display">\[C_{E,T}=max(0, S_{T}-X)\]</span> <span class="math display">\[P_{E,T}=max(0, X-S_{T})\]</span></p>
+<p>where <em>T</em> is the time at which <em>C</em>, a European call option, and <em>P</em>, a European put option, expire. These two formulas provide the value of each of the options when they expire. With these boundary conditions, the Black-Scholes PDE solves to the Black-Scholes Formula:</p>
+<p><span class="math display">\[C_{E}(S, t)=N(d_{1})S-N(d_{2})Xe^{-rT}\]</span></p>
+<p>where <em>S</em> is the price of the security, <em>T</em> is the date of expiration, <em>t</em> is the current date, <em>X</em> is the exercise price, <em>r</em> is the rate of return for the risk-free asset, and <span class="math inline">\(\sigma\)</span> is the volatility. The <span class="math inline">\(d_{1}\)</span> and <span class="math inline">\(d_{2}\)</span> are, respectfully, defined as:</p>
+<p><span class="math display">\[d_{1}=\frac{\ln{\frac{S}{X}}+(r+\frac{\sigma^{2}}{2})(T-t)}{\sigma\sqrt{T-t}}\]</span> <span class="math display">\[d_{1}=\frac{\ln{\frac{S}{X}}+(r-\frac{\sigma^{2}}{2})(T-t)}{\sigma\sqrt{T-t}}\]</span></p>
+<p>Notice that the Black-Scholes Formula uses the value of the cumulative function of the standard normal distribution at the values <span class="math inline">\(d_{1}\)</span> and <span class="math inline">\(d_{2}\)</span>, as our initial equations for Brownian motion did. As we’ve established, this implies that <em>N</em> will always fall in the range <em>[0, 1]</em>.</p>
+<p>To program this formula, we’d start by creating and populating a NumPy array with the values of a stock option at various times. We can then find the returns on that stock by taking <span class="math inline">\(\ln{\frac{S_{t}}{S_{t-1}}}\)</span>, which in code would be:</p>
+<div class="sourceCode" id="cb5" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>returns <span class="op">=</span> numpy.log(stock[<span class="dv">1</span>:] <span class="op">/</span> stock[:<span class="op">-</span><span class="dv">1</span>])</span></code></pre></div>
+<p>We can find the variance of these returns with <span class="math inline">\(\sigma = \sqrt{\frac{1}{n}\cdot\Sigma(r-\bar{r})^{2}}\)</span>, or with the code:</p>
+<div class="sourceCode" id="cb6" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>variance <span class="op">=</span> numpy.sqrt(numpy.nanvar(returns))</span></code></pre></div>
+<p>Finally, we can create a function that takes all the necessary variables and returns the predicted value of the option:</p>
+<div class="sourceCode" id="cb7" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats.norm.cdf</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> returns(stock):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> numpy.log(stock[<span class="dv">1</span>:] <span class="op">/</span> stock[:<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> variance(returns):</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> numpy.sqrt(numpy.nanvar(returns))</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> sim(stock, T, t, X, r):</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> variance(stock)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      S <span class="op">=</span> stock[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      denominator <span class="op">=</span> var <span class="op">*</span> numpy.sqrt(T <span class="op">-</span> t))</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      d1_numerator <span class="op">=</span> (numpy.log(S<span class="op">/</span>X) <span class="op">+</span> (r <span class="op">+</span> (var <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span>))<span class="op">*</span> (T <span class="op">-</span> t))</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>      d1 <span class="op">=</span> d1_numerator <span class="op">/</span> denominator</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>      d2_numerator <span class="op">=</span> (numpy.log(S<span class="op">/</span>X) <span class="op">+</span> (r <span class="op">-</span> (var <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span>)) <span class="op">*</span> (T <span class="op">-</span> t))</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>      d2 <span class="op">=</span> d2_numerator <span class="op">/</span> denominator</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> S <span class="op">*</span> cdf(d1) <span class="op">-</span> X <span class="op">*</span> numpy.exp(<span class="op">-</span>r<span class="op">*</span>T) <span class="op">*</span> cdf(d2)</span></code></pre></div>
+<h1 class="unnumbered" id="conclusion">Conclusion</h1>
+<p>For their achievement of separating stock options from their underlying risks, Robert Merton and Myron Scholes were awarded the Noble Prize in Economics in 1973; Fischer Black was acknowledged as a contributor. Though alternatives exist, it is still a highly popular method for valuing company options, primarily because of the simplicity of its approach. Eighty percent of the fifty largest companies in the world use the Black-Scholes Model. However, a newer option becoming increasingly popular is the binomial “lattice" model, which uses a binomial tree to model the various paths an option’s price may take. For more on that approach, you can read: <a href="https://en.wikipedia.org/wiki/Lattice_model_(finance)">https://en.wikipedia.org/wiki/Lattice_model_(finance)</a></p>
+<h1 class="unnumbered" id="sources">Sources</h1>
+<ol>
+<li><p>“Approximations of <span class="math inline">\(\pi\)</span>.” Wikipedia, Wikimedia Foundation, 29 Jan. 2021, <a href="en.wikipedia.org/wiki/Approximations_of_%CF%80">en.wikipedia.org/wiki/Approximations_of_%CF%80</a></p></li>
+<li><p>“Black–Scholes Equation.” Wikipedia, Wikimedia Foundation, 26 Dec. 2020, <a href="en.wikipedia.org/wiki/Black%E2%80%93Scholes_equation#Derivation_of_the_Black%E2%80%93Scholes_PDE.">en.wikipedia.org/wiki/Black%E2%80%93Scholes_equation#Derivation_of_the_Black%E2%80%93Scholes_PDE.</a></p></li>
+<li><p>“Google Colaboratory.” Google, Google, <a href="colab.research.google.com/drive/1UK_uuLmVqo3cB-KbrEcm_gGswYwV-qiS#scrollTo=teys8zf08_r-.">colab.research.google.com/drive/1UK_uuLmVqo3cB-KbrEcm_gGswYwV-qiS#scrollTo=teys8zf08_r-.</a></p></li>
+<li><p>“Itô’s Lemma.” Wikipedia, Wikimedia Foundation, 19 Nov. 2020, <a href="en.wikipedia.org/wiki/It%C3%B4%27s_lemma#Geometric_Brownian_motion.">en.wikipedia.org/wiki/It%C3%B4%27s_lemma#Geometric_Brownian_motion.</a></p></li>
+<li><p>“Markov Chain.” Wikipedia, Wikimedia Foundation, 26 Jan. 2021, <a href="en.wikipedia.org/wiki/Markov_chain.">en.wikipedia.org/wiki/Markov_chain.</a></p></li>
+<li><p>Milton, Adam. “What Are Call and Put Options?” The Balance, <a href="www.thebalance.com/call-and-put-options-definitions-and-examples-1031124.">www.thebalance.com/call-and-put-options-definitions-and-examples-1031124.</a></p></li>
+<li><p>“Probability Distribution.” Wikipedia, Wikimedia Foundation, 10 Jan. 2021, <a href="en.wikipedia.org/wiki/Probability_distribution.">en.wikipedia.org/wiki/Probability_distribution.</a></p></li>
+<li><p>Probability. 26 Jan. 2021, <a href="en.wikipedia.org/wiki/Probability.">en.wikipedia.org/wiki/Probability.</a></p></li>
+<li><p>“Random Variable.” Wikipedia, Wikimedia Foundation, 27 Dec. 2020, <a href="en.wikipedia.org/wiki/Random_variable.">en.wikipedia.org/wiki/Random_variable.</a></p></li>
+<li><p>“Stochastic Process.” Wikipedia, Wikimedia Foundation, 25 Jan. 2021, <a href="en.wikipedia.org/wiki/Stochastic_process#:~:text=A%20stochastic%20or%20random%20process%20can%20be%20defined%20as%20a,an%20element%20in%20the%20set.">en.wikipedia.org/wiki/Stochastic_process#:~:text=A%20stochastic%20or%20random%20process%20can%20be%20defined%20as%20a,an%20element%20in%20the%20set.</a></p></li>
+<li><p>Veisdal, Jørgen. “The Black-Scholes Formula, Explained.” Medium, Cantor’s Paradise, 4 July 2020,<br />
+<a href="medium.com/cantors-paradise/the-black-scholes-formula-explained-9e05b7865d8a.">medium.com/cantors-paradise/the-black-scholes-formula-explained-9e05b7865d8a.</a></p></li>
+</ol>
+</body>
+</html>
