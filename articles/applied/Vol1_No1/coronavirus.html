@@ -3,17 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Coronavirus Epidemiology | Math and CS Research">
+    <meta name="description" content="Math and CS Research">
     <meta name="keywords" content="Math, CS, Mathematics, Computer Science, Research">
-    
-  <meta property="og:title" content="Coronavirus Epidemiology | Math and CS Research">
+  <meta property="og:title" content="Math and CS Research">
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://mathcsr.org/logo.png">
   <meta property="og:description" content="A Math and CS Research Publication">
   <meta property="og:url" content="">
   <meta property="fb:app_id" content="712553486189960">
-    <title>Coronavirus Epidemiology | Math and CS Research</title>
-    
+    <title>Math and CS Research</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X001RVXZHZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -240,11 +238,11 @@ img {
 <h2 class="unnumbered" id="descriptive-epidemiology">Descriptive Epidemiology</h2>
 <p>Descriptive epidemiology involves describing a disease in terms of person, place, and time. During investigation, all of the unexplained cases of pneumonia were likely tabulated with information such as place of residence and onset of symptoms. Investigating location (places of residence, occupation, etc.) can help determine possible sources. John Snow, the "father of epidemiology," famously plotted cholera cases on a map of London and found they were centered around one water well (this map is shown below, with red dots marking cases and black circles marking wells). Once the well was shut down, the cholera cases ceased, and thus the cause of the outbreak was found. Similarly, considering the area where patients lived in Wuhan could help investigators pinpoint the area where it must have originated, one particular seafood and wet animal market.</p>
 <div class="center">
-<p><img src="DotPlot.png" style="width:45.0%" alt="image" /></p>
+<p><img src="coronavirus/DotPlot.png" style="width:45.0%" alt="image" /></p>
 </div>
 <p>Investigating time, we can build out what is known as an "epicurve," or a histogram of all of the cases over time. The length of time between the first case (known as the index case) and the next cluster of cases can help determine the incubation period (time from infection to showing symptoms). The epicurve can also suggest person-to-person spread with multiple successively larger peaks one incubation period apart eventually emerging. The epicurve for COVID-19 is typical for person-to-person spread, and can be seen below with an additional 7-day average line.</p>
 <div class="center">
-<p><img src="Epicurve.png" style="width:75.0%" alt="image" /></p>
+<p><img src="coronavirus/Epicurve.png" style="width:75.0%" alt="image" /></p>
 </div>
 <h2 class="unnumbered" id="analytic-epidemiology">Analytic Epidemiology</h2>
 <p>In the case of COVID-19, descriptive epidemiology established that it spreads between people, and we can begin linking patients to other patients. All of the spread comes from a small number of patients (probably just one) present when the disease jumped from animal to human (it is known as a zoonotic disease because it originates from animals). At this point, we can move on to lab-test patients to identify the new strain. However, not all outbreaks are spread person-to-person. Some have what is known as a common source, like contaminated food or water. In this case, we can perform a case-control trial to investigate possible risk factors and how many people were exposed to them. For example, say a number of people went to a particular restaurant and got sick with a particular gastrointestinal illness. We can build out contingencies and calculate odds ratios for each risk factor (the ratio between the odds that someone got sick given that they had the risk factor vs. that they didn’t).</p>
@@ -332,13 +330,13 @@ img {
 <h2 class="unnumbered" id="covid-19-case-fatality-rate">COVID-19 Case-Fatality Rate</h2>
 <p>Likely the most important factor to consider for a disease is the Case-Fatality Rate. While a lot of people getting sick is a threat to their ability to work, people dying is clearly far worse. The following table is the result of an analysis performed in early March in an attempt to compute the mortality rate.</p>
 <div class="center">
-<p><img src="CFR.png" alt="image" /></p>
+<p><img src="coronavirus/CFR.png" alt="image" /></p>
 </div>
 <p>* These first numbers are simply totals as of March 5th. † These adjusted numbers only count confirmed cases before February 21st, only count deaths among those with confirmed cases before February 21st. The adjustment of the numbers prevents two mathematical issues. The first is overcounting cases relative to deaths because there are existing cases which will end up as deaths. The second is undercounting cases because there are existing cases which have not yet been discovered. The February 21st date was picked under the assumption that 2 weeks after confirmation of having the disease one would either die or recover. Clearly, none of the rates are the be-all end-all - they wildly vary from each other for a number of reasons. The most important of these reasons is the response of the healthcare system, which was likely poorer among the earliest cases of the disease in each country. This likely inflated the CFR for the whole of China (which includes a large number of the earliest patients in Hubei Province), as well as for the 82 other countries and territories just beginning to experience the disease. Ultimately, this mathematical uncertainty is in fact a positive sign that proper healthcare can improve outcomes.</p>
 <h2 class="unnumbered" id="age-specific-case-fatality-rates">Age-Specific Case-Fatality Rates</h2>
 <p>A Centers for Disease Control (CDC) study sheds more light on the situation by breaking the fatality down by age. It found the overall CFR to be about <span class="math inline">\(2.5\%\)</span>, but the age-specific case-fatality rates vary wildly from <span class="math inline">\(0\%\)</span> to more than <span class="math inline">\(10\%\)</span>. These numbers are important because they help suggest who is most at risk due to the disease. However, they are also from relatively early in the disease so they could be skewed toward having more deaths than will ultimately occur.</p>
 <div class="center">
-<p><img src="CFRbyAge.png" alt="image" /></p>
+<p><img src="coronavirus/CFRbyAge.png" alt="image" /></p>
 </div>
 <p>*Ranges were determined due to missing data on subjects (these are the maximum and minimum possible percentages given data known).</p>
 <h1 class="unnumbered" id="modelling-disease-spread">Modelling Disease Spread</h1>
@@ -348,15 +346,15 @@ img {
 <h2 class="unnumbered" id="flattening-the-curve">Flattening the Curve</h2>
 <p>Without medication that acts as treatment to make recovery quicker (that is, <span class="math inline">\(o\)</span> larger), and without vaccination that allows people in the susceptible category to move directly to the recovered/immune category, the only factor we can affect is <span class="math inline">\(r\)</span>. In effect, this means we need to reduce people’s contact with one another. The graphs that follow will show a purple line representing susceptible individuals, an orange line representing infected individuals, and a green ine represenging recovered individuals.</p>
 <div class="center">
-<p><img src="49.png" style="width:45.0%" alt="image" /></p>
+<p><img src="coronavirus/49.png" style="width:45.0%" alt="image" /></p>
 </div>
 <p>In this first scenario, <span class="math inline">\(r=0.00049\)</span>, which means each person with the disease comes into contact and transmits the disease to thousands of others. This is a disaster scenario, and practically impossible, which results in most of the population being simultaneously infected at one point in time. Clearly, we never are going to have this situation because humans just don’t come into contact with one another this quickly.</p>
 <div class="center">
-<p><img src="21.png" style="width:45.0%" alt="image" /></p>
+<p><img src="coronavirus/21.png" style="width:45.0%" alt="image" /></p>
 </div>
 <p>In a more plausible yet still very deadly scenario, we can get a flatter curve as shown above. The curve at the left is the <span class="math inline">\(r = 0.00021\)</span> scenario. This would still be a bad situation because our hospital capacity is not sufficient to hold so much of the world’s population at once. For that reason, we need to reduce the transmission, flattening the curve to the point where everyone can get medical care, and therefore reducing the death rate.</p>
 <div class="center">
-<p><img src="13.png" style="width:45.0%" alt="image" /></p>
+<p><img src="coronavirus/13.png" style="width:45.0%" alt="image" /></p>
 </div>
 <p>Ultimately, with isolation measures, including those that we are experiencing at the time of writing (late March and April), we can reduce the curve even further. The curve at the right is the <span class="math inline">\(r = 0.00013\)</span> scenario. This would be a significant improvement, as hospitals may be able to handle the inflow to a better extent. Furthermore, if even better isolation measures are enacted, the purple curve (susceptibles) won’t hit 0, but will flatten out higher. This means that the whole population does not end up having to get it before the disease burns out (tihs will be discussed more later with regards to herd immunity).</p>
 <h1 class="unnumbered" id="control-measures">Control Measures</h1>
@@ -364,7 +362,7 @@ img {
 <h2 class="unnumbered" id="testing">Testing</h2>
 <p>Generally, screening for the disease and diagnosing patients who have the disease is the first and most important step in controlling disease. To do this, however, we must create a test that accurately and efficiently diagnoses the disease. To provide a bit of scientific background, tests can be looking for the pathogen itself or the antibodies your body produces to fight the pathogen. The former is known as a molecular test - it is more common, and involves a swab of the back of the throat to test for the presence of the infection. The latter is known as a serological test - it is more useful for people with a mild infection with the disease to test their bloodstream for the antibodies as the infection may be hard to detect in their throat.</p>
 <div class="wrapfigure">
-<p><span>l</span><span>0.55</span> <img src="PredictiveTests.png" style="width:55.0%" alt="image" /></p>
+<p><img src="coronavirus/PredictiveTests.png" style="width:55.0%" alt="image" /></p>
 </div>
 <p>No matter which type of test, we want maximal accuracy - that is, the test should say whether the patient has or doesn’t have the disease correctly as frequently as possible. However, accuracy is not the only possible measure for a disease. The table at left, is helpful for visualizing how there are a number of different values we are interested in when evaluating a test. We have to be concerned about both false positives and false negatives. Oftentimes, a high accuracy can be misleading. For a rare disease, for example, high accuracy may not mean a high positive predictive value. Say 100 people have the disease and 10000 don’t, and say the test gets 95% of people right. Then, 500 people will be diagnosed with the disease who don’t have it. Meanwhile, 95 people will be diagnosed with the disease who do have it. This ends up meaning false positives can outweigh true positives, making a positive diagnosis less meaningful or useful. On the other hand, for a more common disease like COVID-19, the issue will instead be sensitivity. In particular, we can have a relatively accurate test that still produces a number of false negatives due to how many people have the disease. Any false negatives are an enormous issue as they could spread it to other people unknowingly. In fact, an early COVID-19 test had an issue where a number of false negatives were produced.</p>
 <h2 class="unnumbered" id="chain-of-infection">Chain of Infection</h2>
