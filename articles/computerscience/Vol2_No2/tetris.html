@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Tetris | Math and CS Research">
-    <meta name="keywords" content="Math, CS, Mathematics, Computer Science, Research">
+    <meta name="keywords" content="Tetris, Game Tree, Heuristics, Algorithms, Complexity">
     <meta name="author" content="Jeremy Ku-Benjet">
   <meta property="og:title" content="Math and CS Research">
   <meta property="og:type" content="article" />
@@ -241,11 +241,11 @@ img {
 </header></center>
 <p>Tetris is a popular puzzle game by Alexey Pajitnov in which the player is given various shaped blocks to place on a rectangular board. The shapes are commonly called <span class="math inline">\(I,T,S,Z,L,J,\)</span> and <span class="math inline">\(O\)</span>, each corresponding with the similar looking shape.</p>
 <figure>
-<center><img src="/articles/computerscience/Vol2_No2/tetris/Tetrominoes.PNG" style="width: 45%; min-width: 300px;" alt="Image taken from wikipedia" />
+<center><img src="/articles/computerscience/Vol2_No2/tetris/Tetrominoes.PNG" style="width: 45%; min-width: 300px;" alt="Image taken from Wikipedia" />
 </figure></center>
 <p>The player can rotate the blocks or move them horizontally before placing them. When a unbroken line of blocks fills a row, the row is cleared.</p>
 <div class="wrapfigure">
-<center><p><img src="/articles/computerscience/Vol2_No2/tetris/computation.png" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+<center><p><img src="/articles/computerscience/Vol2_No2/tetris/computation.png" style="width: 45%; min-width: 300px;" alt="Image of Tetris" /></p></center>
 </div>
 <p>Along with manually playing the game, there has been study into optimal strategies for the game along with its algorithmic complexity.</p>
 <p>The first question is what we want an algorithm to do. What is its input, and what is its output? The most natural way to think about Tetris is putting the computer in the same situation we, as the player, are put in. That is the algorithm knows the current state of the board and the next piece to place. This is the “online" Tetris puzzle, meaning it processes information as it becomes available. As the algorithm doesn’t have all the information at once, finding an optimal solution to a given piece sequence is not always possible. Therefore, the number of cleared lines is often used as a metric for success. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
