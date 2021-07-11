@@ -239,22 +239,22 @@ img {
 <center><header id="title-block-header">
 <h1 class="title">Spherical Fullerenes</h1>
 <p class="author">Theo Schiminovich</p>
-</header>
+</header></center>
 <h1 id="defining-fullerenes-and-the-buckyball">Defining Fullerenes and the Buckyball</h1>
 <p>Allotropes are different physical forms in which an element can exist. Each element has a different number of allotropes. Because a carbon atom can make up to four covalent bonds with other atoms, it has a very large number of allotropes. Some of these allotropes are well known. Diamond is an incredibly hard carbon allotrope in which all carbon atoms in the substance are connected by covalent bonds. Graphite is a very weak allotrope in which carbon atoms are bonded together in hexagonal sheets, which are loosely attracted to each other. Some are less well known. Graphene is an allotrope consisting of one hexagonal sheet of carbon. Double bonds scattered around the sheet allow each carbon atoms to have four bonds, making this allotrope incredibly strong. Nanotubes are another strong carbon allotrope in which a hexagonal sheet is wrapped into a tube. Fullerenes are yet another carbon allotrope in which this network of carbon atoms is wrapped into a ball. That is the allotrope which I will be focusing on. Fullerenes can vary in size. However, all fullerenes have a few features in common. Every carbon in the fullerene is bonded to three other carbons (with one covalent bond connecting to each carbon, to give each carbon four covalent bonds in total). The gaps between the carbons will form pentagons or hexagons, and there will always be exactly twelve pentagons. The smallest possible fullerene contains twenty carbons, and is therefore called <span class="math inline">\(C_{20}\)</span>. The gaps between the carbons form twelve pentagons and zero hexagons. This shape is also known as a dodecahedron. However, this fullerene is extremely unstable. It is difficult to synthesize and it does not last long. This is because of the bond positions. The ideal positions for the three bonds emanating from each carbon would be 120 degrees from each other on the same plane. However, since this fullerene is small, these bonds are forced much closer to each other than they want to be, creating extreme instability.</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/C20.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/C20.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <p>Some other small and uncommon fullerenes are <span class="math inline">\(C_{28}\)</span> with <span class="math inline">\(28\)</span> carbons, <span class="math inline">\(C_{36}\)</span> with <span class="math inline">\(36\)</span> carbons, and <span class="math inline">\(C_{50}\)</span> with <span class="math inline">\(50\)</span> carbons. The first common fullerene is <span class="math inline">\(C_{60}\)</span> with <span class="math inline">\(60\)</span> carbons. This is the smallest fullerene in which no pentagons are touching each other, which makes it more stable than the others previously listed. This specific fullerene is also known as a buckyball. It can be recognized as the pattern on the surface of a soccer ball. Another quite common fullerene is <span class="math inline">\(C_{70}\)</span>, with 70 carbons.</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/C60.pdf" style="width: 45%; min-width: 300px;" alt="image" /> <img src="/articles/research/Vol2_No2/bucky-balls/C70.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/C60.jpg" style="width: 45%; min-width: 300px;" alt="image" /> <img src="/articles/research/Vol2_No2/bucky-balls/C70.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <h1 id="spherical-fullerenes">Spherical Fullerenes</h1>
 <p>I focused specifically on spherical fullerenes. These are fullerenes that are symmetrical about each pentagonal face; if a spherical fullerene was drawn two times, once with one pentagonal face facing upward and once with some other pentagonal face facing upward, the two drawings would look identical. These pentagonal faces are also spaced equally apart on the fullerene. The smallest spherical fullerene is <span class="math inline">\(C_{20}\)</span>, the dodecahedron. The second smallest spherical fullerene is <span class="math inline">\(C_{60}\)</span>, the buckyball. There are infinitely many fullerenes, but all of the rest are larger in size.</p>
 <h2 id="classifying-spherical-fullerenes">Classifying Spherical Fullerenes</h2>
 <p>(This proof is attributed to the MathILy summer program) Consider a pathway drawn along the surface of a spherical fullerene. Define a step to be moving across a side from one hexagon/pentagon to another hexagon/pentagon. Then, consider how many steps you will have to take to get from one pentagon to the closest pentagon (any pentagon on a spherical fullerene will have five pentagons which are equidistant to it, and any of those five can be used) by taking <span class="math inline">\(m\)</span> steps in one direction, and then turning left <span class="math inline">\(60\)</span> degrees and taking <span class="math inline">\(n\)</span> steps in that direction. You can then call that shape an <span class="math inline">\((m,n)\)</span> spherical fullerene. An example for <span class="math inline">\(C_{60}\)</span> is pictured below. Using this technique, <span class="math inline">\(C_{60}\)</span> can be determined to be the <span class="math inline">\((1,1)\)</span> spherical fullerene.</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/C60classify.pdf" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/C60classify.jpg" alt="image" /></p>
 </div>
 <p>However, an <span class="math inline">\((m,n)\)</span> spherical fullerene is the same as an <span class="math inline">\((n,m)\)</span> spherical fullerene, so to simplify things, both can be called a (max<span class="math inline">\((m,n),\)</span>min<span class="math inline">\((m,n))\)</span> spherical fullerene. Examples:</p>
 <ul>
@@ -276,11 +276,11 @@ img {
 <h2 id="proof">Proof</h2>
 <p>(This proof is attributed to the MathILy summer program) One can start by trying to find how many vertices there are. A good way to do this is to break up the surface of the spherical fullerene. This can be done by drawing points at the center of each pentagon and connecting them. This creates a polyhedron with <span class="math inline">\(12\)</span> vertices, <span class="math inline">\(30\)</span> edges, and <span class="math inline">\(20\)</span> triangular faces: an icosahedron. I’ll find how many vertices are in each icosahedron, and multiply by <span class="math inline">\(20\)</span> to get the total. Each triangular face is bounded by one pentagon at each vertex. Therefore, each triangular face can be "flattened out" into a region of hexagons with three pentagons on the edges. Example:</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/icosahedralzone.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/icosahedralzone.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <p>As except for the three pentagons on the corners, these are all hexagons of equal size, the centers of these pentagons and hexagons can be drawn as the intersection points of an isometric grid. The shortest path between any two pentagons on the grid is shown in the image below. There is a pentagon at each end of the orange and purple path. A path between them can be drawn by going <span class="math inline">\(m\)</span> units forward from a pentagon, then turning left and moving <span class="math inline">\(n\)</span> units.</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/path.pdf" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/path.jpg" alt="image" /></p>
 </div>
 <p>As the three pentagons surrounding this triangular face are equidistant from each other, the third pentagon will be centered at one of the vertices on this plane such that it would create an equilateral triangle with the other two pentagons. Each triangle represents the thing that is surrounded by three hexagons or pentagons: a vertex. Therefore, if I find how many triangles there are in each triangular face, I can find how many vertices are in each face, on average. Each small triangle has an area <span class="math inline">\(\frac{\sqrt{3}}{4}\)</span> and our larger equilateral triangle has an area <span class="math inline">\(\frac{s^2\sqrt{3}}{4}\)</span>, where <span class="math inline">\(s\)</span> is the distance between two pentagons. Therefore, there are <span class="math inline">\(s^2\)</span> little triangles in the large triangle. <span class="math inline">\(s^2 = (m+\frac{n}{2})^2 + (\frac{n\sqrt{3}}{2})^2\)</span> <span class="math inline">\(s^2 = m^2 + mn + \frac{n^2}{4} + \frac{3n^2}{4}\)</span> <span class="math inline">\(s^2 = m^2 + mn + n^2\)</span> There are <span class="math inline">\(m^2 + mn + n^2\)</span> vertices in each triangular face, which means there are <span class="math inline">\(20(m^2 + mn + n^2)\)</span> vertices on an <span class="math inline">\((m,n)\)</span> spherical fullerene. <span class="math inline">\(3\)</span> edges connect to each vertex, and each edge connects <span class="math inline">\(2\)</span> vertices. Therefore, there are <span class="math inline">\(\frac{3}{2}\cdot20(m^2 + mn + n^2) = 30(m^2 + mn + n^2)\)</span> edges on an <span class="math inline">\((m,n)\)</span> spherical fullerene. By Euler’s formula, for a polyhedron <span class="math inline">\(F + V - E = 2\)</span>. This can be rewritten as <span class="math inline">\(F = E - V + 2\)</span>. Therefore, there are <span class="math inline">\(10(m^2+mn+n^2)+2\)</span> faces. We already know that <span class="math inline">\(12\)</span> of these faces are pentagons. Therefore, there are <span class="math inline">\(10(m^2+mn+n^2) - 10 = 10(m^2+mn+n^2-1)\)</span> hexagons on a <span class="math inline">\((m,n)\)</span> spherical fullerene. In summary:</p>
 <ul>
@@ -301,20 +301,20 @@ img {
 <h1 id="schlegel-diagrams">Schlegel Diagrams</h1>
 <p>It can be difficult to visualize spherical fullerenes, as they are 3D solids. A solution is to use Schlegel diagrams, which are 2D representations of the faces of 3D solids. Distances are distorted, but all edges, faces, and vertices correspond. Edges are represented as lines and vertices are represented as their intersections. Faces are represented as the spaces between the lines. The exterior represents an additional face. Here’s an example for the (1,1) spherical fullerene (C60). All vertices are numbered.</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/C60 Schlegel.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/C60 Schlegel.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <h1 id="schlegel-diagrams-of-hamiltongons">Schlegel Diagrams of Hamiltongons</h1>
 <p>Here are some examples of pairs of Hamiltongons for the three smallest spherical fullerenes. The two colors correspond to the two Hamiltongons, and the loop that I am looking for runs along the perimeter between the two colors. For the (1,0) spherical fullerene (C20):</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/C20 Halfgons.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/C20 Halfgons.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <p>For the (1,1) spherical fullerene (C60):</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/C60 Halfgons.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/C60 Halfgons.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <p>For the (2,0) spherical fullerene (C80):</p>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/C80 Halfgons.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/C80 Halfgons.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <h1 id="proof-part-2-separating-pentagons-and-hexagons-by-rings">Proof Part 2: Separating Pentagons and Hexagons by Rings</h1>
 <p>Pentagons and hexagons can be separated by rings based on their distance from a chosen pentagon, which can be called Pentagon <span class="math inline">\(P\)</span>. The distance from pentagon/hexagon <span class="math inline">\(Q\)</span> to pentagon <span class="math inline">\(P\)</span> can be defined in the following manner: The distance is the minimum number of edges a line traced along the exterior of the spherical fullerene, which does not pass through any vertices, must cross to get from pentagon <span class="math inline">\(P\)</span> to pentagon/hexagon <span class="math inline">\(Q\)</span>. Pentagon <span class="math inline">\(P\)</span> is a distance <span class="math inline">\(0\)</span> from itself. Because the pentagons are spaced symmetrically on the spherical fullerene as far apart as possible, there will be a diametrically opposed pentagon to pentagon <span class="math inline">\(P\)</span>, as the 3D shape for which twelve centers of faces are spaced as far apart as possible is the dodecahedron, and that shape has diametrically opposed pentagons. This diametrically opposed pentagon will be the farthest pentagon/hexagon on the shape from pentagon <span class="math inline">\(P\)</span>. It can be said to be in ring <span class="math inline">\(d\)</span>. This means every other pentagon or hexagon is some distance from <span class="math inline">\(1\)</span> to <span class="math inline">\(d-1\)</span> away from pentagon <span class="math inline">\(P\)</span>. It also means that there are <span class="math inline">\(d+1\)</span> rings. When I continue the proof, I will break the spherical fullerenes into two cases: those for which <span class="math inline">\(d\)</span> is odd (and the number of rings is even), and those for which <span class="math inline">\(d\)</span> is even (and the number of rings is odd).</p>
@@ -335,7 +335,7 @@ img {
 </ol>
 <h3 id="example">Example</h3>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/singlespiral.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/singlespiral.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <h3 id="problems">Problems</h3>
 <p>This process can fail when you are moving to the next ring. This is because sometimes there is only one polygon bordering the polygon you are moving up from into the next ring, and that polygon is also bordering the polygon just counterclockwise of the one you are moving up from, creating a group of three polygons in the hamiltongon surrounding the same vertex. This is bad as the perimeter would not go through that vertex, breaking a rule.</p>
@@ -354,7 +354,7 @@ img {
 </ol>
 <h3 id="example-1">Example</h3>
 <div class="center">
-<p><img src="/articles/research/Vol2_No2/bucky-balls/C60 Halfgons.pdf" style="width: 45%; min-width: 300px;" alt="image" /></p>
+<p><img src="/articles/research/Vol2_No2/bucky-balls/C60 Halfgons.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
 </div>
 <h3 id="problems-1">Problems</h3>
 <p>This process faces the same problem as the single spiral method.</p>
