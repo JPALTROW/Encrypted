@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generating Functions and their Applications | Math and CS Research">
+    <meta name="keywords" content="COVID, Epidemiology, Modelling, Herd Immunity, Differential Equations">
+    <meta name="author" content="Khizer Shahid and Benjamin Gallai">
+  <meta property="og:title" content="Math and CS Research">
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://mathcsr.org/logo.png">
+  <meta property="og:description" content="A Math and CS Research Publication">
+  <meta property="og:url" content="">
+  <meta property="fb:app_id" content="712553486189960">
+    <title>Generating Functions and their Applications | Math and CS Research</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X001RVXZHZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X001RVXZHZ');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-181200311-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-181200311-1');
+</script>
+
+   <script type="text/javascript">
+var _0x16d0=['metaKey','6bwtPsH','addEventListener','oncontextmenu','captureEvents','639214bwFvNj','navigator','1239226ymjEuu','46135YiXdag','MOUSEDOWN','getElementById','layers','454159UdgjyX','onmouseup','my-img','all','keydown','728336CVUjpS','ctrlKey','return\x20false','762977DDKmwr','1364924DSPnLI','1BUTpXD','Mac','getElementsByClassName','which','onmousedown','preventDefault'];var _0x2613=function(_0xf00521,_0x34da6a){_0xf00521=_0xf00521-0x194;var _0x16d0df=_0x16d0[_0xf00521];return _0x16d0df;};var _0x5316dc=_0x2613;(function(_0x25c512,_0x110ec0){var _0x598568=_0x2613;while(!![]){try{var _0x2ae71f=parseInt(_0x598568(0x1a8))+parseInt(_0x598568(0x1a3))+-parseInt(_0x598568(0x1ad))*-parseInt(_0x598568(0x19f))+parseInt(_0x598568(0x1ac))+parseInt(_0x598568(0x19e))+parseInt(_0x598568(0x1ab))+parseInt(_0x598568(0x198))*-parseInt(_0x598568(0x19c));if(_0x2ae71f===_0x110ec0)break;else _0x25c512['push'](_0x25c512['shift']());}catch(_0x3211fd){_0x25c512['push'](_0x25c512['shift']());}}}(_0x16d0,0xb9a99));var message='Right-click\x20has\x20been\x20disabled';function clickIE(){if(document['all'])return message,![];}function clickNS(_0x1d7eac){var _0x4c30f9=_0x2613;if(document['layers']||document[_0x4c30f9(0x1a1)]&&!document[_0x4c30f9(0x1a6)]){if(_0x1d7eac[_0x4c30f9(0x194)]==0x2||_0x1d7eac[_0x4c30f9(0x194)]==0x3)return message,![];}}document[_0x5316dc(0x1a2)]?(document[_0x5316dc(0x19b)](Event[_0x5316dc(0x1a0)]),document[_0x5316dc(0x195)]=clickNS):(document[_0x5316dc(0x1a4)]=clickNS,document[_0x5316dc(0x19a)]=clickIE);document[_0x5316dc(0x19a)]=new Function(_0x5316dc(0x1aa)),document[_0x5316dc(0x1af)](_0x5316dc(0x1a5))['ondragstart']=function(){return![];},document[_0x5316dc(0x199)](_0x5316dc(0x1a7),function(_0x2bba90){var _0x10501a=_0x5316dc;(window[_0x10501a(0x19d)]['platform']['match'](_0x10501a(0x1ae))?_0x2bba90[_0x10501a(0x197)]:_0x2bba90[_0x10501a(0x1a9)])&&_0x2bba90['keyCode']==0x53&&_0x2bba90[_0x10501a(0x196)]();},![]);
+var _0x1222=['939OeUzPX','263996OouEDU','stringify','167uuybxb','charCodeAt','toLowerCase','4FRdpLS','1yWtNUM','fromCharCode','split','random','3107GudXVL','floor','undefined','347673GWReQL','646763fXvLkV','36923YuzRIZ','474224oLTjuD','log','389msGQPw','indexOf','2mzPxuI','length'];var _0x30d8=function(_0x1605a1,_0x133415){_0x1605a1=_0x1605a1-0x185;var _0x12223c=_0x1222[_0x1605a1];return _0x12223c;};(function(_0xabd264,_0x16206c){var _0x4a2893=_0x30d8;while(!![]){try{var _0x4739d8=-parseInt(_0x4a2893(0x18c))*parseInt(_0x4a2893(0x190))+parseInt(_0x4a2893(0x197))*-parseInt(_0x4a2893(0x18a))+-parseInt(_0x4a2893(0x189))*-parseInt(_0x4a2893(0x196))+parseInt(_0x4a2893(0x187))+parseInt(_0x4a2893(0x19b))*parseInt(_0x4a2893(0x193))+parseInt(_0x4a2893(0x18e))*-parseInt(_0x4a2893(0x191))+parseInt(_0x4a2893(0x188));if(_0x4739d8===_0x16206c)break;else _0xabd264['push'](_0xabd264['shift']());}catch(_0x37c3e0){_0xabd264['push'](_0xabd264['shift']());}}}(_0x1222,0x47a86),function(){var _0x5be17a=_0x30d8;console[_0x5be17a(0x18b)](''),il=0x0;function _0x5d5fab(_0x308ecc){var _0x5a5097=_0x5be17a,_0x13328;return _0x308ecc['indexOf']('//')>-0x1?_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x2]:_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)](':')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)]('?')[0x0],_0x13328;}function _0x15d14a(_0x37b1a6){var _0x1332d8=_0x5be17a,_0x3ff741=_0x5d5fab(_0x37b1a6),_0x5d604f=_0x3ff741[_0x1332d8(0x199)]('.'),_0x55df6d=_0x5d604f['length'];if(_0x55df6d==0x2)_0x3ff741=_0x5d604f[0x0];else _0x55df6d>0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x2],_0x5d604f[_0x55df6d-0x2][_0x1332d8(0x18f)]==0x2&&_0x5d604f[_0x55df6d-0x1][_0x1332d8(0x18f)]==0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x3]));return _0x3ff741;}l=String[_0x5be17a(0x198)](0x4c,0x4f,0x43,0x41,0x54,0x49,0x4f,0x4e)[_0x5be17a(0x195)](),o=String[_0x5be17a(0x198)](0x6f,0x72,0x69,0x67,0x69,0x6e)[_0x5be17a(0x195)](),w=window[l][o],lcl=w[_0x5be17a(0x18d)](String[_0x5be17a(0x198)](0x6c,0x6f,0x63,0x61,0x6c));if(lcl<0x0||il==0x1)var _0x3d18d7=_0x15d14a(w);else return;var _0x51a8fd=[109,116,99,114],_0x5b30fc=[],_0x1a354a=[],_0x2da697='';x=0x0;while(x<_0x51a8fd['length']*0x2){_0x1a354a['push'](_0x3d18d7[_0x5be17a(0x194)](x)),x+=0x2;}if(JSON['stringify'](_0x1a354a)===JSON[_0x5be17a(0x192)](_0x51a8fd)){}else{var _0x1a9db3=0x0;for(var _0x27fa15 in window){_0x1a9db3++;if(_0x1a9db3>0xc8)try{z=Math[_0x5be17a(0x185)](Math[_0x5be17a(0x19a)]()*0x64),window[z]!==_0x5be17a(0x186)?window[_0x27fa15]=window[z]:window[_0x27fa15]=null;}catch(_0x380ed9){}}}}());
+</script>
+ 
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+.brand {
+    Position: absolute
+    left: 50%;
+    margin-left: -120px !important;
+-webkit-transform: translateX(+15%);
+   
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        body {
+         font-size: 1em;
+        }
+
+      }
+
+
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+.container-fluid {
+    padding-right: 14%;
+    padding-left: 14%;
+}
+    p {
+      margin: 1em 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+.title{
+    font-size: 2.5em;
+}
+    h1{
+      Font-size: 1.9em;
+    }
+    h2{
+      Font-size: 1.4em;
+    }
+    h3, h4 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h5, h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a>
+      </div>
+      <div class="col-4 text-center brand" >
+        <a class="blog-header-logo text-dark" href="/"><img src="/logo.png" class="img-responsive center-block" height='118' width='200'></a>
+      </div>
+	<div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary" href="/subscribe">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between ">
+      <a class="p-2 link-secondary" href="/">This Edition</a>
+      <a class="p-2 link-secondary" href="/appliedmath">Applied Math</a>
+      <a class="p-2 link-secondary" href="/computerscience">Computer Science</a>
+      <a class="p-2 link-secondary" href="/features">Features</a>
+      <a class="p-2 link-secondary" href="/problemsolving">Problem Solving</a>
+      <a class="p-2 link-secondary" href="/puzzles">Puzzles</a>
+      <a class="p-2 link-secondary" href="/research">Research</a>
+      <a class="p-2 link-secondary" href="/editions">Editions</a>
+      <a class="p-2 link-secondary" href="/staff">Staff</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container-fluid">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<center><header id="title-block-header">
+<h1 class="title">Generating Functions and their Applications</h1>
+<p class="author">Khizer Shahid and Benjamin Gallai</p>
+</header></center>
+<h1 id="what-is-a-generating-function">What is a Generating Function?</h1>
+<p>The <strong>generating function</strong> of a sequence <span class="math inline">\(a_0, a_1, a_2, a_3, \cdots\)</span> is the power series: <span class="math display">\[A(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3+\cdots + a_kx^k+\cdots\]</span> For example, the generating function for the sequence <span class="math inline">\(1, 2, 3, 4, 5, \cdots\)</span> is <span class="math inline">\(A(x) = 1+2x^2+3x^3+4x^4 +\cdots\)</span>. Additionally, the generating function for the Fibonacci sequence, <span class="math inline">\(0, 1, 1, 2, 3, 5, \cdots\)</span>, is <span class="math inline">\(B(x) = 0+x+x^2+2x^3+3x^4+5x^5\cdots\)</span>. Note that we are using the polynomial to keep track of information. We will not examine the convergence of a series in this paper; i.e., we may say that <span class="math display">\[\begin{aligned}
+1+x+x^2+x^3+x^4+x^5+\cdots = \frac{1}{1-x}.\end{aligned}\]</span> The function is only storing information about the polynomial. However, when we compute sums, we must check for convergence. For example, we cannot plug in <span class="math inline">\(x=2\)</span> into <span class="math inline">\(1+x+x^2+\cdots = \frac{1}{1-x}\)</span>; if we do we get the equation <span class="math inline">\(1+2+2^2+2^3+\cdots = -1\)</span>. Additionally, the reader should note that the left hand side of <span class="math inline">\((\star)\)</span> is a power series while the right hand side is a rational function.</p>
+<h1 id="finding-the-generating-function-of-a-sequence">Finding the Generating Function of a Sequence</h1>
+<p>We will find the generating function of a sequence below.</p>
+<div class="ex">
+<p><span>Fibonacci Generating Function</span>   Find the generating function for the Fibonacci sequence, <span class="math inline">\(\{ F_n\}_{n = 0} ^ {\infty} = \{0, 1, 1, 2, 3, 5, \cdots\}\)</span>, which is defined recursively as <span class="math inline">\(F_n = F_{n-1} + F_{n-2}\)</span> for <span class="math inline">\(n \ge 2\)</span> with <span class="math inline">\(F_0 = 0\)</span> and <span class="math inline">\(F_1 = 1\)</span>.</p>
+</div>
+<p>Let the generating function for <span class="math inline">\({F_n}\)</span> be <span class="math inline">\(F(x)\)</span>. By the definition of the generating function, we have</p>
+<p><span class="math display">\[\begin{aligned}
+F(x) &amp;=  F_0 + F_1x + F_2x^2 + F_3x^3 + F_4x^4 \cdots \\
+        &amp;=  0    + x +  1x^2 + 2x^3 + 3x^4+ \cdots\end{aligned}\]</span> Now, we must use the recurrence relationship. First, we will rewrite <span class="math inline">\(F(x) = \displaystyle\sum_{n\ge0} F_n x^n\)</span>. To apply the recurrence relationship, we need <span class="math inline">\(n \ge 2\)</span>. Hence, we can further rewrite this as <span class="math inline">\(\displaystyle\sum_{n\ge0} F_n x^n = F(x) = F_0 + F_1x  + \displaystyle\sum_{n\ge2} F_n x^n\)</span> . Now, we may apply the recurrence relationship. We have <span class="math display">\[\begin{aligned}
+ F(x) &amp;= F_0 + F_1x  + \sum_{n\ge2} F_n x^n \\
+ &amp;= 0 + x + \sum_{n\ge2} (F_{n-1} + F_{n-2}) x^n \\
+ &amp;=  x + \sum_{n\ge2} F_{n-1}  x^n + \sum_{n\ge2} F_{n-2}  x^n \\
+ &amp;=  x +  x\sum_{n\ge2} F_{n-1}  x^{n-1} + x^2\sum_{n\ge2} F_{n-2}  x^{n-2} \end{aligned}\]</span> Now, we have some expressions that look similar to our original expression for <span class="math inline">\(F(x)\)</span>. First, <span class="math display">\[\displaystyle\sum_{n\ge2} F_{n-2}  x^{n-2} = \displaystyle\sum_{j\ge 0} F_{j}  x^{j} = F(x)\]</span> Also, <span class="math display">\[\displaystyle\sum_{n\ge2} F_{n-1}  x^{n-1} = \displaystyle\sum_{n\ge 1} F_{n}  x^{n} = \displaystyle\sum_{n\ge 0} F_{n}  x^{n} - F_0 = F(x)\]</span> Hence,</p>
+<p><span class="math display">\[\begin{aligned}
+F(x) &amp;= x +  x\sum_{n\ge2} F_{n-1}  x^{n-1} + x^2\sum_{n\ge2} F_{n-2}  x^{n-2} \\
+&amp;= x + x \cdot (F(x) - F_0) + x^2 \cdot F(x) \\
+&amp;= x + xF(x) + x^2F(x) \end{aligned}\]</span> We may solve for <span class="math inline">\(F(x)\)</span>. Subtracting <span class="math inline">\(xF(x) + x^2 F(x)\)</span> from both sides, we have <span class="math display">\[\begin{aligned}
+x &amp;= F(x) - xF(x) - x^2F(x) \\
+&amp;= F(x) \left (1 - x - x^2 \right) \\\end{aligned}\]</span></p>
+<p>Dividing by <span class="math inline">\(1-x-x^2\)</span>, we have <span class="math inline">\(F(x) = \displaystyle\frac{x}{1-x-x^2}\)</span>. Again, we took a polynomial and turned it into a rational expression.</p>
+<h1 id="finding-the-closed-form-of-a-recurrence">Finding the Closed Form of a Recurrence</h1>
+<p>We have the generating function for the Fibonacci sequence. From this, we may find the closed form for <span class="math inline">\(F_n\)</span>.</p>
+<div class="ex">
+<p><span>Deriving Binet’s Formula</span>  Find the closed form for the <span class="math inline">\(n^{\text{th}}\)</span> term of the Fibonacci sequence.</p>
+</div>
+<p>We may do this by the partial fraction decomposition of <span class="math inline">\(F(x)\)</span>. In other words, we are trying to find <span class="math inline">\(A, B \in \mathbb{R}\)</span> such that <span class="math display">\[\frac{x}{1-x-x^2} = \frac{A}{\alpha - x} + \displaystyle\frac{B}{\beta - x} \tag{1}\]</span></p>
+<p>where <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are roots of <span class="math inline">\(x^2+x-1\)</span>, with <span class="math inline">\(\alpha &gt; \beta\)</span>, meaning that <span class="math inline">\(1-x-x^2 = - (x^2+x-1) = -(x-\alpha)(x-\beta) = - (\alpha - x)(\beta -x)\)</span>. Multiplying both sides of <span class="math inline">\((1)\)</span> by <span class="math inline">\((\alpha - x)(\beta -x)\)</span>, we have <span class="math display">\[\begin{aligned}
+\frac{x(\alpha - x)(\beta -x)}{1-x-x^2} &amp;= A(\beta -x) + B(\alpha -x) \\
+-x &amp;= A(\beta -x) + B(\alpha -x) \end{aligned}\]</span></p>
+<p>Plugging in <span class="math inline">\(x = \alpha\)</span> into <span class="math inline">\((2)\)</span>, we have <span class="math inline">\(-\alpha = A(\beta-\alpha) + B(\alpha - \alpha) = A(\beta - \alpha) \Rightarrow A = \frac{\alpha}{\alpha - \beta}\)</span>. Similarly, plugging in <span class="math inline">\(x = \beta\)</span> into <span class="math inline">\((2)\)</span>, we get <span class="math inline">\(B = \frac{\beta}{\beta - \alpha}\)</span>. Now, we can compute <span class="math inline">\(\alpha - \beta\)</span> using the fact that <span class="math inline">\((\alpha - \beta)^2 = (\alpha + \beta)^2 - 4\alpha\beta\)</span>. By Vieta’s formulas, <span class="math inline">\(\alpha + \beta = -1\)</span> and <span class="math inline">\(\alpha\beta = -1\)</span>, hence <span class="math inline">\((\alpha - \beta)^2 = (-1)^2 - 4\cdot (-1) = 5\)</span>. We will take <span class="math inline">\(\alpha - \beta\)</span> as <span class="math inline">\(\sqrt{5}\)</span>. Since <span class="math inline">\(\alpha - \beta = \sqrt{5} &gt; 0\)</span>, <span class="math inline">\(\alpha\)</span> is the larger of the two roots of <span class="math inline">\(x^2+x-1\)</span>. Therefore, <span class="math inline">\(A = \frac{\alpha}{\sqrt{5}}\)</span> and <span class="math inline">\(B = -\frac{\beta}{\sqrt{5}}\)</span>. Hence, we may write <span class="math inline">\(F(x)\)</span> as <span class="math inline">\(\dfrac{\frac{\alpha}{\sqrt{5}}}{\alpha - x} + \dfrac{-\frac{\beta}{\sqrt{5}}}{\beta - x} = \dfrac{1}{\sqrt{5}}
+\left ( \dfrac{\alpha}{\alpha - x} - \dfrac{\beta}{\beta - x} \right)\)</span>. Now, let’s try to rewrite <span class="math inline">\(\dfrac{\alpha}{\alpha - x}\)</span> and <span class="math inline">\(\dfrac{\beta}{\beta - x}\)</span>. These look similar to <span class="math inline">\(\frac{1}{1-x} = 1+x+x^2+x^3+\cdots\)</span>. We can manipulate <span class="math inline">\(\dfrac{\alpha}{\alpha - x}\)</span> to look more like <span class="math inline">\(\dfrac{1}{1-x}\)</span> by dividing the numerator and denominator by <span class="math inline">\(\alpha\)</span>: <span class="math inline">\(\dfrac{\alpha}{\alpha - x} = \dfrac{1}{1-\left(\frac{x}{\alpha} \right)}\)</span>. If <span class="math inline">\(\left| \dfrac{x}{\alpha}\right| &lt; 1\)</span>, we can rewrite <span class="math inline">\(\dfrac{1}{1-\left(\frac{x}{\alpha} \right)}\)</span> as the series <span class="math inline">\(1+ \left (\frac{x}{\alpha} \right) + \left (\frac{x}{\alpha} \right)^2 + \left (\frac{x}{\alpha} \right)^3 + \cdots\)</span>. Similarly, if <span class="math inline">\(\left| \dfrac{x}{\beta}\right| &lt; 1\)</span>, we can rewrite <span class="math inline">\(\frac{\beta}{\beta - x}\)</span> as <span class="math inline">\(1+ \left (\frac{x}{\beta} \right) + \left (\frac{x}{\beta} \right)^2 + \left (\frac{x}{\beta} \right)^3 + \cdots\)</span>. Hence, we can rewrite <span class="math inline">\(F(x)\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+F(x) &amp;= \frac{1}{\sqrt{5}} \left (\frac{\alpha}{\alpha - x} - \frac{\beta}{\beta - x} \right) \\
+&amp;= \frac{1}{\sqrt{5}} \left ( \left[ 1+ \left (\frac{x}{\alpha} \right) + \left (\frac{x}{\alpha} \right)^2 + \left (\frac{x}{\alpha} \right)^3 + \cdots \right] - \left[ 1+ \left (\frac{x}{\beta} \right) + \left (\frac{x}{\beta} \right)^2 + \left (\frac{x}{\beta} \right)^3 + \cdots \right] \right) \\
+&amp;= \frac{1}{\sqrt{5}} \left ( \sum_{n \ge 0} \left (\frac{x}{\alpha} \right)^n - \sum_{n \ge 0} \left (\frac{x}{\beta} \right)^n \right)
+= \frac{1}{\sqrt{5}} \left ( \sum_{n \ge 0} \left [  \left (\frac{x}{\alpha} \right)^n - \left (\frac{x}{\beta} \right)^n \right] \right) \\
+&amp;= \frac{1}{\sqrt{5}} \sum_{n \ge 0} \left [\frac{1}{\alpha^n} - \frac{1}{\beta^n} \right] x^n = \frac{1}{\sqrt{5}} \sum_{n \ge 0} \left [\frac{1}{\left (\tfrac{ -1+\sqrt{5}}{2} \right)^n} - \frac{1}{\left (\tfrac{ -1-\sqrt{5}}{2} \right)^n} \right]x^n \\
+&amp;= \frac{1}{\sqrt{5}} \sum_{n \ge 0} \left [\left (\frac{1+\sqrt{5}}{2} \right)^n - \left (\frac{1-\sqrt{5}}{2} \right)^n \right]x^n\end{aligned}\]</span></p>
+<p>Therefore, the coefficient of <span class="math inline">\(x^n\)</span> in <span class="math inline">\(F(x)\)</span> is <span class="math inline">\(\frac{1}{\sqrt{5}} \left [\left (\frac{1+\sqrt{5}}{2} \right)^n - \left (\frac{1-\sqrt{5}}{2} \right)^n \right]\)</span>. However, since we defined <span class="math inline">\(F(x)\)</span> as the generating function of <span class="math inline">\({F_n}\)</span>, the coefficient of <span class="math inline">\(x^n\)</span> is also <span class="math inline">\(F_n\)</span>. Hence, we have that <span class="math inline">\(F_n = \frac{1}{\sqrt{5}} \left [\left (\frac{1+\sqrt{5}}{2} \right)^n - \left (\frac{1-\sqrt{5}}{2} \right)^n \right]\)</span>. This is known as <span class="math inline">Binet&#39;s formula</span>.</p>
+<h1 id="transforming-generating-functions">Transforming Generating Functions</h1>
+<p>Given a generating function, <span class="math inline">\(A(x)\)</span>, for a sequence <span class="math inline">\(\{A_n\}\)</span>, what other generating functions can we find in terms of <span class="math inline">\(A(x)\)</span>? Well, the generating function for <span class="math inline">\(\{A_n + k \}\)</span> is <span class="math inline">\(A(x) + k + kx + kx^2 + \cdots = A(x) + \frac{k}{1-kx}\)</span>. Additionally, the generating function for <span class="math inline">\(\{kA_n\}\)</span> is <span class="math inline">\(kA(x)\)</span>. How can we get the generating function for a sequence like <span class="math inline">\(\{na_n\}\)</span>? Lets write out <span class="math inline">\(A(x)\)</span> first:</p>
+<p><span class="math display">\[A(x) = A_0 + A_1x + A_2x^2 + A_3x^3 + A_4x^4+\cdots\]</span></p>
+<p>Multiplying each term by its index is the same as multiple the term by the degree of its term. This can be done by differentiation! Taking the derivative of both sides with respect to <span class="math inline">\(x\)</span>, we have</p>
+<p><span class="math display">\[\begin{aligned}
+A&#39;(x) &amp;= 0 \cdot A_0 +  1 \cdot A_1 + 2 \cdot A_2x^1 + 3 \cdot A_3x^2 + 4 \cdot A_4x^3+\cdots \\
+&amp;= A_1 + 2A_2x + 3A_3x^2 + 4A_4x^3 +\cdots \\\end{aligned}\]</span> We also need to multiply by <span class="math inline">\(x\)</span> so that the degree of each term matches the index of the term. Hence, the desired generating function is <span class="math inline">\(xA&#39;(x)\)</span>.</p>
+<p>Similarly, let’s find the generating function of <span class="math inline">\(\left \{\dfrac{A_n}{n+1} \right\}\)</span>. If we integrate the general term of our generating function <span class="math inline">\(A_nx^n\)</span> with respect to <span class="math inline">\(x\)</span>, we get <span class="math inline">\(\dfrac{1}{n+1} A_n x^{n+1}\)</span>. Dividing by <span class="math inline">\(x\)</span>, we have <span class="math inline">\(\dfrac{A_n}{n+1} x^n\)</span>. Hence, the generating function of <span class="math inline">\(\left \{\dfrac{A_n}{n+1} \right\}\)</span> is <span class="math inline">\(\dfrac{1}{x} \displaystyle\int A(x) dx\)</span>.</p>
+<h1 id="convergence">Convergence</h1>
+<p>Now that we know about finding generating functions, what values of <span class="math inline">\(x\)</span> can we plug into them to yield answers that make sense? For example, if we plug in <span class="math inline">\(x = 1\)</span> into <span class="math inline">\(F(x) = \dfrac{x}{1-x-x^2} = \displaystyle\sum_{n \ge 0} F_n x^n\)</span>, we get <span class="math inline">\(\sum_{n \ge 0} F_n = \frac{1}{1-1-1} = -1\)</span>, which is obviously not true. In order to find the interval of convergence, we can use the ratio test. By the ratio test, we know that <span class="math inline">\(F(x) = \displaystyle\sum_{n \ge 0} F_n x^n\)</span> will converge if <span class="math inline">\(\displaystyle\lim_{n \to \infty} \left | \dfrac{F_{n+1} x^{n+1}}{F_n x^n} \right| &lt; 1\)</span>. Simplifying this, we have</p>
+<p><span class="math display">\[\begin{aligned}
+\lim_{n \to \infty} \left | \dfrac{F_{n+1} x^{n+1}}{F_n x^n} \right| = \lim_{n \to \infty} \left | \dfrac{F_{n+1}}{F_n} x \right| = |x| \lim_{n \to \infty} \left | \dfrac{F_{n+1}}{F_n} \right| &lt; 1\end{aligned}\]</span></p>
+<p>Hence, we must have <span class="math display">\[|x| &lt; \dfrac{1}{\displaystyle\lim_{n \to \infty} \left | \dfrac{F_{n+1}}{F_n} \right|} = \displaystyle\lim_{n \to \infty} \left | \dfrac{F_n}{F_{n+1}} \right|\]</span></p>
+<p>We just have to compute what <span class="math inline">\(\displaystyle\lim_{n \to \infty} \left | \dfrac{F_n}{F_{n+1}} \right| = \displaystyle\lim_{n \to \infty} \dfrac{F_n}{F_{n+1}} = L\)</span> is.</p>
+<p>We have</p>
+<p><span class="math display">\[\begin{aligned}
+\lim_{n \to \infty} \dfrac{F_n}{F_{n+1}} = \lim_{n \to \infty} \dfrac{F_n}{F_n + F_{n-1}} = \frac{1}{\displaystyle\lim_{n \to \infty} \tfrac{F_n + F_{n-1}}{F_n}} = \frac{1}{\displaystyle\lim_{n \to \infty} \left(1 + \tfrac{F_{n-1}}{F_n} \right)} = \frac{1}{1 + \displaystyle\lim_{n \to \infty} \tfrac{F_{n-1}}{F_n}} = \frac{1}{1 + \displaystyle\lim_{n \to \infty} \tfrac{F_{n}}{F_{n+1}}} \end{aligned}\]</span></p>
+<p>Therefore, <span class="math inline">\(L = \frac{1}{1+L} \Rightarrow L^2 + L - 1 =0\)</span>. Hence, <span class="math inline">\(L\)</span> is either <span class="math inline">\(\frac{-1+\sqrt{5}}{2}\)</span> or <span class="math inline">\(\frac{-1-\sqrt{5}}{2}\)</span>. However, <span class="math inline">\(L &gt; 0\)</span> and <span class="math inline">\(\frac{-1-\sqrt{5}}{2} &lt;0\)</span>, so <span class="math inline">\(L = \frac{-1+\sqrt{5}}{2}\)</span>. Plugging this into our inequality, we have that <span class="math inline">\(F(x)\)</span> will converge if <span class="math inline">\(|x| &lt;\frac{\sqrt{5}-1}{2}\)</span>. Since <span class="math inline">\(1 &gt; \frac{\sqrt{5}-1}{2}\)</span>, it is expected that we get a nonsensical answer.</p>
+<h1 id="computing-sums">Computing Sums</h1>
+<p>Now that we understand when generating functions converge, we can finally compute sums!</p>
+<div class="ex">
+<p><span>Fibonacci Sum</span>  Compute <span class="math display">\[\sum_{n = 0} ^{\infty} \frac{F_n}{2^n}.\]</span></p>
+</div>
+<p>We will present two solutions – one using manipulations and other using generating functions.</p>
+<p><em>Solution 1</em> Let <span class="math inline">\(S\)</span> be the desired sum.</p>
+<p>We have <span class="math display">\[\begin{aligned}
+S &amp;= \frac{F_0}{2^0} +  \frac{F_1}{2^1} + \frac{F_2}{2^2} + \frac{F_3}{2^3} +\cdots \\
+\frac{S}{2} &amp;= ~~~~~~~~  \frac{F_0}{2^1} +  \frac{F_1}{2^2} + \frac{F_2}{2^3} + \cdots\end{aligned}\]</span></p>
+<p>Subtracting the two equations, we have</p>
+<p><span class="math display">\[\begin{aligned}
+S - \frac{S}{2} &amp;= \frac{F_0}{2^0} +  \frac{F_1 - F_0}{2^1} + \frac{F_2 - F_1}{2^2} + \frac{F_3 - F_2}{2^3} +\cdots \\
+\frac{S}{2}&amp;= \frac{0}{1} + \frac{1}{2} + \frac{F_0}{2^2} + \frac{F_1}{2^3} +\cdots \\
+&amp;= \frac{1}{2} + \frac{S}{4}\end{aligned}\]</span></p>
+<p>Solving for <span class="math inline">\(S\)</span>, we have that <span class="math inline">\(S = 2\)</span>.</p>
+<p><em>Solution 2</em> Rewrite the given sum as <span class="math inline">\(\displaystyle\sum_{n = 0} ^{\infty} F_n \cdot \left(\frac{1}{2}\right)^n = F \left(\dfrac{1}{2} \right)\)</span>. Additionally, since <span class="math inline">\(\left|\frac{1}{2} \right| &lt; \left | \frac{\sqrt{5}-1}{2} \right|\)</span>, <span class="math inline">\(\frac{1}{2}\)</span> lies inside the interval of convergence of <span class="math inline">\(F(x)\)</span>. Hence, the requested sum is <span class="math inline">\(\dfrac{\frac{1}{2}}{1 - \frac{1}{2} - \left(\frac{1}{2}\right)^2} = 2\)</span>.</p>
+<p>Notice that in our generating function solution, we did not take the convergence of our series for granted, as in solution 1.</p>
+<div class="ex">
+<p> Compute <span class="math display">\[\sum_{n = 0} ^{\infty} \frac{1}{(n+1) \cdot 2^n}.\]</span></p>
+</div>
+<p>Let’s start of by replacing <span class="math inline">\(\dfrac{1}{2}\)</span> with <span class="math inline">\(x\)</span>; our new sum is <span class="math inline">\(\displaystyle\sum_{n = 0} ^{\infty} \dfrac{x^n}{n+1}\)</span>. The generating function for the sequence <span class="math inline">\(\{1\}\)</span> is <span class="math inline">\(1+x+x^2+x^3\cdots = \dfrac{1}{1-x}\)</span>. So we have <span class="math display">\[1 + x + x^2 +x^3 +\cdots = \frac{1}{1-x}\]</span></p>
+<p>Taking the integral of both sides with respect to <span class="math inline">\(x\)</span>, we have <span class="math display">\[x + \tfrac{1}{2} x^2 + \tfrac{1}{3} x^3 + \tfrac{1}{4} x^4 + \cdots = -\ln|x-1|\]</span></p>
+<p>Dividing both sides by <span class="math inline">\(x\)</span>, we have <span class="math display">\[1 + \tfrac{1}{2} x + \tfrac{1}{3} x^2 + \tfrac{1}{4} x^3 + \cdots = -\tfrac{1}{x}\ln|x-1|\]</span></p>
+<p>Using the ratio test on this series, we find that it converges for <span class="math inline">\(|x| &lt; 1\)</span>. Plugging in <span class="math inline">\(\frac{1}{2}\)</span>, we have that the desired sum is <span class="math inline">\(2\ln2\)</span>.</p>
+<div class="ex">
+<p> Compute <span class="math display">\[\sum_{n = 0} ^{\infty} \frac{F_n}{n!}.\]</span></p>
+</div>
+<p>For this problem, we cannot use the generating function we already found for <span class="math inline">\(\{F_n\}\)</span>. We must instead derive a generating function for <span class="math inline">\(\{\frac{F_n}{n!}\}\)</span>. We will call this sequence <span class="math inline">\(\{A_n\}\)</span>. We see that <span class="math inline">\(A_0=\frac{0}{0!}\)</span>, <span class="math inline">\(A_1=\frac{1}{1!}\)</span>, and <span class="math display">\[A_n = \frac{A_{n-1}(n-1)!+A_{n-2}(n-2)!}{n!}.\]</span> Removing fractions, we simplify to <span class="math display">\[n(n-1)A_n = (n-1)A_{n-1}+A_{n-2}. \tag{$\ast$}\]</span></p>
+<p>We can now write out the generating function <span class="math inline">\(A(x)=A_0+A_1x+A_2x^2+A_3x^3+\cdots\)</span>. Part of the motivation to have written <span class="math inline">\((\ast)\)</span> the way we did (as opposed to isolating <span class="math inline">\(A_n\)</span>), is that twice differentiating <span class="math inline">\(A(x)\)</span> will give us a very similar form</p>
+<p><span class="math display">\[\begin{aligned}
+A(x) &amp;= A_0+A_1x+A_2x^2+A_3x^3+\cdots \\
+A&#39;(x) &amp;= 1A_1 + 2A_2x + 3A_3x^2+4A_4x^3+\cdots \\
+A&#39;&#39;(x) &amp;= 2\cdot1A_2+3\cdot2A_3x+4\cdot3A_4x^2+5\cdot4A_5x^3+\cdots \\
+&amp;= (A_1+A_0) + (2A_2+A_1)x + (3A_3+A_2)x^2 + (4A_4+A_3)x^3 + \cdots \\
+&amp;= (A_1+2A_2x+3A_3x^2+\cdots) + (A_0+A_1x+A_2x^2) + \cdots \\
+&amp;= A&#39;(x) + A(x)\end{aligned}\]</span></p>
+<p>To solve this differential equation, we know that <span class="math inline">\(A(x)\)</span> must be of the form <span class="math inline">\(e^{ax}\)</span> or <span class="math inline">\(\sum e^{ix}\)</span>.</p>
+<p><span class="math display">\[\begin{aligned}
+a^2e^{ax} &amp;= ae^{ax} + e^{ax} \\
+a^2-a-1 &amp;= 0 \\
+a &amp;= \frac{1\pm\sqrt{5}}{2}\end{aligned}\]</span></p>
+<p>Thus, <span class="math inline">\(A(x)=pe^{\frac{1+\sqrt{5}}{2}x}+qe^{\frac{1-\sqrt{5}}{2}x}\)</span>. To solve for <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>, we use the fact that <span class="math inline">\(A(0)=A_0=0 \Rightarrow A(0)=p+q=0 \Rightarrow p=-q\)</span>. We also know that <span class="math inline">\(A&#39;(0) = A_1 = 1\)</span></p>
+<p><span class="math display">\[\begin{aligned}
+A&#39;(x)&amp;=p\frac{1+\sqrt{5}}{2}e^{\frac{1+\sqrt{5}}{2}}-p\frac{1-\sqrt{5}}{2}e^{\frac{1-\sqrt{5}}{2}} \\
+A&#39;(0)&amp;=p \left(\frac{1+\sqrt{5}}{2}-\frac{1-\sqrt{5}}{2} \right) =1\\
+\Rightarrow p&amp;=\frac{1}{\sqrt{5}}\end{aligned}\]</span></p>
+<p>Finally, we know that <span class="math inline">\(A(x)=\frac{e^{\frac{1+\sqrt{5}}{2}x}-e^{\frac{1-\sqrt{5}}{2}x}}{\sqrt{5}}\)</span>. Our desired sum is simply <span class="math inline">\(A(1) \approx \fbox{2.0143}\)</span>.</p>
+<h1 id="a-final-example">A Final Example</h1>
+<div class="ex">
+<p><span>Catalan Numbers</span>  Find the generating function for the Catalan numbers, which are defined by the recursion <span class="math inline">\(C_{n+1} = \displaystyle\sum_{i=0}^n C_iC_{n-i}\)</span> with <span class="math inline">\(C_0 = 1\)</span>.</p>
+</div>
+<p>Let <span class="math inline">\(C(x)= C_0 + C_1x+C_2x^2+C_3x^3+\cdots = 1 + x + 2x^2 + 5x^3 +\cdots\)</span> be the desired generating function. Seeing the product of two Catalan numbers, we are motivated to multiply <span class="math inline">\(C(x)\)</span> by itself. We will find <span class="math inline">\(C(x)^2\)</span> by finding the coefficient of each term.</p>
+<p>For the constant term, we must multiply the two constant terms together. Therefore, <span class="math inline">\(C(x)^2 = C_0 ^2 +\cdots\)</span></p>
+<p>For the <span class="math inline">\(x\)</span> term, we can multiply the <span class="math inline">\(C_0\)</span> from the first <span class="math inline">\(C(x)\)</span> with the <span class="math inline">\(C_1\)</span> from the second <span class="math inline">\(C(x)\)</span> or multiply the <span class="math inline">\(C_0\)</span> from the first <span class="math inline">\(C(x)\)</span> with the <span class="math inline">\(C_1\)</span> from the second <span class="math inline">\(C(x)\)</span>. Therefore, the coefficient of <span class="math inline">\(x\)</span> is <span class="math inline">\(C_0C_1 + C_1C_0\)</span>. However, this is just <span class="math inline">\(C_2\)</span>. So we can write <span class="math inline">\(C(x)^2 = C_0^2 + C_2x + \cdots\)</span>.</p>
+<p>In general, the <span class="math inline">\(x^{k}\)</span> term will be <span class="math inline">\(C_0C_k + C_1C_{k-1} + \cdots +C_kC_0 = C_{k+1}\)</span>. Therefore, <span class="math inline">\(C(x)^2 = C_0^2 + C_2x + C_3x^2 + \cdots + C_{k+1}x^k +\cdots\)</span>. Also, <span class="math inline">\(C_0 ^2 = 1 = C_1\)</span>, so we can write <span class="math inline">\(C(x)^2 = C_1 + C_2x + C_3x^2 + \cdots\)</span>. This is similar to <span class="math inline">\(C(x) = C_0+C_1x+ C_2 x^2 +\cdots\)</span>. We can connect the two: <span class="math inline">\(xC(x)^2 + C_0 = C(x) \Rightarrow xC(x)^2 - C(x) + 1 = 0\)</span>, which is a quadratic in <span class="math inline">\(C(x)\)</span>. Solving for <span class="math inline">\(C(x)\)</span>, we have <span class="math inline">\(C(x) = \frac{1 \pm \sqrt{1-4x}}{2x}\)</span>. In order to decide which one to choose, we will expand <span class="math inline">\(\sqrt{1-4x}\)</span>. To do this, we must use the generalized binomial theorem, which states that for any real <span class="math inline">\(r\)</span></p>
+<p><span class="math display">\[(1+x)^r = \sum_{n \ge 0} \binom{r}{n} x^n ~~\text{where}~~ \binom{r}{n} = \frac{r(r-1)(r-2)\cdots ( r-n+1)}{n!}\]</span> Using this, we have <span class="math display">\[\sqrt{1-4x} = \sum_{n = 0} ^{\infty} \binom{\tfrac{1}{2}}{n} (-4x)^n = \sum_{n=0} ^{\infty} \frac{(\frac{1}{2})(-\frac{1}{2})(-\frac{3}{2})\cdots(\frac{3-2n}{2})}{n!}(-4x)^n\]</span> Note that this is negative for all values of n, so we can take out a negative sign from the summation, and rewrite it as <span class="math display">\[-\sum_{n=0} ^{\infty} 2^n \frac{(2n-3)!!}{n!} x^n.\]</span> Here, the double exclamation marks represent the double factorial function, which only multiplies integers of same parity; for example, <span class="math inline">\(10!! = 10\cdot 8 \cdot 6 \cdot 4 \cdot 2\)</span>, while <span class="math inline">\(7!! = 7 \cdot 5 \cdot 3 \cdot 1\)</span>. Since the terms of our power series are positive, we must take the negative square root. Hence, <span class="math inline">\(C(x) = \frac{1 -\sqrt{1-4x}}{2x}\)</span>. We can even find the general term of our sequence. Substituting the power series expansion of <span class="math inline">\(\sqrt{1-4x}\)</span> into our generating function, we have <span class="math display">\[C(x) = \frac{1 + \displaystyle\sum_{n=0} ^{\infty} 2^n \frac{(2n-3)!!}{n!} x^n}{2x}.\]</span> The coefficient of <span class="math inline">\(x^n\)</span> is <span class="math display">\[\frac{2^{n+1} \tfrac{(2n-1)!!}{(n+1)!}}{2} = 2^{n} \cdot\frac{(2n-1)!!}{(n+1)!} = 2^{n} \cdot\frac{(2n-1)!!}{(n+1)!} \cdot \frac{(2n)!!}{(2n)!!} = 2^n \frac{(2n)!}{(2n)!!(n+1)!} = \frac{(2n)!}{n!(n+1)!} = \frac{\binom{2n}{n}}{n+1}.\]</span> Therefore, we have <span class="math inline">\(C_n = \displaystyle\frac{1}{n+1}\binom{2n}{n}\)</span>.</p>
+</main>
+</body>
+
+<script>
+var maxHeight = 0;
+
+$(".row").each(function () {
+    if ($(this).height() > maxHeight) {
+        maxHeight = $(this).height();
+    }
+});
+
+$(".row").height(maxHeight);
+</script>
+
+
+<footer class="blog-footer">
+  <a href="https://us7.list-manage.com/contact-form?u=bd1a0a18ff760b00bf541b12d&form_id=b47981c22ebecdf4a32acfec1a5f0fc7">Contact Us</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a><br>
+Copyright © 2021 Math and CS Research.
+</footer>
+  </body>
+</html>
+</body><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></html>
+
