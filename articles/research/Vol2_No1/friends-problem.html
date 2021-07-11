@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Friends Problem | Math and CS Research">
+    <meta name="keywords" content="COVID, Epidemiology, Modelling, Herd Immunity, Differential Equations">
+    <meta name="author" content="Declan Stacy">
+  <meta property="og:title" content="Math and CS Research">
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://mathcsr.org/logo.png">
+  <meta property="og:description" content="A Math and CS Research Publication">
+  <meta property="og:url" content="">
+  <meta property="fb:app_id" content="712553486189960">
+    <title>Friends Problem | Math and CS Research</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X001RVXZHZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X001RVXZHZ');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-181200311-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-181200311-1');
+</script>
+
+   <script type="text/javascript">
+var _0x16d0=['metaKey','6bwtPsH','addEventListener','oncontextmenu','captureEvents','639214bwFvNj','navigator','1239226ymjEuu','46135YiXdag','MOUSEDOWN','getElementById','layers','454159UdgjyX','onmouseup','my-img','all','keydown','728336CVUjpS','ctrlKey','return\x20false','762977DDKmwr','1364924DSPnLI','1BUTpXD','Mac','getElementsByClassName','which','onmousedown','preventDefault'];var _0x2613=function(_0xf00521,_0x34da6a){_0xf00521=_0xf00521-0x194;var _0x16d0df=_0x16d0[_0xf00521];return _0x16d0df;};var _0x5316dc=_0x2613;(function(_0x25c512,_0x110ec0){var _0x598568=_0x2613;while(!![]){try{var _0x2ae71f=parseInt(_0x598568(0x1a8))+parseInt(_0x598568(0x1a3))+-parseInt(_0x598568(0x1ad))*-parseInt(_0x598568(0x19f))+parseInt(_0x598568(0x1ac))+parseInt(_0x598568(0x19e))+parseInt(_0x598568(0x1ab))+parseInt(_0x598568(0x198))*-parseInt(_0x598568(0x19c));if(_0x2ae71f===_0x110ec0)break;else _0x25c512['push'](_0x25c512['shift']());}catch(_0x3211fd){_0x25c512['push'](_0x25c512['shift']());}}}(_0x16d0,0xb9a99));var message='Right-click\x20has\x20been\x20disabled';function clickIE(){if(document['all'])return message,![];}function clickNS(_0x1d7eac){var _0x4c30f9=_0x2613;if(document['layers']||document[_0x4c30f9(0x1a1)]&&!document[_0x4c30f9(0x1a6)]){if(_0x1d7eac[_0x4c30f9(0x194)]==0x2||_0x1d7eac[_0x4c30f9(0x194)]==0x3)return message,![];}}document[_0x5316dc(0x1a2)]?(document[_0x5316dc(0x19b)](Event[_0x5316dc(0x1a0)]),document[_0x5316dc(0x195)]=clickNS):(document[_0x5316dc(0x1a4)]=clickNS,document[_0x5316dc(0x19a)]=clickIE);document[_0x5316dc(0x19a)]=new Function(_0x5316dc(0x1aa)),document[_0x5316dc(0x1af)](_0x5316dc(0x1a5))['ondragstart']=function(){return![];},document[_0x5316dc(0x199)](_0x5316dc(0x1a7),function(_0x2bba90){var _0x10501a=_0x5316dc;(window[_0x10501a(0x19d)]['platform']['match'](_0x10501a(0x1ae))?_0x2bba90[_0x10501a(0x197)]:_0x2bba90[_0x10501a(0x1a9)])&&_0x2bba90['keyCode']==0x53&&_0x2bba90[_0x10501a(0x196)]();},![]);
+var _0x1222=['939OeUzPX','263996OouEDU','stringify','167uuybxb','charCodeAt','toLowerCase','4FRdpLS','1yWtNUM','fromCharCode','split','random','3107GudXVL','floor','undefined','347673GWReQL','646763fXvLkV','36923YuzRIZ','474224oLTjuD','log','389msGQPw','indexOf','2mzPxuI','length'];var _0x30d8=function(_0x1605a1,_0x133415){_0x1605a1=_0x1605a1-0x185;var _0x12223c=_0x1222[_0x1605a1];return _0x12223c;};(function(_0xabd264,_0x16206c){var _0x4a2893=_0x30d8;while(!![]){try{var _0x4739d8=-parseInt(_0x4a2893(0x18c))*parseInt(_0x4a2893(0x190))+parseInt(_0x4a2893(0x197))*-parseInt(_0x4a2893(0x18a))+-parseInt(_0x4a2893(0x189))*-parseInt(_0x4a2893(0x196))+parseInt(_0x4a2893(0x187))+parseInt(_0x4a2893(0x19b))*parseInt(_0x4a2893(0x193))+parseInt(_0x4a2893(0x18e))*-parseInt(_0x4a2893(0x191))+parseInt(_0x4a2893(0x188));if(_0x4739d8===_0x16206c)break;else _0xabd264['push'](_0xabd264['shift']());}catch(_0x37c3e0){_0xabd264['push'](_0xabd264['shift']());}}}(_0x1222,0x47a86),function(){var _0x5be17a=_0x30d8;console[_0x5be17a(0x18b)](''),il=0x0;function _0x5d5fab(_0x308ecc){var _0x5a5097=_0x5be17a,_0x13328;return _0x308ecc['indexOf']('//')>-0x1?_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x2]:_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)](':')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)]('?')[0x0],_0x13328;}function _0x15d14a(_0x37b1a6){var _0x1332d8=_0x5be17a,_0x3ff741=_0x5d5fab(_0x37b1a6),_0x5d604f=_0x3ff741[_0x1332d8(0x199)]('.'),_0x55df6d=_0x5d604f['length'];if(_0x55df6d==0x2)_0x3ff741=_0x5d604f[0x0];else _0x55df6d>0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x2],_0x5d604f[_0x55df6d-0x2][_0x1332d8(0x18f)]==0x2&&_0x5d604f[_0x55df6d-0x1][_0x1332d8(0x18f)]==0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x3]));return _0x3ff741;}l=String[_0x5be17a(0x198)](0x4c,0x4f,0x43,0x41,0x54,0x49,0x4f,0x4e)[_0x5be17a(0x195)](),o=String[_0x5be17a(0x198)](0x6f,0x72,0x69,0x67,0x69,0x6e)[_0x5be17a(0x195)](),w=window[l][o],lcl=w[_0x5be17a(0x18d)](String[_0x5be17a(0x198)](0x6c,0x6f,0x63,0x61,0x6c));if(lcl<0x0||il==0x1)var _0x3d18d7=_0x15d14a(w);else return;var _0x51a8fd=[109,116,99,114],_0x5b30fc=[],_0x1a354a=[],_0x2da697='';x=0x0;while(x<_0x51a8fd['length']*0x2){_0x1a354a['push'](_0x3d18d7[_0x5be17a(0x194)](x)),x+=0x2;}if(JSON['stringify'](_0x1a354a)===JSON[_0x5be17a(0x192)](_0x51a8fd)){}else{var _0x1a9db3=0x0;for(var _0x27fa15 in window){_0x1a9db3++;if(_0x1a9db3>0xc8)try{z=Math[_0x5be17a(0x185)](Math[_0x5be17a(0x19a)]()*0x64),window[z]!==_0x5be17a(0x186)?window[_0x27fa15]=window[z]:window[_0x27fa15]=null;}catch(_0x380ed9){}}}}());
+</script>
+ 
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+.brand {
+    Position: absolute
+    left: 50%;
+    margin-left: -120px !important;
+-webkit-transform: translateX(+15%);
+   
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        body {
+         font-size: 1em;
+        }
+
+      }
+
+
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+.container-fluid {
+    padding-right: 14%;
+    padding-left: 14%;
+}
+    p {
+      margin: 1em 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+.title{
+    font-size: 2.5em;
+}
+    h1{
+      Font-size: 1.9em;
+    }
+    h2{
+      Font-size: 1.4em;
+    }
+    h3, h4 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h5, h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a>
+      </div>
+      <div class="col-4 text-center brand" >
+        <a class="blog-header-logo text-dark" href="/"><img src="/logo.png" class="img-responsive center-block" height='118' width='200'></a>
+      </div>
+	<div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary" href="/subscribe">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between ">
+      <a class="p-2 link-secondary" href="/">This Edition</a>
+      <a class="p-2 link-secondary" href="/appliedmath">Applied Math</a>
+      <a class="p-2 link-secondary" href="/computerscience">Computer Science</a>
+      <a class="p-2 link-secondary" href="/features">Features</a>
+      <a class="p-2 link-secondary" href="/problemsolving">Problem Solving</a>
+      <a class="p-2 link-secondary" href="/puzzles">Puzzles</a>
+      <a class="p-2 link-secondary" href="/research">Research</a>
+      <a class="p-2 link-secondary" href="/editions">Editions</a>
+      <a class="p-2 link-secondary" href="/staff">Staff</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container-fluid">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<center><header id="title-block-header">
+<h1 class="title">Friends Problem</h1>
+<p class="author">Declan Stacy</p>
+</header></center>
+<h1 class="unnumbered" id="introduction">Introduction</h1>
+<div class="wrapfigure">
+<center><p><img src="articles/research/Vol2_No1/friends-problem/math2.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p></centeR>
+</div>
+<p><strong>Problem:</strong> Two friends want to meet up at some time between <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> pm, but neither friend remembers the time they agreed to meet. So, both come at a random time chosen uniformly between <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>. Both friends will wait <span class="math inline">\(15\)</span> minutes for the other before giving up and going home. What is the probability that they successfully meet?</p>
+<p>This is a problem that you may have heard of before and already know how to solve. In this article, I will present a solution and generalize the problem through the use of random variables, probability distributions, and expectation.</p>
+<h1 class="unnumbered" id="solution">Solution</h1>
+<p>One approach is to split the problem into cases. The first case is when both people arrive between 1:45 and 2. Since both friends will wait 15 minutes, they are guaranteed to meet if they both come within the same 15 minute interval. Thus, this case contributes <span class="math inline">\(\frac{1}{4} \cdot \frac{1}{4} = \frac{1}{16}\)</span> to the probability of them meeting (they both have a <span class="math inline">\(\frac{1}{4}\)</span> chance of arriving between 1:45 and 2).</p>
+<p>The second case is when the first person is the first to arrive and arrives before 1:45. In this case, the second person must arrive within 15 minutes of the first, which happens with probability <span class="math inline">\(\frac{1}{4}\)</span>. Since there is a <span class="math inline">\(\frac{3}{4}\)</span> chance of the first person arriving before 1:45, this case contributes <span class="math inline">\(\frac{1}{4} \cdot \frac{3}{4} = \frac{3}{16}\)</span> to the probability of them meeting.</p>
+<p>Similarly, the second person could be the first to arrive and arrive before 1:45, so the first person would have to arrive within 15 minutes of the second, which also happens with probability <span class="math inline">\(\frac{1}{4} \cdot \frac{3}{4} = \frac{3}{16}\)</span>.</p>
+<p>Thus, the answer is <span class="math inline">\(\frac{1}{16} + \frac{3}{16} + \frac{3}{16} = \boxed{\frac{7}{16}}\)</span>.</p>
+<p>This approach would work if the problem had more than two friends too, as long as they all are willing to wait for the same period of time. For example, if there were ten friends and each were willing to wait ten minutes, you could use the above approach to find the probability of the friends meeting. (As an exercise, try solving this problem for <span class="math inline">\(n\)</span> friends that will all wait <span class="math inline">\(t\)</span> hours.)</p>
+<p>However, what if one friend was particularly impatient and would only wait for five minutes? What if another had no life and would be fine waiting 45 minutes? This problem would require more cases.</p>
+<h1 class="unnumbered" id="the-first-generalization">The First Generalization</h1>
+<p>Consider <span class="math inline">\(n\)</span> friends and the set <span class="math inline">\(\{t_1, t_2, ..., t_n\}\)</span>, where <span class="math inline">\(\forall i \in [n], t_i \in (0,1)\)</span>. Each friend <span class="math inline">\(i\)</span> arrives at a time <span class="math inline">\(a_i\)</span> chosen uniformly at random between 0 and 1 hours, and departs <span class="math inline">\(t_i\)</span> hours later. Let <span class="math inline">\(M\)</span> be the event that <span class="math inline">\(\exists T \in [0,1)\)</span> such that every friend is present at time <span class="math inline">\(T\)</span> (present means the friend has arrived but not yet departed). What is <span class="math inline">\(P(M)\)</span>?</p>
+<h1 class="unnumbered" id="solution-to-the-first-generalization">Solution to the First Generalization</h1>
+<h2 class="unnumbered" id="intuition">Intuition</h2>
+<p>Assuming <span class="math inline">\(M\)</span> occurred, there is some earliest time <span class="math inline">\(T\)</span> for which every friend is present. Thus, <span class="math inline">\(T\)</span> is the time of the final arrival (otherwise, it would not be the earliest time that satisfies the condition). Knowing a friend is present at time <span class="math inline">\(T\)</span> gives us information about when they could have arrived. They must have arrived sometime before <span class="math inline">\(T\)</span>, but also, not too far before <span class="math inline">\(T\)</span>, as otherwise they would have departed before <span class="math inline">\(T\)</span>. Thus, we can easily calculate the probability that a particular friend is present at time <span class="math inline">\(T\)</span>. Then we can do casework on which friend was the last to arrive to calculate the probability that the final arrival is at time <span class="math inline">\(T\)</span> and all friends are present at time <span class="math inline">\(T\)</span>. By summing this over all <span class="math inline">\(T \in [0, 1)\)</span>, we will obtain <span class="math inline">\(P(M)\)</span>.</p>
+<p>However, we can’t take a sum over all <span class="math inline">\(T \in [0,1)\)</span>, since <span class="math inline">\([0,1)\)</span> is uncountable. So, we will make this argument rigorous by splitting the interval <span class="math inline">\([0,1)\)</span> into <span class="math inline">\(m\)</span> intervals of equal length and compute the sum over all intervals of the probability that <span class="math inline">\(T\)</span> lies within the interval, taking the the limit as <span class="math inline">\(m \to \infty\)</span>. This will give us an integral from 0 to 1 that will evaluate to <span class="math inline">\(P(M)\)</span>.</p>
+<h2 class="unnumbered" id="initial-claim">Initial Claim</h2>
+<p>To solve this problem, we will partition the interval <span class="math inline">\([0,1)\)</span> into <span class="math inline">\(m\)</span> disjoint intervals, <span class="math inline">\(I_1, I_2, ...I_m\)</span> of equal length. For example, if <span class="math inline">\(m=4\)</span>, the intervals would be <span class="math inline">\([0,.25), [.25,.5), [.5,.75),\)</span> and <span class="math inline">\([.75,1)\)</span>. For every interval <span class="math inline">\(I_i\)</span>, let <span class="math inline">\(E_i\)</span> be the event that exactly one friend arrived during <span class="math inline">\(I_i\)</span> and all other friends were present during the entire interval <span class="math inline">\(I_i\)</span>. I claim that <span class="math display">\[P(M) = \lim\limits_{m \to \infty}  \sum_{i=1}^m P(E_i).\]</span></p>
+<h2 class="unnumbered" id="showing-e_is-disjoint">Showing <span class="math inline">\(E_i\)</span>’s Disjoint</h2>
+<p>Assume <span class="math inline">\(E_j\)</span> and <span class="math inline">\(E_k\)</span> both occur for <span class="math inline">\(0&lt;j&lt;k\leq m\)</span>. <span class="math inline">\(E_j\)</span> occurring implies that all friends have arrived within or before the time interval <span class="math inline">\(I_j\)</span>. However, <span class="math inline">\(E_k\)</span> occurring implies that one friend arrived during interval <span class="math inline">\(I_k\)</span>, a time interval after <span class="math inline">\(I_j\)</span>. This is a contradiction, so all the events <span class="math inline">\(E_i\)</span> are disjoint.</p>
+<p>Let <span class="math inline">\(E = \bigcup\limits_{i=1}^{m} E_m\)</span>.</p>
+<p>By the disjoint property this gives</p>
+<p><span class="math inline">\(P(E) = P(\bigcup\limits_{i=1}^{m} E_m) = \sum_{i=1}^m P(E_i)\)</span>.</p>
+<p>Thus, <span class="math inline">\(P(M) = \lim\limits_{m \to \infty}  \sum_{i=1}^m P(E_i) \iff P(M) = \lim\limits_{m \to \infty}P(E)\)</span>.</p>
+<h2 class="unnumbered" id="bounding-pec-cap-m">Bounding <span class="math inline">\(P(E^C \cap M)\)</span></h2>
+<p><span class="math inline">\(\forall i \in [m], E_i \subset M\)</span> because <span class="math inline">\(E_i\)</span> occurring implies that all the friends are present for some time in <span class="math inline">\(I_i \subset [0,1)\)</span>. Thus, <span class="math inline">\(\bigcup\limits_{i=1}^{m} E_i = E \subset M\)</span>, so <span class="math inline">\(P(M) = P(E) + P(M \cap E^C)\)</span>.</p>
+<p>Assuming <span class="math inline">\(M\)</span> occurs, let <span class="math inline">\(T\)</span> be the earliest time for which every friend is present. Since <span class="math inline">\(\bigcup\limits_{i=1}^{m} I_m = [0,1)\)</span> and <span class="math inline">\(T \in [0,1)\)</span>, <span class="math inline">\(\exists i \text{ such that } T \in I_i\)</span>. Since <span class="math inline">\(T\)</span> is the earliest time when every friend is present, there must be an arrival at time <span class="math inline">\(T\)</span>, so there must be an arrival during <span class="math inline">\(I_i\)</span>.</p>
+<p>If <span class="math inline">\(T \in I_i\)</span>, <span class="math inline">\(E_i \subset E\)</span> will not occur if and only if more than one friend arrived during <span class="math inline">\(I_i\)</span>, or there was a departure during <span class="math inline">\(I_i\)</span>. (If you are having trouble understanding why this is, go back to the definition of <span class="math inline">\(E_i\)</span>. There needs to be <em>exactly</em> one arrival during <span class="math inline">\(I_i\)</span> and all other friends must be present for <em>the entire</em> interval <span class="math inline">\(I_i\)</span>, so there must be no departures during <span class="math inline">\(I_i\)</span>.)</p>
+<p>Let <span class="math inline">\(B\)</span> be the event <span class="math inline">\(\exists a \in [m]\)</span> such that more than one friend arrived during <span class="math inline">\(I_a\)</span>, and let <span class="math inline">\(C\)</span> be the event <span class="math inline">\(\exists a \in [m]\)</span> such that a friend arrived and a friend left during <span class="math inline">\(I_a\)</span>. Let <span class="math inline">\(A = B \cup C\)</span>.</p>
+<p><span class="math inline">\(E^C \cap M \subset A\)</span> because if <span class="math inline">\(E\)</span> did not occur and <span class="math inline">\(M\)</span> did occur, <span class="math inline">\(A\)</span> must have occurred. So, <span class="math inline">\(P(E^C \cap M) \leq P(A)\)</span>.</p>
+<h2 class="unnumbered" id="showing-pa-0">Showing <span class="math inline">\(P(A) = 0\)</span></h2>
+<p>Since we know <span class="math inline">\(t_k\)</span>, the difference between the arrival and departure times of friend <span class="math inline">\(k\)</span>, knowing friend <span class="math inline">\(k\)</span> left during an interval <span class="math inline">\(I_a = [\frac{a-1}{m}, \frac{a}{m})\)</span> is equivalent to knowing they arrived during <span class="math inline">\(I_{\text{arrival}} \coloneqq [\max(0, \frac{a-1}{m} - t_k), \frac{a}{m} - t_k)\)</span>. Since the interval <span class="math inline">\(I_a\)</span> has length greater than or equal to the length of <span class="math inline">\(I_{\text{arrival}}\)</span>, we have that <span class="math display">\[P(\text{friend k leaves during interval } I_a) = P(\text{friend k arrives during interval } I_{\text{arrival}})\]</span> <span class="math display">\[\leq P(\text{friend k arrives during interval } I_a)\]</span> (Since arrival times are uniformly distributed between 0 and 1, the probability of an arrival during a certain interval contained in <span class="math inline">\([0,1)\)</span> is simply the length of that interval.)</p>
+<p>Event <span class="math inline">\(C\)</span> requires at least one departure and at least one arrival during a certain interval, while event <span class="math inline">\(B\)</span> requires at least two arrivals during a certain interval. Since the probability of a departure in a certain interval is less than or equal to the probability of an arrival, <span class="math inline">\(P(C) \leq P(B)\)</span>. Also, <span class="math inline">\(P(A) = P(B \cup C) \leq P(B) + P(C)\)</span>. Thus, <span class="math inline">\(P(A) \leq P(B) + P(C) \leq 2P(B)\)</span>.</p>
+<p>The probability that the <span class="math inline">\(k\)</span>th friend arrives during a certain interval <span class="math inline">\(I_a\)</span> is <span class="math inline">\(\frac{1}{m}\)</span> as all intervals <span class="math inline">\(I_i\)</span> are of length <span class="math inline">\(\frac{1}{m}\)</span>. Since the arrival times of all friends are independent,</p>
+<p><span class="math display">\[\begin{aligned}
+    P(\text{more than one friend arrived during } I_a) \\=
+    1 - P(\text{one or less friend arrived during } I_a) \\=
+    1 - P(\text{one friend arrived during } I_a) - P(\text{zero friends arrived during } I_a)\\ = 
+    1 - n \cdot \frac{1}{m} \cdot (\frac{m-1}{m})^{n-1} - (\frac{m-1}{m})^{n}\end{aligned}\]</span></p>
+<p>(If this did not make sense, think about how you would calculate the probability of getting more than 1 heads as a result of <span class="math inline">\(n\)</span> independent coin flips where each coin has a <span class="math inline">\(\frac{1}{m}\)</span> chance of flipping heads.)</p>
+<p>Then we can bound <span class="math inline">\(\lim\limits_{m \to \infty}P(B)\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+    \lim\limits_{m \to \infty}P(B) = \lim\limits_{m \to \infty}P(\exists j \in [m] \text{ such that more than one friend arrived during } I_j)
+    \\ \leq \lim\limits_{m \to \infty} \sum_{j=1}^m P(\text{more than one friend arrived during } I_j)
+    \\ = \lim\limits_{m \to \infty} \sum_{j=1}^m (1 - \frac{n}{m} \cdot (\frac{m-1}{m})^{n-1} - (\frac{m-1}{m})^{n}) \\ = \lim\limits_{m \to \infty} m(1 - \frac{n}{m} \cdot (\frac{m-1}{m})^{n-1} - (\frac{m-1}{m})^{n})
+    \\ = \lim\limits_{m \to \infty} \frac{m^n - n(m-1)^{n-1} - (m-1)^{n}}{m^{n-1}}
+    \\ = \lim\limits_{m \to \infty} \frac{m^n - nm^{n-1} - m^n + nm^{n-1} + O(m^{n-2})}{m^{n-1}} = 0\end{aligned}\]</span> (In the last line, <span class="math inline">\(-n(m-1)^{n-1}\)</span> and <span class="math inline">\(-(m-1)^{n}\)</span> are expanded. <span class="math inline">\(O(m^{n-2})\)</span> is big-O notation, and is used to represent the sum of the terms in the expansions which have degree at most <span class="math inline">\(n-2\)</span>. We say <span class="math inline">\(f(m) = O(g(m))\)</span> if there exists a positive real number <span class="math inline">\(k\)</span> such that <span class="math inline">\(|f(m)| \leq kg(m)\)</span> for all <span class="math inline">\(m\)</span> greater than or equal to some real number. So, as <span class="math inline">\(m \to \infty\)</span>, <span class="math inline">\(f(m)\)</span> will behave like a constant multiple of <span class="math inline">\(g(m)\)</span>. Thus, <span class="math inline">\(\lim_{m \to \infty}\frac{O(m^{n-2})}{m^{n-1}} \leq \lim_{m \to \infty}\frac{km^{n-2}}{m^{n-1}} = 0\)</span>.)</p>
+<p>Thus, <span class="math inline">\(\lim\limits_{m \to \infty}P(M \cap E^C) \leq \lim\limits_{m \to \infty}P(A) \leq \lim\limits_{m \to \infty}2P(B) = 0\)</span>. Since probabilities are non-negative, <span class="math inline">\(\lim\limits_{m \to \infty}P(M \cap E^C) = 0\)</span>. So, <span class="math inline">\(P(M) = \lim\limits_{m \to \infty}(P(E) + P(M \cap E^C)) = \lim\limits_{m \to \infty}P(E)\)</span>, proving the equivalent statement <span class="math inline">\(P(M) = \lim\limits_{m \to \infty}  \sum_{i=1}^m P(E_i)\)</span>.</p>
+<h2 class="unnumbered" id="finding-e_i">Finding <span class="math inline">\(E_i\)</span></h2>
+<p>For <span class="math inline">\(E_i\)</span> to occur, there must be exactly 1 friend that arrives during <span class="math inline">\(I_i\)</span>. Let friend <span class="math inline">\(k \in [n]\)</span> be the friend who arrives during <span class="math inline">\(E_i\)</span>.</p>
+<p>The second condition for <span class="math inline">\(E_i\)</span> occurring is that all other friends are present for the entire interval <span class="math inline">\(I_i\)</span>. This is equivalent to saying <span class="math inline">\(\forall j \neq k \in [n]\)</span>, friend <span class="math inline">\(j\)</span> arrived before <span class="math inline">\(\min(I_i)\)</span>, but within <span class="math inline">\(t_j\)</span> of <span class="math inline">\(\sup(I_i)\)</span> (otherwise they would have left before the end of <span class="math inline">\(I_i\)</span>).</p>
+<p>Since <span class="math inline">\(I_i = [\frac{i-1}{m}, \frac{i}{m})\)</span>, this means that <span class="math inline">\(a_j &lt; \frac{i-1}{m}\)</span> and <span class="math inline">\(a_j + t_j \ge \frac{i}{m}\)</span>, or equivalently, <span class="math inline">\(a_j\in [\max(0, \frac{i}{m} - t_j), \frac{i-1}{m})\)</span> (<span class="math inline">\(a_j\)</span> is the arrival time of friend <span class="math inline">\(j\)</span>, so <span class="math inline">\(a_j\)</span> can’t be less than <span class="math inline">\(0\)</span>). This occurs with probability <span class="math inline">\(\frac{i-1}{m} - \max(0, \frac{i}{m} - t_j)\)</span>.</p>
+<p>Note that the arrival times of friends are independent of each other, so the probability of the intersection of multiple events in the form <span class="math inline">\(a_j \in I\)</span> (<span class="math inline">\(I\)</span> being an interval) occurring is equal to the product of the probabilities of those events occurring. Thus, <span class="math inline">\(P(a_k \in I_i \text{ and all other friends are present for}\)</span> <span class="math inline">\(\text{the entire interval } I_i)\)</span> = <span class="math inline">\(P(a_k \in I_i) \prod_{j \neq k \in [n]} P(\text{friend } j \text{ is present for the entire interval } I_i)\)</span>.</p>
+<p>Also, we can treat events in the form “<span class="math inline">\(a_k \in I_i\)</span> and all other friends are present for the entire interval <span class="math inline">\(I_i\)</span>" as disjoint for different values of <span class="math inline">\(k\)</span>. (Two of those events occurring would imply both friend <span class="math inline">\(k_1\)</span> and friend <span class="math inline">\(k_2 \neq k_1\)</span> are present for the entire interval <span class="math inline">\(I_i\)</span> (which implies <span class="math inline">\(a_{k_1},a_{k_2} \leq \min(I_i)\)</span>), but also that they both arrived during <span class="math inline">\(I_i\)</span> (<span class="math inline">\(a_{k_1},a_{k_2} \in I_i\)</span>). This could only be possible if they both arrive at <span class="math inline">\(\min(I_i)\)</span>, but that has probability 0.)</p>
+<p>Thus, we can sum <span class="math inline">\(P(a_k \in I_i \text{ and all other friends are present for the entire interval } I_i)\)</span> over all possible <span class="math inline">\(k\)</span> to get <span class="math inline">\(P(E_i)\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+    P(E_i) \\=
+    \sum_{k=1}^n \frac{1}{m} \prod_{j \neq k \in [n]} \frac{i-1}{m} - \max(0, \frac{i}{m} - t_j) \\=
+    \frac{1}{m} \sum_{k=1}^n \prod_{j \neq k \in [n]} -\max(\frac{1-i}{m}, \frac{1}{m} - t_j) \\=
+    \frac{1}{m} \sum_{k=1}^n \prod_{j \neq k \in [n]} \min(\frac{i-1}{m}, t_j - \frac{1}{m})  \\=
+    \frac{1}{m} \sum_{k=1}^n \prod_{j \neq k \in [n]} (\min(\frac{i}{m}, t_j)  - \frac{1}{m})\end{aligned}\]</span></p>
+<h2 class="unnumbered" id="summing-pe_i">Summing <span class="math inline">\(P(E_i)\)</span></h2>
+<p><span class="math display">\[\begin{aligned}
+    P(M) = \lim\limits_{m \to \infty}  \sum_{i=1}^m P(E_i) \\=
+    \lim\limits_{m \to \infty}  \sum_{i=1}^m \frac{1}{m} \sum_{k=1}^n \prod_{j \neq k \in [n]} (\min(\frac{i}{m}, t_j)  - \frac{1}{m}) \\=
+    \lim\limits_{m \to \infty}  \sum_{i=1}^m \frac{1}{m} \sum_{k=1}^n \prod_{j \neq k \in [n]} \min(\frac{i}{m}, t_j)  + \lim\limits_{m \to \infty}  \sum_{i=1}^m \frac{1}{m} \sum_{k=1}^n O(\frac{1}{m}) \\=
+    \int_0^1 \sum_{k=1}^n \prod_{j \neq k \in [n]} \min(x, t_j) dx + 0 \\= \boxed{\int_0^1 (\prod_{j \in n} \min(x, t_j)) \sum_{j \in n}  \frac{1}{\min(x, t_j)} dx}\end{aligned}\]</span></p>
+<p>The final step uses the fact that the sum of <span class="math inline">\(n\)</span> positive numbers taken <span class="math inline">\(n - 1\)</span> at a time is equal to the product of all <span class="math inline">\(n\)</span> numbers multiplied by the sum of the reciprocals of the <span class="math inline">\(n\)</span> numbers. It is not necessary, but it does make calculations easier (instead of computing <span class="math inline">\(n\)</span> products with <span class="math inline">\(n-1\)</span> numbers each and then adding those <span class="math inline">\(n\)</span> numbers, you take the sum of <span class="math inline">\(n\)</span> numbers and the product of <span class="math inline">\(n\)</span> numbers and then multiply them).</p>
+<h2 class="unnumbered" id="summary">Summary</h2>
+<p>This integral confirms our original intuition, that the answer is essentially the sum over all possible times between 0 and 1 of the probability that one friend arrived exactly at that time, and that all the other friends had arrived before that time and are still present. If we were to compute this integral for a specific choice of <span class="math inline">\(\{t_1, t_2, ..., t_n\}\)</span> where <span class="math inline">\(t_1 \leq t_2 \leq ... \leq t_n\)</span>, the easiest way would be to express the integral from <span class="math inline">\(0\)</span> to <span class="math inline">\(1\)</span> as a sum of <span class="math inline">\(n + 1\)</span> integrals, the first from <span class="math inline">\(0\)</span> to <span class="math inline">\(t_1\)</span>, the second from <span class="math inline">\(t_1\)</span> to <span class="math inline">\(t_2\)</span>, etc., with the last integral being from <span class="math inline">\(t_n\)</span> to <span class="math inline">\(1\)</span>. This would allow us to get rid of the <span class="math inline">\(\min(x, t_j)\)</span> terms and replace them with either <span class="math inline">\(x\)</span> or <span class="math inline">\(t_j\)</span>, as we would know based on the bounds of each integral if <span class="math inline">\(x \leq t_j\)</span>. This would turn all of the integrands into polynomials, which are easy to integrate.</p>
+<p>As mentioned in section 4.0, we did casework on the interval during which the final arrival occurred. It is almost the opposite of the solution to the simpler problem, where we did casework on the interval during which the first arrival occurred.</p>
+<p>When I first tried to generalize the problem, I did casework on the interval during which the first arrival occurred. I encourage you to try this on your own, as it does lead to a solution (although it is recursive and arguably more of a pain to write out). However, I much prefer the approach presented in this paper because it easier to generalize further (as you will see in the next couple of sections), easier to code, and the resulting integral is relatively fast for a computer to compute (using the method described above).</p>
+<h1 class="unnumbered" id="introduction-to-random-variables">Introduction to Random Variables</h1>
+<h2 class="unnumbered" id="motivation">Motivation</h2>
+<p>In real life, your friends do not choose the time they show up for a meeting uniformly at random from <span class="math inline">\(0\)</span> to <span class="math inline">\(1\)</span>. Chances are, you have some friends who tend to arrive early, and others who tend to arrive late. Maybe one friend is twice as likely to arrive between <span class="math inline">\(.1\)</span> and <span class="math inline">\(.2\)</span> than they are to arrive between <span class="math inline">\(.2\)</span> and <span class="math inline">\(.3\)</span>. In order to further generalize this problem, we will need to find a way of representing how likely each friend is to arrive within a certain interval of time.</p>
+<h2 class="unnumbered" id="definition-of-random-variable">Definition of Random Variable</h2>
+<p>For this paper, we will define a random variable <span class="math inline">\(X\)</span> as a function from events to real numbers such that <span class="math inline">\(P(\{\omega \in \Omega| X(\omega) \leq x\})\)</span> exists for <span class="math inline">\(x \in \mathbb{R}\)</span>, where <span class="math inline">\(\Omega\)</span> is the domain of <span class="math inline">\(X\)</span>, also called the sample space.</p>
+<p>(Note: There are random variables that do not map to the real numbers, but these will not be discussed. There are also a couple of other restrictions that are needed to make the definition of a random variable more rigorous, but this is also outside the scope of this paper.)</p>
+<p>For example, let’s say we roll a fair, standard <span class="math inline">\(6\)</span>-sided die, and we let <span class="math inline">\(X\)</span> be a random variable representing the outcome of one roll. In this case, <span class="math inline">\(\Omega = \{\text{rolled a } 1, \text{rolled a } 2, \text{rolled a } 3, \text{rolled a } 4, \text{rolled a }\)</span> <span class="math inline">\(5, \text{rolled a } 6\}\)</span>, <span class="math inline">\(X(\text{rolled a } 1) = 1\)</span>, <span class="math inline">\(X(\text{rolled a } 2) = 2\)</span>, etc.</p>
+<h2 class="unnumbered" id="cumulative-distribution-function-cdf">Cumulative Distribution Function (CDF)</h2>
+<p><span class="math inline">\(F_X(x) \coloneqq P(\{\omega \in \Omega| X(\omega) \leq x\})\)</span> is called the cumulative distribution function (CDF) of the random variable <span class="math inline">\(X\)</span>. For the previous example with rolling a die, the CDF of <span class="math inline">\(X\)</span> would be <span class="math display">\[F_X(x) = 
+    \begin{dcases}
+        0 &amp; x &lt; 1 \\
+        \frac{\left \lfloor{x}\right \rfloor }{6} &amp; 1 \leq x &lt; 6 \\
+        1 &amp; 6 \leq x \\
+    \end{dcases}\]</span></p>
+<h2 class="unnumbered" id="discrete-and-continuous-random-variables">Discrete and Continuous Random Variables</h2>
+<p>In the previous example, there were only 6 possible outcomes for <span class="math inline">\(X\)</span>. Since the number of outcomes is countable, we say that <span class="math inline">\(X\)</span> is a discrete random variable. For a discrete random variable with outcomes <span class="math inline">\(x_1, x_2, ...\)</span>, there is a probability mass function (PMF), <span class="math inline">\(p_X(x_i) \coloneqq P({X = x_i})\)</span>. For rolling a die, <span class="math inline">\(p_X(1) = \frac{1}{6}\)</span>, <span class="math inline">\(p_X(2) = \frac{1}{6}\)</span>, etc.</p>
+<p>If <span class="math inline">\(X\)</span> is not discrete, then we instead define the probability density function (PDF), <span class="math inline">\(f_X(x)\)</span>. Note that <span class="math inline">\(f_X(x) = k\)</span> does NOT mean that <span class="math inline">\(P({X = x}) = k\)</span>. Instead, <span class="math inline">\(f_X(x) = k\)</span> iff for arbitrarily small <span class="math inline">\(\delta\)</span>, <span class="math inline">\(P(\{X \in (x, x + \delta)\}) \approx \delta k\)</span>. The PDF does NOT represent a probability, and it can take on values greater than 1 (unlike a PMF).</p>
+<p>If there exists a function <span class="math inline">\(f_X(x)\)</span> that satisfies <span class="math inline">\(F_X(y) = \int_{-\infty}^y f_X(x) dx\)</span> for all <span class="math inline">\(y\)</span>, then <span class="math inline">\(X\)</span> is a continuous random variable. Note that this definition implies that the CDF of a continuous random variable is continuous, and that if <span class="math inline">\(F_X(x)\)</span> is differentiable at <span class="math inline">\(x\)</span>, then <span class="math inline">\(\frac{d}{dx}F_X(x) = f_X(x)\)</span>.</p>
+<h2 class="unnumbered" id="adding-independent-continuous-random-variables">Adding Independent Continuous Random Variables</h2>
+<p>Let’s say <span class="math inline">\(Z = X + Y\)</span>, where <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent continuous random variables (independent meaning <span class="math inline">\(\forall x,y \in \mathbb{R}, P(X \leq x \cap Y \leq y) = F_X(x)F_Y(y)\)</span>). Then <span class="math inline">\(Z\)</span> is also a continuous random variable with <span class="math inline">\(f_Z(y) = \int_{-\infty}^{\infty} f_X(x)f_Y(y - x)dx\)</span>. (You may recognize this as the convolution of <span class="math inline">\(f_X\)</span> and <span class="math inline">\(f_Y\)</span> evaluated at <span class="math inline">\(y\)</span>, <span class="math inline">\((f*g)(y)\)</span>.) This implies <span class="math inline">\(F_Z(y) = \int_{-\infty}^{\infty} F_X(x)f_Y(y - x)dx = \int_{-\infty}^{\infty} f_X(x)F_Y(y - x)dx\)</span>. We will not actually use these rules in the paper, but it is useful to have an intuitive understanding of why they are true, so consider the discrete case.</p>
+<p>Imagine <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> were independent discrete random variables and could only take on integer values between <span class="math inline">\(-10\)</span> and <span class="math inline">\(10\)</span>. Then the probability that <span class="math inline">\(X + Y = 5\)</span> would be the sum of the probabilities that <span class="math inline">\(X = i\)</span> and <span class="math inline">\(Y = 5 - i\)</span> for all possible <span class="math inline">\(i\)</span>. Since <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, <span class="math inline">\(P(X = i \cap Y = 5 - i) = P(X = i)P(Y = 5 - i)\)</span>. Thus, <span class="math inline">\(p_{X+Y}(5) = \sum_{i = -10}^{10} p_X(i)p_Y(5 - i)\)</span>. For the continuous case, you would have PDFs instead of PMFs and an integral as opposed to a sum.</p>
+<p>Note: This should also remind you of multiplying polynomials, which may motivate the representation of discrete random variables as polynomials. For our example of a die roll, you could represent the random variable <span class="math inline">\(X\)</span> as <span class="math inline">\(\frac{1}{6}(x^1 + x^2 + x^3 + x^4 + x^5 + x^6)\)</span>, or, more generally, <span class="math inline">\(\sum_i p_X(i)x^i\)</span>, where the coefficients are the PMFs. Then <span class="math inline">\(P_{X + Y}(i)\)</span> is the coefficient of the <span class="math inline">\(x^i\)</span> term of the product of the polynomials representing <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. For example, <span class="math inline">\(p_{X + X}(5)\)</span> is the coefficient of the <span class="math inline">\(x^5\)</span> term of <span class="math inline">\((\frac{1}{6}(x^1 + x^2 + x^3 + x^4 + x^5 + x^6))^2\)</span>, which is <span class="math inline">\(\frac{4}{36}\)</span>, meaning that the probability of rolling a sum of five on two fair, standard 6-sided dice is <span class="math inline">\(\frac{1}{9}\)</span>. This representation will not be used in this paper, but if you would like to learn more about using polynomials to encode information, check out the Generating Functions article in the previous edition of Math &amp; CS Research.</p>
+<h2 class="unnumbered" id="expected-value">Expected Value</h2>
+<p>One important piece of information that is useful when describing a random variable <span class="math inline">\(X\)</span> is its expectation (expected value), <span class="math inline">\(E[X]\)</span>. For a discrete random variable <span class="math inline">\(X\)</span>, <span class="math inline">\(E[X] \coloneqq \sum_x xp_X(x)\)</span>. In other words, it is the average over all possible outcomes of <span class="math inline">\(X\)</span>, weighted by the PMF. For the previous example of a die roll, <span class="math inline">\(E[X] = 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6} + 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6} = \frac{7}{2}\)</span>.</p>
+<p>The definition for a continuous random variable <span class="math inline">\(X\)</span> is similar: <span class="math inline">\(E[X] \coloneqq \int_{-\infty}^{\infty} xf_X(x) dx\)</span>.</p>
+<p>The expected value of a function of a random variable is exactly what you would expect; for a discrete random variable, <span class="math inline">\(E[g(X)] = \sum_x g(x)p_X(x)\)</span>; for a continuous random variable, <span class="math inline">\(E[g(X)] = \int_{-\infty}^{\infty} g(x)f_X(x) dx\)</span> (assuming <span class="math inline">\(g\)</span> is a real-valued function defined over <span class="math inline">\(\mathbb{R}\)</span>).</p>
+<p>Other useful properties about expected value (which will not be used or proven in this paper but are important to know) are:</p>
+<p><span class="math inline">\(E[X + Y] = E[X] + E[Y]\)</span> for random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> (linearity of expectation)</p>
+<p><span class="math inline">\(E[kX] = kE[X]\)</span> for a random variable <span class="math inline">\(X\)</span> and constant <span class="math inline">\(k\)</span>.</p>
+<p><span class="math inline">\(E[XY] = E[X]E[Y]\)</span> if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent random variables.</p>
+<h2 class="unnumbered" id="law-of-iterated-expectation">Law of Iterated Expectation</h2>
+<p>The Law of Iterated Expectation (also called Law of Total Expectation) states that for random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> defined over the same sample space, <span class="math inline">\(E[E[X|Y]] = E[X]\)</span>.</p>
+<p>Note that <span class="math inline">\(E[X|Y]\)</span>, the "expected value of <span class="math inline">\(X\)</span> given <span class="math inline">\(Y\)</span>," is a function of the random variable <span class="math inline">\(Y\)</span>. Thus, we can write <span class="math inline">\(E[E[X|Y]] = \sum_y E[X|Y=y]p_Y(y)\)</span> when <span class="math inline">\(Y\)</span> is discrete, and <span class="math inline">\(E[E[X|Y]] = \int_{-\infty}^{\infty} E[X|Y=y]f_Y(y) dy\)</span> when <span class="math inline">\(Y\)</span> is continuous. (Note: When <span class="math inline">\(Y\)</span> is a continuous random variable and we condition on the event <span class="math inline">\(Y = y\)</span>, it really refers to <span class="math inline">\(Y \in [y, y+\delta]\)</span> where <span class="math inline">\(\delta \to 0\)</span>, but for the sake of notation <span class="math inline">\(Y = y\)</span> is used.) This is essentially a formalization of casework: instead of calculating <span class="math inline">\(E[X]\)</span> directly, you go through every possible <span class="math inline">\(y\)</span> that could be the outcome of <span class="math inline">\(Y\)</span> and take the weighted average of <span class="math inline">\(E[X|Y=y]\)</span> over all of those cases, with <span class="math inline">\(P(Y = y)\)</span> as the weights.</p>
+<p>I will not go in depth about what "<span class="math inline">\(X\)</span> given <span class="math inline">\(Y = y\)</span>" means, but the basic idea is that if you know the outcome of <span class="math inline">\(Y\)</span>, that tells you which possible events <span class="math inline">\(\omega\)</span> could have occurred, which affects <span class="math inline">\(E[X]\)</span>. In the case of a die roll, let’s say you had another random variable <span class="math inline">\(Y\)</span>, defined over the same sample space as <span class="math inline">\(X\)</span> (from the previous examples), that is <span class="math inline">\(1\)</span> if the die roll is greater than 3 and <span class="math inline">\(0\)</span> otherwise. If we know <span class="math inline">\(Y = 1\)</span>, then <span class="math inline">\(X\)</span> must be either <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span>, and <span class="math inline">\(6\)</span>, all with equal probability. (In this way, you can imagine conditioning on <span class="math inline">\(Y\)</span> as a transformation of the sample space.) Thus, <span class="math inline">\(E[X|Y = 1] = 5\)</span>. Similarly, <span class="math inline">\(E[X|Y = 0] = 2\)</span>. Since <span class="math inline">\(P(Y = 1) = P(Y = 0) = \frac{1}{2}\)</span>, <span class="math inline">\(E[E[X|Y]] = 5 \cdot \frac{1}{2} + 2 \cdot \frac{1}{2} = \frac{7}{2} = E[X]\)</span>, as expected.</p>
+<p>(If you would like to learn more about conditional probability or get practice with solving conditional probability problems, be sure to read the "Conditional Probability" article in the previous edition of Math &amp; CS Research.)</p>
+<h1 class="unnumbered" id="generalization-with-random-variables">Generalization with Random Variables</h1>
+<p>Consider <span class="math inline">\(n\)</span> friends. The arrival time for each friend <span class="math inline">\(i \in [n]\)</span> can be represented by a continuous random variable <span class="math inline">\(X_i\)</span> with <span class="math inline">\(F_{X_i}(1) = 1\)</span> and <span class="math inline">\(\forall x&lt;0, F_{X_i}(x) = 0\)</span>, and the amount of hours they wait before departing can be represented by a continuous random variable <span class="math inline">\(T_i\)</span> with <span class="math inline">\(F_{T_i}(1) = 1\)</span> and <span class="math inline">\(\forall x \leq 0, F_{T_i}(x) = 0\)</span>. (Also, all random variables <span class="math inline">\(X_i\)</span> and <span class="math inline">\(T_i\)</span> are independent of each other.) Let <span class="math inline">\(M\)</span> be the event that <span class="math inline">\(\exists T \in [0,1]\)</span> such that every friend is present at time <span class="math inline">\(T\)</span> (present means the friend has arrived but not yet departed). What is <span class="math inline">\(P(M)\)</span>?</p>
+<h2 class="unnumbered" id="intuition-1">Intuition</h2>
+<p>When all <span class="math inline">\(X_i\)</span> were uniform random variables on <span class="math inline">\([0,1]\)</span> (uniform random variables model the process of picking a number uniformly at random from an interval) and <span class="math inline">\(t_i\)</span> were constants, the answer was <span class="math display">\[\begin{aligned}
+\int_0^1 (\prod_{j \in n} \min(x, t_j)) \sum_{j \in n}  \frac{1}{\min(x, t_j)} dx\end{aligned}\]</span></p>
+<p>Recall that <span class="math inline">\(\min(x, t_j)\)</span> was the probability that friend <span class="math inline">\(j\)</span> arrived before and within <span class="math inline">\(t_j\)</span> hours of <span class="math inline">\(x\)</span>. In more mathematical terms, <span class="math inline">\(\min(x, t_j)\)</span> = <span class="math inline">\(P(\{\omega \in \Omega| x - t_j &lt; X_j(\omega) \leq x\}) = F_{X_j}(x) - F_{X_j}(x - t_j)\)</span>. (In this case, <span class="math inline">\(\Omega\)</span> is the set of all events "friend <span class="math inline">\(j\)</span> arrives at time <span class="math inline">\(t\)</span>" for <span class="math inline">\(t \in [0,1]\)</span>.) This is consistent with the previous answer because all <span class="math inline">\(X_j\)</span> were uniform random variables on <span class="math inline">\([0,1]\)</span>, so <span class="math display">\[F_{X_j}(x) = 
+    \begin{dcases}
+        0 &amp; x &lt; 0 \\
+        x &amp; 0 \leq x \leq 1 \\
+        1 &amp; 1 &lt; x \\
+    \end{dcases}\]</span> meaning <span class="math inline">\(\forall x \in [0,1], F_{X_j}(x) - F_{X_j}(x - t_j) = \min(x, t_j)\)</span>.</p>
+<p>Before, we were able to calculate each friends’ departure time by adding <span class="math inline">\(t_j\)</span> to their arrival time. Now, <span class="math inline">\(T_j\)</span> is a random variable. This motivates us to define random variables <span class="math inline">\(D_j \coloneqq X_j + T_j\)</span>, representing the departure time of friend <span class="math inline">\(j\)</span>.</p>
+<p>One interpretation of the <span class="math inline">\(F_{X_j}(x - t_j)\)</span> term is the probability that friend <span class="math inline">\(j\)</span> departed before <span class="math inline">\(x\)</span>. So, it would make sense if our new answer had <span class="math inline">\(F_{D_j}(x) = F_{X_j + T_j}(x)\)</span> instead. (We can also rewrite <span class="math inline">\(F_{X_j}(x - t_j)\)</span> as <span class="math inline">\(F_{X_j + t_j}(x)\)</span>, making this connection even easier to see.)</p>
+<p>Furthermore, <span class="math inline">\(1\)</span> was the ratio of the probability of friend <span class="math inline">\(j\)</span> arriving within a small interval <span class="math inline">\((x, x + dx)\)</span> to <span class="math inline">\(dx\)</span>, or <span class="math inline">\(f_{X_j}(x)\)</span>. (This is also consistent with the previous answer, as the probability of a uniform random variable on <span class="math inline">\([0,1]\)</span> taking on a value within an interval <span class="math inline">\(I \subset [0,1]\)</span> is equal to the length of that interval.)</p>
+<p>So, it would make sense if the answer was <span class="math display">\[\begin{aligned}
+\int_0^1 \prod_{j \in n} (F_{X_j}(x) - F_{X_j + T_j}(x)) \sum_{j \in n}  \frac{f_{X_j}(x)}{F_{X_j}(x) - F_{X_j + T_j}(x)} dx\end{aligned}\]</span></p>
+<h2 class="unnumbered" id="solution-1">Solution</h2>
+<p>Let <span class="math inline">\(\mathbb{I}_M\)</span> be a random variable with <span class="math inline">\(\mathbb{I}_M(\omega) = 1\)</span> if <span class="math inline">\(\omega \in M\)</span> and <span class="math inline">\(\mathbb{I}_M(\omega) = 0\)</span> otherwise. (This is called an indicator random variable. Essentially, it is <span class="math inline">\(1\)</span> if <span class="math inline">\(M\)</span> occurred, and <span class="math inline">\(0\)</span> if <span class="math inline">\(M\)</span> didn’t.) Then <span class="math inline">\(E[\mathbb{I}_M] = 1 \cdot P(M) + 0 \cdot (1 - P(M)) = P(M)\)</span>. (In general, for any indicator random variable <span class="math inline">\(\mathbb{I}_E\)</span> of an event <span class="math inline">\(E\)</span>, <span class="math inline">\(P(E) = E[\mathbb{I}_E]\)</span>.)</p>
+<p>Let <span class="math inline">\(U\)</span> be a random variable with <span class="math inline">\(U(\omega) = T\)</span> if <span class="math inline">\(\omega \in M\)</span>, with <span class="math inline">\(T\)</span> being the earliest time for which every friend is present, and <span class="math inline">\(U(\omega) = -1\)</span> otherwise.</p>
+<p>By the Law of Iterated Expectation, <span class="math inline">\(E[\mathbb{I}_M] = E[E[\mathbb{I}_M|U]]\)</span> <span class="math display">\[\begin{aligned}
+    E[E[\mathbb{I}_M|U]] = \int_{-\infty}^\infty E[\mathbb{I}_M|U = x]f_U(x) dx \\=
+    \int_0^1 f_U(x) dx\end{aligned}\]</span></p>
+<p>since <span class="math inline">\(\mathbb{I}_M = 1\)</span> iff <span class="math inline">\(U \in [0,1]\)</span> and <span class="math inline">\(\mathbb{I}_M = 0\)</span> otherwise.</p>
+<p>For <span class="math inline">\(x \in [0,1]\)</span>, <span class="math inline">\(U \in [x,x+\delta)\)</span> iff a friend <span class="math inline">\(i \in [n]\)</span> arrived at a time <span class="math inline">\(a_i \in [x,x+\delta)\)</span> and <span class="math inline">\(\forall j \neq i \in [n]\)</span>, friend <span class="math inline">\(j\)</span> is present at time <span class="math inline">\(a_i\)</span>. If all other friends are present at the arrival time of friend <span class="math inline">\(i\)</span> (<span class="math inline">\(a_i\)</span>), then friend <span class="math inline">\(i\)</span> was the last arrival. Since the probability that two friends arrive at exactly the same time is 0, there can only be one last arrival, so the events <span class="math inline">\(\{a_i \in [x,x+\delta) \cap\forall j \neq i \in [n] \text{ friend } j \text{ is present at } a_i\}\)</span> can be treated as disjoint for different values of <span class="math inline">\(i\)</span>. Thus, <span class="math inline">\(P(\{U \in [x,x+\delta)\}) = \sum_{i=1}^n P(\{a_i \in [x,x+\delta) \cap \forall j \neq i \in [n] \text{ friend } j \text{ is present at } a_i\})\)</span>.</p>
+<p>Furthermore, since the arrival and departure times of different friends are independent, the events <span class="math inline">\(\{\text{friend }j \text{ is present at } a_i\}\)</span> are all independent (friend <span class="math inline">\(j\)</span> being present at a certain time depends only on friend <span class="math inline">\(j\)</span>’s arrival and departure times), and are also independent from <span class="math inline">\(\{a_i \in [x,x+\delta)\}\)</span>. So, <span class="math inline">\(P(\{a_i \in [x,x+\delta) \cap \forall j \neq i \in [n] \text{ friend } j \text{ is present at } a_i\}) = P(\{a_i \in [x,x+\delta)\}) \prod_{j \neq i \in [n]} P(\{\text{friend } j \text{ is present at } a_i\})\)</span>.</p>
+<p>The probability that friend <span class="math inline">\(i\)</span> arrived at a time <span class="math inline">\(a_i \in [x, x+\delta)\)</span>, <span class="math inline">\(P(X_i \in [x, x+\delta))\)</span>, is <span class="math inline">\(f_{X_i}(x)\delta\)</span> for small <span class="math inline">\(\delta\)</span> (by the definition of a PDF).</p>
+<p>To find <span class="math inline">\(P(\{\text{friend } j \text{ is present at } a_i\})\)</span>, remember that the definition of friend <span class="math inline">\(j\)</span> being present is that friend <span class="math inline">\(j\)</span> has arrived but not yet left. For the sake of notation, let <span class="math inline">\(A_j\)</span> be the event that friend <span class="math inline">\(j\)</span> arrived before <span class="math inline">\(a_i\)</span> (<span class="math inline">\(\{X_j \leq a_i)\}\)</span>), and let <span class="math inline">\(B_j\)</span> be the event that friend <span class="math inline">\(j\)</span> left before <span class="math inline">\(a_i\)</span> (<span class="math inline">\(\{D_j \leq a_i\}\)</span>). Then <span class="math inline">\(P(\text{friend j is present at } a_i) = P(A_j \cap B_j^C)\)</span>. Since <span class="math inline">\(B_j \subset A_j\)</span> (a friend can’t leave before they arrive), <span class="math inline">\(P(A_j) = P(A_j \cap B_j^C) + P(B_j)\)</span>. So, <span class="math inline">\(P(A_j \cap B_j^C) = P(A_j) - P(B_j) = P(\{X_j \leq a_i\}) - P(\{D_j \leq a_i\})\)</span>.</p>
+<p>Writing <span class="math inline">\(a_i\)</span> as <span class="math inline">\(x + k\delta\)</span> for some <span class="math inline">\(k \in [0,1)\)</span> and substituting,</p>
+<p><span class="math display">\[\begin{aligned}
+f_U(x) = \lim_{\delta \to 0} \frac{P(\{U \in [x,x+\delta)\})}{\delta} \\=
+\lim_{\delta \to 0} \frac{\sum_{i=1}^n P(\{a_i \in [x,x+\delta) \cap \forall j \neq i \in [n] \text{ friend } j \text{ is present at } a_i\})}{\delta} \\=
+\lim_{\delta \to 0} \frac{\sum_{i=1}^n f_{X_i}(x)\delta \prod_{j \neq i \in [n]} P(\{X_j \leq x + k\delta\}) - P(\{D_j \leq x + k\delta\})}{\delta} \\=
+\lim_{\delta \to 0} \sum_{i=1}^n f_{X_i}(x) \prod_{j \neq i \in [n]} F_{X_j}(x + k\delta) - F_{D_j}(x + k\delta) \\=
+\sum_{i=1}^n f_{X_i}(x) \lim_{\delta \to 0} \prod_{j \neq i \in [n]} F_{X_j}(x + k\delta) - F_{D_j}(x + k\delta) \\=
+\sum_{i=1}^n f_{X_i}(x) \prod_{j \neq i \in [n]} \lim_{\delta \to 0} (F_{X_j}(x + k\delta) - F_{D_j}(x + k\delta)) \\=
+\sum_{i=1}^n f_{X_i}(x) \prod_{j \neq i \in [n]} \lim_{\delta \to 0} F_{X_j}(x + k\delta) - \lim_{\delta \to 0} F_{D_j}(x + k\delta)\end{aligned}\]</span></p>
+<p>We were able to bring the limit inside the sum and products because both <span class="math inline">\(\lim_{\delta \to 0} F_{X_j}(x + k\delta)\)</span> and <span class="math inline">\(\lim_{\delta \to 0} F_{D_j}(x + k\delta)\)</span> exist, so <span class="math inline">\(\lim_{\delta \to 0} F_{X_j}(x + k\delta) - F_{D_j}(x + k\delta)\)</span> exists, etc. In fact, since <span class="math inline">\(F_{X_j}\)</span> and <span class="math inline">\(F_{D_j}\)</span> are continuous, <span class="math inline">\(\lim_{\delta \to 0} F_{X_j}(x + k\delta) = F_{X_j}(x)\)</span> and <span class="math inline">\(\lim_{\delta \to 0} F_{D_j}(x + k\delta) = F_{D_j}(x)\)</span>.</p>
+<p>Thus,</p>
+<p><span class="math display">\[\begin{aligned}
+f_U(x) = \sum_{i=1}^n f_{X_i}(x) \prod_{j \neq i \in [n]} F_{X_j}(x) - F_{D_j}(x) \\=
+\prod_{j \in n} (F_{X_j}(x) - F_{D_j}(x)) \sum_{j \in n}  \frac{f_{X_j}(x)}{F_{X_j}(x) - F_{D_j}(x)}\end{aligned}\]</span></p>
+<p>Note: Again, the last step is not necessary, but does make calculations easier. Just be careful if <span class="math inline">\(\exists i \in [n]\)</span> such that <span class="math inline">\(F_{X_i}(x) - F_{D_i}(x) = 0\)</span>. In that case, use the expression in the second to last line instead to avoid dividing by 0 (most terms in the sum will be 0 anyway.)</p>
+<p>Remembering that <span class="math inline">\(D_j \coloneqq X_j + T_j\)</span> and substituting,</p>
+<p><span class="math display">\[\begin{aligned}
+P(M) = \int_0^1 f_U(x) dx = \boxed{\int_0^1 \prod_{j \in n} (F_{X_j}(x) - F_{X_j + T_j}(x)) \sum_{j \in n}  \frac{f_{X_j}(x)}{F_{X_j}(x) - F_{X_j + T_j}(x)} dx}\end{aligned}\]</span></p>
+<p>as expected.</p>
+<h1 class="unnumbered" id="conclusion">Conclusion</h1>
+<p>As we further generalized the problem, the answer got more complicated and harder to compute. The answer to the first generalization was an integral that could be expressed as a sum of integrals with polynomial integrands. This is very nice for computation. However, the answer to the second generalization may be very hard to calculate depending on the given functions <span class="math inline">\(F_{X_i}\)</span> and <span class="math inline">\(F_{T_i}\)</span>. In some cases, it may be more practical to estimate these integrals with Riemann sums, in which case you could treat <span class="math inline">\(X_j\)</span> and <span class="math inline">\(T_j\)</span> as discrete random variables since you would only need to know the value of their CDFs and PDFs over a finite sequence of values. This should raise the question: how much faster and more accurate is it to calculate these integrals, as opposed to running simulations and averaging the results?</p>
+<p>Although I have not delved deep into the answer to this question, I would guess that the answer would be this:</p>
+<p>For all cases, if the anti-derivative of the integrand can be computed, it is best to do the integral, as this will yield an exact answer. (This will always be the case for the first generalization.)</p>
+<p>If not, then see if <span class="math inline">\(\int_0^y f_{X_j}(x)f_{T_j}(y - x)dx\)</span> can be easily expressed in terms of <span class="math inline">\(y\)</span> for <span class="math inline">\(y \in [0,1]\)</span>, which will give you <span class="math inline">\(f_{X_j + T_j}(y)\)</span>. If this is the case, then estimating the integral with a Riemann sum of <span class="math inline">\(m\)</span> intervals will take about as long as simulating the situation <span class="math inline">\(m\)</span> times, but will be more accurate.</p>
+<p>If the answer is still no, then a Riemann sum with <span class="math inline">\(m\)</span> intervals will take about as long as simulating the situation <span class="math inline">\(m\log(m)\)</span> times.</p>
+<p>These are purely hypotheses and I have not tested these claims, but for <span class="math inline">\(n\)</span> friends, I would imagine running the simulation <span class="math inline">\(m\)</span> times would take <span class="math inline">\(O(mn)\)</span> time, approximating the integral with a Riemann sum with <span class="math inline">\(m\)</span> intervals when you have <span class="math inline">\(f_{X_j + T_j}(x)\)</span> in terms of <span class="math inline">\(x\)</span> would take <span class="math inline">\(O(mn)\)</span> time, and approximating the integral with a Riemann sum with <span class="math inline">\(m\)</span> intervals when <span class="math inline">\(f_{X_j + T_j}(x)\)</span> is not easily expressed in terms of <span class="math inline">\(x\)</span> would take <span class="math inline">\(O(m\log(m)n)\)</span> time (since you would need to multiply polynomials of degree <span class="math inline">\(m\)</span> to find <span class="math inline">\(f_{X_j + T_j}(x)\)</span> for <span class="math inline">\(x = \frac{1}{m}, \frac{2}{m},...\frac{m}{m}\)</span>, which can be done in <span class="math inline">\(O(m\log(m))\)</span> time.)</p>
+<p>I would encourage you to think about how you could construct algorithms for both simulating the situation and estimating the integral to test my hypotheses and possibly prove or disprove them. (To clarify, these are purely conjectures and I have not laid out the details of any such algorithms. These are just my initial guesses.)</p>
+<p>In conclusion, even if the result from the second generalization may not always be easy to compute, it was still a good exercise in utilizing properties of random variables, probability distributions, and expectation.</p>
+<h1 class="unnumbered" id="references">References</h1>
+<p style="word-wrap: break-word;">Robert Gallager. Spring 2011. Massachusetts Institute of Technology: MIT OpenCouseWare, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-262-discrete-stochastic-processes-spring-2011/course-notes/MIT6_262S11_chap01.pdf">.</a> License: Creative Commons BY-NC-SA.</p>
+</main>
+</body>
+
+<script>
+var maxHeight = 0;
+
+$(".row").each(function () {
+    if ($(this).height() > maxHeight) {
+        maxHeight = $(this).height();
+    }
+});
+
+$(".row").height(maxHeight);
+</script>
+
+
+<footer class="blog-footer">
+  <a href="https://us7.list-manage.com/contact-form?u=bd1a0a18ff760b00bf541b12d&form_id=b47981c22ebecdf4a32acfec1a5f0fc7">Contact Us</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a><br>
+Copyright © 2021 Math and CS Research.
+</footer>
+  </body>
+</html>
+</body><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></html>
+
