@@ -466,8 +466,8 @@ There’s a general formula that can do this process much faster:</p>
 <p><span class="math display">\[(a+bi)^n =\sum^{n}_{k=0}\binom{n}{k}a^{n-k}(bi)^ k = \sum^{[\frac{n}{2}]}_{k=0}(\binom{n}{2k})(-1)^{k}a^{n-2k} b^{2k} + i\sum^{[\frac{n-1}{2}]}_{k=0}\binom{n}{2k+1}(-1)^{k}a^{n-2k-1}b^{2k+1}\]</span></p>
 <p>Substituting back <span class="math inline">\(\cos{\theta} = a\)</span> and <span class="math inline">\(\sin{\theta} = b\)</span>, we derive our formulas.</p>
 <p><span class="math display">\[(a+bi)^n = (\cos{\theta}+i\sin{\theta})^n = \cos{(n\theta)}+i\sin{(n\theta)}\]</span></p>
-<p><span class="math display">\[Re(\cos{\theta} + i\sin{\theta})^n = \cos{(n\theta)} =\sum^{\floor*{\frac{n}{2}}}_{k=0}\binom{n}{2k}(-1)^{k}\cos^{n-2k}{\theta} \sin^{2k}{\theta}\]</span></p>
-<p><span class="math display">\[Im(\cos{\theta} + i\sin{\theta})^n = \sin{(n\theta)} = \sum^{\floor*{\frac{n+1}{2}}}_{k=0}\binom{n}{2k+1}(-1)^{k}\cos^{n-2k-1}{\theta} \sin^{2k+1}{\theta}\]</span></p>
+<p><span class="math display">\[Re(\cos{\theta} + i\sin{\theta})^n = \cos{(n\theta)} =\sum^{{\lfloor\frac{n}{2}}\rfloor}_{k=0}\binom{n}{2k}(-1)^{k}\cos^{n-2k}{\theta} \sin^{2k}{\theta}\]</span></p>
+<p><span class="math display">\[Im(\cos{\theta} + i\sin{\theta})^n = \sin{(n\theta)} = \sum^{{\lfloor\frac{n+1}{2}}\rfloor}_{k=0}\binom{n}{2k+1}(-1)^{k}\cos^{n-2k-1}{\theta} \sin^{2k+1}{\theta}\]</span></p>
 <p>Some of the common multiple angle formulas are listed below:</p>
 <div class="center">
 <p><span class="math inline">\(\sin{(2x)} = 2\cos{x} sin{x}\)</span></p>
