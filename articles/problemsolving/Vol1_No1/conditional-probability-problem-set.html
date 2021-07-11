@@ -344,7 +344,7 @@ img {
     \end{aligned}\]</span></p>
 <p>Multiplying the third line of the equation by <span class="math inline">\(\frac{9}{20}\)</span> and subtracting it from the second line yields:</p>
 <p><span class="math display">\[\begin{aligned}
-    (1 - \frac{9}{20})\cdotp(\mbox{marbles }|\mbox{ not ugly}) = \frac{11}{20}\cdot\sum_{i=1}^{\infty}{\frac{9}{20}}^{i-1}
+    (1 - \frac{9}{20})\cdot E(\mbox{marbles }|\mbox{ not ugly}) = \frac{11}{20}\cdot\sum_{i=1}^{\infty}{\frac{9}{20}}^{i-1}
     \end{aligned}\]</span></p>
 <p><span class="math display">\[\begin{aligned}
         E(\mbox{marbles}|\mbox{not ugly}) = \sum_{i=1}^{\infty}{\frac{9}{20}}^{i-1} \\=
@@ -411,7 +411,7 @@ img {
 <p>(Quick Tip: here we are considering all the cards to be unique because it makes the calculations easier, but some questions are more easily answered when you consider all objects of the same type to be the same. No matter which way you do it, remember to be consistent. Don’t do one calculation where you consider all the red cards to be the same and then another where you consider them to be different.)</p>
 <p>Now let’s substitute that back into our expression for <span class="math inline">\(P(\mbox{first k are red})\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
-        P(\mbox{first k are red}) = \sum_{i=k}^{100}P(n = i)\cdotp(\mbox{first k are red }|n = i) \\=
+        P(\mbox{first k are red}) = \sum_{i=k}^{100}P(n = i)\cdot P(\mbox{first k are red }|n = i) \\=
         \sum_{i=k}^{100}\frac{1}{101}\cdot\frac{{i \choose k}}{{100 \choose k}} \\=
         \frac{1}{101}\cdot\frac{1}{{100 \choose k}}\cdot\sum_{i=k}^{100}{i \choose k}
     \end{aligned}\]</span></p>
@@ -420,7 +420,7 @@ img {
         P(\mbox{first k are red}) = \frac{1}{101}\cdot\frac{1}{{100 \choose k}}\cdot\sum_{i=k}^{100}{i \choose k}\\=
         \frac{1}{101}\cdot\frac{{101 \choose k+1}}{{100 \choose k}} \\=
         \frac{1}{101}\cdot\frac{\frac{101!}{(k+1)!(100-k)!}}{\frac{100!}{k!(100-k)!}} \\=
-        \frac{1}{101}\cdot\frac{101!\cdotk!}{100!\cdot(k+1)!} \\=
+        \frac{1}{101}\cdot\frac{101!\cdot k!}{100!\cdot(k+1)!} \\=
         \frac{1}{101}\cdot\frac{101}{k+1} \\=
         \frac{1}{k+1}
     \end{aligned}\]</span></p>
@@ -439,14 +439,14 @@ img {
 </div>
 <p>We want to find <span class="math inline">\(E(N | \mbox{draws 2})\)</span>. Using the definition of expected value and Bayes’ Theorem, we can write</p>
 <p><span class="math display">\[\begin{aligned}
-        E(N|\mbox{draws 2}) = \sum_{i=2}^\infty{i \cdotp(N=i |\mbox{ draws 2})} \\=
-        \sum_{i=2}^\infty{i \cdotp(\mbox{draws 2 }| N=i) \cdot\frac{P(N=i)}{P(\mbox{draws 2})}}
+        E(N|\mbox{draws 2}) = \sum_{i=2}^\infty{i \cdot P(N=i |\mbox{ draws 2})} \\=
+        \sum_{i=2}^\infty{i \cdot P(\mbox{draws 2 }| N=i) \cdot\frac{P(N=i)}{P(\mbox{draws 2})}}
     \end{aligned}\]</span></p>
 <p><span class="math inline">\(P(\mbox{draws 2}|N=i) = \frac{1}{i}\)</span> since there are <span class="math inline">\(i\)</span> slips and Annie chooses one of them at random (technically if <span class="math inline">\(i&lt;2\)</span> than it would be 0 but in our sum <span class="math inline">\(i\)</span> starts at 2).</p>
 <p><span class="math inline">\(P(N=i) = 2^{-i}\)</span> because that is given in the problem.</p>
 <p>Can you guess what we are going to do to compute <span class="math inline">\(P(\mbox{draws 2})\)</span>? Yes, for the fifth time we are going to use the Total Probability Theorem.</p>
 <p><span class="math display">\[\begin{aligned}
-        P(\mbox{draws 2}) = \sum_{i=2}^\infty{P(\mbox{draws 2 }|N=i) \cdotp(N=i)} \\=
+        P(\mbox{draws 2}) = \sum_{i=2}^\infty{P(\mbox{draws 2 }|N=i) \cdot P(N=i)} \\=
         \sum_{i=2}^\infty{\frac{1}{i} \cdot2^{-i}}
     \end{aligned}\]</span></p>
 <p>This sum looks like a geometric series with a common ratio of <span class="math inline">\(\frac{1}{2}\)</span>, but unfortunately we have that <span class="math inline">\(\frac{1}{i}\)</span> messing it up. In order to get rid of the <span class="math inline">\(\frac{1}{i}\)</span>, we need to do something that will result in each term being multiplied by i. It will be easier to see if we replace <span class="math inline">\(\frac{1}{2}\)</span> with <span class="math inline">\(x\)</span> and then plug in <span class="math inline">\(\frac{1}{2}\)</span> for <span class="math inline">\(x\)</span> later:</p>
@@ -475,7 +475,7 @@ img {
 <p>Now we can go back to our equation to compute <span class="math inline">\(E(N |\mbox{ draws 2})\)</span></p>
 <p><span class="math display">\[\begin{aligned}
         E(N |\mbox{ draws 2}) =
-        \sum_{i=2}^\infty{i \cdotp(\mbox{draws 2 }| N=i) \cdot\frac{P(N=i)}{P(\mbox{draws 2})}} \\=
+        \sum_{i=2}^\infty{i \cdot P(\mbox{draws 2 }| N=i) \cdot\frac{P(N=i)}{P(\mbox{draws 2})}} \\=
         \sum_{i=2}^\infty{i \cdot\frac{1}{i} \cdot \frac{2^{-i}}{\ln(2) - \frac{1}{2}}} \\=
         \frac{1}{\ln(2) - \frac{1}{2}}\cdot\sum_{i=2}^\infty{{\frac{1}{2}} ^ i} \\=
         \frac{1}{\ln(2) - \frac{1}{2}}\cdot\frac{1}{4}\cdot\frac{1}{1-\frac{1}{2}} &amp;&amp; \text{(sum of geometric series)} \\=
@@ -508,4 +508,3 @@ Copyright © 2021 Math and CS Research.
 </body><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></html>
-
