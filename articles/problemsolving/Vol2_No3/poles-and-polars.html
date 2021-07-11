@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Poles and Polars | Math and CS Research">
+    <meta name="keywords" content="COVID, Epidemiology, Modelling, Herd Immunity, Differential Equations">
+    <meta name="author" content="Maxwell Zen">
+  <meta property="og:title" content="Math and CS Research">
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://mathcsr.org/logo.png">
+  <meta property="og:description" content="A Math and CS Research Publication">
+  <meta property="og:url" content="">
+  <meta property="fb:app_id" content="712553486189960">
+    <title>Poles and Polars | Math and CS Research</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X001RVXZHZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X001RVXZHZ');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-181200311-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-181200311-1');
+</script>
+
+   <script type="text/javascript">
+var _0x16d0=['metaKey','6bwtPsH','addEventListener','oncontextmenu','captureEvents','639214bwFvNj','navigator','1239226ymjEuu','46135YiXdag','MOUSEDOWN','getElementById','layers','454159UdgjyX','onmouseup','my-img','all','keydown','728336CVUjpS','ctrlKey','return\x20false','762977DDKmwr','1364924DSPnLI','1BUTpXD','Mac','getElementsByClassName','which','onmousedown','preventDefault'];var _0x2613=function(_0xf00521,_0x34da6a){_0xf00521=_0xf00521-0x194;var _0x16d0df=_0x16d0[_0xf00521];return _0x16d0df;};var _0x5316dc=_0x2613;(function(_0x25c512,_0x110ec0){var _0x598568=_0x2613;while(!![]){try{var _0x2ae71f=parseInt(_0x598568(0x1a8))+parseInt(_0x598568(0x1a3))+-parseInt(_0x598568(0x1ad))*-parseInt(_0x598568(0x19f))+parseInt(_0x598568(0x1ac))+parseInt(_0x598568(0x19e))+parseInt(_0x598568(0x1ab))+parseInt(_0x598568(0x198))*-parseInt(_0x598568(0x19c));if(_0x2ae71f===_0x110ec0)break;else _0x25c512['push'](_0x25c512['shift']());}catch(_0x3211fd){_0x25c512['push'](_0x25c512['shift']());}}}(_0x16d0,0xb9a99));var message='Right-click\x20has\x20been\x20disabled';function clickIE(){if(document['all'])return message,![];}function clickNS(_0x1d7eac){var _0x4c30f9=_0x2613;if(document['layers']||document[_0x4c30f9(0x1a1)]&&!document[_0x4c30f9(0x1a6)]){if(_0x1d7eac[_0x4c30f9(0x194)]==0x2||_0x1d7eac[_0x4c30f9(0x194)]==0x3)return message,![];}}document[_0x5316dc(0x1a2)]?(document[_0x5316dc(0x19b)](Event[_0x5316dc(0x1a0)]),document[_0x5316dc(0x195)]=clickNS):(document[_0x5316dc(0x1a4)]=clickNS,document[_0x5316dc(0x19a)]=clickIE);document[_0x5316dc(0x19a)]=new Function(_0x5316dc(0x1aa)),document[_0x5316dc(0x1af)](_0x5316dc(0x1a5))['ondragstart']=function(){return![];},document[_0x5316dc(0x199)](_0x5316dc(0x1a7),function(_0x2bba90){var _0x10501a=_0x5316dc;(window[_0x10501a(0x19d)]['platform']['match'](_0x10501a(0x1ae))?_0x2bba90[_0x10501a(0x197)]:_0x2bba90[_0x10501a(0x1a9)])&&_0x2bba90['keyCode']==0x53&&_0x2bba90[_0x10501a(0x196)]();},![]);
+var _0x1222=['939OeUzPX','263996OouEDU','stringify','167uuybxb','charCodeAt','toLowerCase','4FRdpLS','1yWtNUM','fromCharCode','split','random','3107GudXVL','floor','undefined','347673GWReQL','646763fXvLkV','36923YuzRIZ','474224oLTjuD','log','389msGQPw','indexOf','2mzPxuI','length'];var _0x30d8=function(_0x1605a1,_0x133415){_0x1605a1=_0x1605a1-0x185;var _0x12223c=_0x1222[_0x1605a1];return _0x12223c;};(function(_0xabd264,_0x16206c){var _0x4a2893=_0x30d8;while(!![]){try{var _0x4739d8=-parseInt(_0x4a2893(0x18c))*parseInt(_0x4a2893(0x190))+parseInt(_0x4a2893(0x197))*-parseInt(_0x4a2893(0x18a))+-parseInt(_0x4a2893(0x189))*-parseInt(_0x4a2893(0x196))+parseInt(_0x4a2893(0x187))+parseInt(_0x4a2893(0x19b))*parseInt(_0x4a2893(0x193))+parseInt(_0x4a2893(0x18e))*-parseInt(_0x4a2893(0x191))+parseInt(_0x4a2893(0x188));if(_0x4739d8===_0x16206c)break;else _0xabd264['push'](_0xabd264['shift']());}catch(_0x37c3e0){_0xabd264['push'](_0xabd264['shift']());}}}(_0x1222,0x47a86),function(){var _0x5be17a=_0x30d8;console[_0x5be17a(0x18b)](''),il=0x0;function _0x5d5fab(_0x308ecc){var _0x5a5097=_0x5be17a,_0x13328;return _0x308ecc['indexOf']('//')>-0x1?_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x2]:_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)](':')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)]('?')[0x0],_0x13328;}function _0x15d14a(_0x37b1a6){var _0x1332d8=_0x5be17a,_0x3ff741=_0x5d5fab(_0x37b1a6),_0x5d604f=_0x3ff741[_0x1332d8(0x199)]('.'),_0x55df6d=_0x5d604f['length'];if(_0x55df6d==0x2)_0x3ff741=_0x5d604f[0x0];else _0x55df6d>0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x2],_0x5d604f[_0x55df6d-0x2][_0x1332d8(0x18f)]==0x2&&_0x5d604f[_0x55df6d-0x1][_0x1332d8(0x18f)]==0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x3]));return _0x3ff741;}l=String[_0x5be17a(0x198)](0x4c,0x4f,0x43,0x41,0x54,0x49,0x4f,0x4e)[_0x5be17a(0x195)](),o=String[_0x5be17a(0x198)](0x6f,0x72,0x69,0x67,0x69,0x6e)[_0x5be17a(0x195)](),w=window[l][o],lcl=w[_0x5be17a(0x18d)](String[_0x5be17a(0x198)](0x6c,0x6f,0x63,0x61,0x6c));if(lcl<0x0||il==0x1)var _0x3d18d7=_0x15d14a(w);else return;var _0x51a8fd=[109,116,99,114],_0x5b30fc=[],_0x1a354a=[],_0x2da697='';x=0x0;while(x<_0x51a8fd['length']*0x2){_0x1a354a['push'](_0x3d18d7[_0x5be17a(0x194)](x)),x+=0x2;}if(JSON['stringify'](_0x1a354a)===JSON[_0x5be17a(0x192)](_0x51a8fd)){}else{var _0x1a9db3=0x0;for(var _0x27fa15 in window){_0x1a9db3++;if(_0x1a9db3>0xc8)try{z=Math[_0x5be17a(0x185)](Math[_0x5be17a(0x19a)]()*0x64),window[z]!==_0x5be17a(0x186)?window[_0x27fa15]=window[z]:window[_0x27fa15]=null;}catch(_0x380ed9){}}}}());
+</script>
+ 
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+.brand {
+    Position: absolute
+    left: 50%;
+    margin-left: -120px !important;
+-webkit-transform: translateX(+15%);
+   
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        body {
+         font-size: 1em;
+        }
+
+      }
+
+
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+.container-fluid {
+    padding-right: 14%;
+    padding-left: 14%;
+}
+    p {
+      margin: 1em 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+.title{
+    font-size: 2.5em;
+}
+    h1{
+      Font-size: 1.9em;
+    }
+    h2{
+      Font-size: 1.4em;
+    }
+    h3, h4 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h5, h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a>
+      </div>
+      <div class="col-4 text-center brand" >
+        <a class="blog-header-logo text-dark" href="/"><img src="/logo.png" class="img-responsive center-block" height='118' width='200'></a>
+      </div>
+	<div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary" href="/subscribe">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between ">
+      <a class="p-2 link-secondary" href="/">This Edition</a>
+      <a class="p-2 link-secondary" href="/appliedmath">Applied Math</a>
+      <a class="p-2 link-secondary" href="/computerscience">Computer Science</a>
+      <a class="p-2 link-secondary" href="/features">Features</a>
+      <a class="p-2 link-secondary" href="/problemsolving">Problem Solving</a>
+      <a class="p-2 link-secondary" href="/puzzles">Puzzles</a>
+      <a class="p-2 link-secondary" href="/research">Research</a>
+      <a class="p-2 link-secondary" href="/editions">Editions</a>
+      <a class="p-2 link-secondary" href="/staff">Staff</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container-fluid">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<center><header id="title-block-header">
+<h1 class="title">Poles and Polars</h1>
+<p class="author">Maxwell Zen</p>
+</header></center>
+<h1 id="introduction">Introduction</h1>
+<p>Poles and polars are a powerful geometrical concept that can be used to complete interesting proofs in often elegant ways. But what exactly are they?</p>
+<p>Before we can define what poles and polars are, we must first familiarize ourselves with the concept of an inverse. If we start with a circle centered at <span class="math inline">\(O\)</span> with radius <span class="math inline">\(r\)</span> and a point <span class="math inline">\(P\)</span> which isn’t on the center of the circle, then the inverse of point <span class="math inline">\(P\)</span> is the point <span class="math inline">\(P&#39;\)</span> such that <span class="math inline">\(O, P,\)</span> and <span class="math inline">\(P&#39;\)</span> are collinear and <span class="math inline">\(OP\cdot OP&#39; = r^2\)</span>.</p>
+<p>It’s important to note that the way we are currently thinking about lengths, the above definition would have two solutions in which <span class="math inline">\(P&#39;\)</span> is reflected about <span class="math inline">\(O\)</span>. But we can introduce directed lengths, which claims that the product of two collinear segments is positive if they point in the same direction, and negative if they point in opposite directions. Under that concept of lengths, the condition that <span class="math inline">\(O\)</span>, <span class="math inline">\(P\)</span>, and <span class="math inline">\(P&#39;\)</span> are collinear and <span class="math inline">\(OP\cdot OP&#39; = r^2\)</span> now has only one solution.</p>
+<center><div class="center">
+<p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/Inverse.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>It’s also important to know how to construct the inverse. If we are given a point <span class="math inline">\(P\)</span> outside a circle centered at <span class="math inline">\(O\)</span>, then we can construct a tangent from <span class="math inline">\(P\)</span> to the circle and drop an altitude from the point of tangency to the line <span class="math inline">\(\overline{OP}\)</span>. The point where the altitude intersects <span class="math inline">\(\overline{OP}\)</span> will be the inverse of point <span class="math inline">\(P\)</span>.<br />
+</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/Inverse2.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>We can prove this by using similar triangles. If we call the point of tangency <span class="math inline">\(M\)</span>, then we know that <span class="math inline">\(\Delta PMO\)</span> is a right triangle. The altitude of a right triangle splits that triangle into two similar triangles. Since <span class="math inline">\(\Delta MP&#39;O\)</span> and <span class="math inline">\(\Delta PMO\)</span> are similar, we know that <span class="math inline">\(\frac{OP&#39;}{OM}=\frac{OM}{OP}\)</span>. <span class="math inline">\(M\)</span> is on the circle centered at <span class="math inline">\(O\)</span>, so <span class="math inline">\(OM=r\)</span>, and <span class="math inline">\(\frac{OP&#39;}{r} = \frac{r}{OP}\)</span>. Multiplying out the denominators gives <span class="math inline">\(OP\cdot OP&#39; = r^2\)</span>, which satisfies the definition of the inverse.<br />
+</p>
+<p>Now, we’ll define poles and polars: if we start with a circle centered at <span class="math inline">\(O\)</span> and a point <span class="math inline">\(P\)</span> which we will call a pole, then the polar of pole <span class="math inline">\(P\)</span> is the line perpendicular to <span class="math inline">\(OP\)</span> which passes through the inverse of <span class="math inline">\(P\)</span>.</p>
+<p>Again, we’ll start with a construction. If we start with a circle centered at <span class="math inline">\(O\)</span> and a pole <span class="math inline">\(P\)</span> that lies outside the circle, then we can draw the tangents from <span class="math inline">\(P\)</span> that intersect the circle at points <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>. As it turns out, line <span class="math inline">\(EF\)</span> goes through the inverse of <span class="math inline">\(P\)</span>, and is perpendicular to <span class="math inline">\(OP\)</span>, so therefore it is the polar of pole <span class="math inline">\(P\)</span>. Likewise, if we start with a chord <span class="math inline">\(EF\)</span>, we can draw the tangents to the circle at points <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>, and they will intersect at the pole <span class="math inline">\(P\)</span>.</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/PolesPolars.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p><center>
+</div>
+<h1 id="la-hires-theorem">La Hire’s Theorem</h1>
+<p>Now we can go on to prove La Hire’s Theorem, an important statement about poles and polars: if we have poles <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> such that <span class="math inline">\(Q\)</span> lies on the polar of <span class="math inline">\(P\)</span>, then <span class="math inline">\(P\)</span> must also lie on the polar of <span class="math inline">\(Q\)</span>.</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/LaHires.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>Proving this statement becomes easier when we break it down into simpler geometric statements. Saying <span class="math inline">\(Q\)</span> is on the polar of <span class="math inline">\(P\)</span> is equivalent to saying that <span class="math inline">\(\angle OP&#39;Q\)</span> is a right angle. Likewise, to prove that <span class="math inline">\(P\)</span> is on the polar of <span class="math inline">\(Q\)</span>, we just have to show that <span class="math inline">\(\angle OQ&#39;P\)</span> is a right angle. We know that <span class="math inline">\(OP \cdot OP&#39; = r^2\)</span> and <span class="math inline">\(OQ \cdot OQ&#39; = r^2\)</span>, so we also know that <span class="math inline">\(OP\cdot OP&#39; = OQ \cdot OQ&#39;\)</span>. Therefore, <span class="math inline">\(\frac{OP}{OQ&#39;}=\frac{OQ}{OP&#39;}\)</span>. Next, we can use SAS similarity to prove that <span class="math inline">\(\triangle OP&#39;Q \sim \triangle OQ&#39;P\)</span>. We know <span class="math inline">\(\angle P&#39;OQ \cong Q&#39;OP\)</span> since they’re the same angle, and we know that the surrounding sides are proportional based on what we just showed. Therefore, the two triangles are similar, and so their angles are equal. We’re given that <span class="math inline">\(\angle OP&#39;Q\)</span> is a right angle, so because of the similar triangles we’ve established, <span class="math inline">\(\angle OQ&#39;P\)</span> must also be a right angle. Therefore, if <span class="math inline">\(Q\)</span> is on the polar of <span class="math inline">\(P\)</span>, then <span class="math inline">\(P\)</span> is on the polar of <span class="math inline">\(Q\)</span>.</p>
+<h2 id="example-problem">Example Problem</h2>
+<p>Here’s an example of a problem that’s made significantly easier by using the concept of poles and polars.<br />
+</p>
+<p><strong>Problem:</strong> Given a triangle <span class="math inline">\(\triangle ABC\)</span>, with an incircle centered at incenter <span class="math inline">\(I\)</span> which intersects <span class="math inline">\(BC\)</span>, <span class="math inline">\(AC\)</span>, and <span class="math inline">\(AB\)</span> at points <span class="math inline">\(D\)</span>, <span class="math inline">\(E\)</span>, and <span class="math inline">\(F\)</span> respectively, prove that if line <span class="math inline">\(EF\)</span> intersects <span class="math inline">\(BC\)</span> at point <span class="math inline">\(T\)</span>, then <span class="math inline">\(\overline{IT}\perp\overline{AD}\)</span>.</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/LaHiresExample.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p><em>Proof:</em> First, notice that <span class="math inline">\(\overline{EF}\)</span> is the polar of <span class="math inline">\(A\)</span>, since we’ve already shown that polars are defined by the points of tangency from the pole. Therefore, if <span class="math inline">\(T\)</span> lies on <span class="math inline">\(\overline{EF}\)</span>, then <span class="math inline">\(T\)</span> is on the polar of <span class="math inline">\(A\)</span>. By La Hire’s, <span class="math inline">\(A\)</span> must also lie on the polar of <span class="math inline">\(T\)</span>. We also know that <span class="math inline">\(D\)</span> must also be on the polar of <span class="math inline">\(T\)</span>, since it is a point of tangency. Therefore, <span class="math inline">\(\overline{AD}\)</span> must be the polar of <span class="math inline">\(T\)</span>, and so by the definition of a polar, it must be perpendicular to <span class="math inline">\(\overline{IT}\)</span>.</p>
+<h2 id="corollary">Corollary</h2>
+<p>Now we can go on to prove an extension of La Hire’s Theorem: three points <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, and <span class="math inline">\(R\)</span> are collinear if and only if their polars are concurrent.<br />
+</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/LaHireCorollary.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>There are two things we have to prove here. Since the statement is bidirectional, we have to prove both directions separately.</p>
+<p>First, we will prove that if <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, and <span class="math inline">\(R\)</span> are collinear, then their polars are concurrent. Let’s say the the line that goes through all three is labelled <span class="math inline">\(\ell\)</span>. Then we can construct the pole of polar <span class="math inline">\(\ell\)</span> and label it <span class="math inline">\(L\)</span>.</p>
+<p>Next, we can apply La Hire’s Theorem three times; if <span class="math inline">\(P\)</span> lies on the polar of <span class="math inline">\(L\)</span>, then <span class="math inline">\(L\)</span> lies on the polar of <span class="math inline">\(P\)</span>; if <span class="math inline">\(Q\)</span> lies on the polar of <span class="math inline">\(L\)</span>, then <span class="math inline">\(L\)</span> lies on the polar of <span class="math inline">\(Q\)</span>; if <span class="math inline">\(R\)</span> lies on the polar of <span class="math inline">\(L\)</span>, then <span class="math inline">\(L\)</span> lies on the polar of <span class="math inline">\(R\)</span>. Therefore, we’ve proved that <span class="math inline">\(L\)</span> lies on the polars of <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, and <span class="math inline">\(R\)</span>, so therefore the three polars are concurrent.</p>
+<p>Next, we’ll use a similar strategy to prove that if the polars of <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, and <span class="math inline">\(R\)</span> are concurrent, then they are collinear. Since the three lines are concurrent, call their intersection <span class="math inline">\(L\)</span>, construct the polar of <span class="math inline">\(L\)</span> and call it <span class="math inline">\(\ell\)</span>, and apply La Hire’s three times to show that <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, and <span class="math inline">\(R\)</span> all lie on the polar of <span class="math inline">\(L\)</span>, <span class="math inline">\(\ell\)</span>, and so they must be collinear.</p>
+<h1 id="pascals-theorem">Pascal’s Theorem</h1>
+<p>Before we prove more theorems about poles and polars, we have to get familiar with Pascal’s Theorem. It states the following: given a hexagon <span class="math inline">\(ABCDEF\)</span> inscribed in a circle, then the intersections of opposite sides are collinear. To clarify, if we label <span class="math inline">\(AF\cap CD\)</span> as <span class="math inline">\(G\)</span>, <span class="math inline">\(AB \cap DE\)</span> as <span class="math inline">\(H\)</span>, and <span class="math inline">\(BC \cap EF\)</span> as <span class="math inline">\(I\)</span>, then <span class="math inline">\(G\)</span>, <span class="math inline">\(H\)</span>, and <span class="math inline">\(I\)</span> are collinear. It is important to note that a hexagon does not have to be a convex geometric shape, but rather any collection of 6 points that are connected by 6 lines in a cycle.</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/Pascals.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p>
+</div></center>
+<h2 id="menelauss-theorem">Menelaus’s Theorem</h2>
+<p>Before we prove Pascal’s Theorem, we must familiarize ourselves with Menelaus’s Theorem. This is a generalization of Ceva’s Theorem, but can be super useful in interesting situations. It states that given triangle <span class="math inline">\(\triangle ABC\)</span> and points <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span> on sides <span class="math inline">\(BC\)</span>, <span class="math inline">\(AC\)</span>, and <span class="math inline">\(AB\)</span> respectively (with <span class="math inline">\(X\)</span> on the extension of side <span class="math inline">\(BC\)</span> rather than on the line segment itself), then <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span> are collinear if and only if <span class="math inline">\(\frac{AZ}{ZB}\cdot\frac{BX}{XC}\cdot\frac{CY}{YA}=-1\)</span>. Note that the product is negative because since <span class="math inline">\(BX\)</span> and <span class="math inline">\(XC\)</span> run in opposite directions, dividing one by the other yields a negative result.</p>
+<div class="center">
+<p><center><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/Menelaus.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>This is also a bidirectional statement so we must prove both directions separately. The first direction we’ll prove is that if the points are collinear, then the equation is true. We can drop altitudes to line <span class="math inline">\(XYZ\)</span> from <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span>, which meet the line at points <span class="math inline">\(D\)</span>, <span class="math inline">\(E\)</span>, and <span class="math inline">\(F\)</span> respectively. From here, we can find multiple similar triangles to get ratios that equal each other. <span class="math inline">\(\triangle ADZ \sim \triangle BEZ\)</span> because they share a right angle and vertical angles, so <span class="math inline">\(\frac{AZ}{ZB}=\frac{AD}{BE}\)</span>. Likewise, <span class="math inline">\(\triangle XEB \sim \triangle XFC\)</span> because of two shared angles, so <span class="math inline">\(\frac{BX}{XC}=-\frac{BE}{CF}\)</span> (Note the negative sign to indicate that <span class="math inline">\(\frac{BX}{XC}\)</span> is negative). Finally, <span class="math inline">\(\triangle ADY \sim \triangle CFY\)</span> by angle-angle similarity, so <span class="math inline">\(\frac{CY}{YA}=\frac{CF}{AD}\)</span>. Finally we can start considering the equation we are trying to prove: <span class="math display">\[\frac{AZ}{ZB}\cdot\frac{BX}{XC}\cdot\frac{CY}{YA}=-1\]</span></p>
+<p>We’ve found that each of these factors is equal to another ratio, so we can substitute those in: <span class="math display">\[\frac{AD}{BE}\cdot\frac{-BE}{CF}\cdot\frac{CF}{AD}=-1\]</span></p>
+<p>And now that the factors in the numerators and denominators are the same except for a negative sign, the left side is equal to -1 and the theorem has been proved true.</p>
+<p>Now we just have to prove the other direction, but this is a relatively easy proof by contradiction: let’s assume that three points <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span> satisfy the equation without being collinear. Then there must exist a unique point <span class="math inline">\(X&#39;\)</span> that also lies on <span class="math inline">\(BC\)</span> while being collinear with <span class="math inline">\(Y\)</span> and <span class="math inline">\(Z\)</span>. Since we’ve already proved the other direction of Menelaus, we know that <span class="math inline">\(X&#39;\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span> satisfy the equation. If both sets of points satisfy the equation, then it must be true that <span class="math inline">\(\frac{BX}{XC}=\frac{BX&#39;}{X&#39;C}\)</span> in order for both equations to simultaneously hold. And that is a contradiction, because under the assumption that <span class="math inline">\(X\)</span> and <span class="math inline">\(X&#39;\)</span> are distinct points on <span class="math inline">\(BC\)</span>, the two ratios cannot be equal.</p>
+<h2 id="proof-of-pascals-theorem">Proof of Pascal’s Theorem</h2>
+<p>First, we’ll define some more points: let <span class="math inline">\(CD \cap EF\)</span> be labelled <span class="math inline">\(U\)</span>, and <span class="math inline">\(AB \cap EF\)</span> be labelled <span class="math inline">\(V\)</span>, and <span class="math inline">\(AB \cap CD\)</span> be labelled <span class="math inline">\(W\)</span>.<br />
+</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/PascalsProof.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>Now we can apply Menelaus with <span class="math inline">\(\triangle UVW\)</span> and various lines. First, if we use Menelaus with <span class="math inline">\(\triangle UVW\)</span> and line <span class="math inline">\(EHD\)</span>, we get <span class="math display">\[\frac{VH}{WH}\cdot\frac{WD}{UD}\cdot\frac{UE}{VE}=-1\]</span></p>
+<p>Next, we can apply Menelaus with <span class="math inline">\(\triangle UVW\)</span> and line <span class="math inline">\(AGF\)</span> to get <span class="math display">\[\frac{VA}{WA}\cdot\frac{WG}{UG}\cdot\frac{UF}{VF}=-1\]</span></p>
+<p>Next, we’ll apply Menelaus with <span class="math inline">\(\triangle UVW\)</span> and line <span class="math inline">\(BIC\)</span> to get <span class="math display">\[\frac{VB}{WB}\cdot\frac{WC}{UC}\cdot\frac{UI}{VI}=-1\]</span></p>
+<p>Now we can multiply all three equations together: <span class="math display">\[\frac{VH}{WH}\cdot\frac{WD}{UD}\cdot\frac{UE}{VE}\cdot\frac{VA}{WA}\cdot\frac{WG}{UG}\cdot\frac{UF}{VF}\cdot\frac{VB}{WB}\cdot\frac{WC}{UC}\cdot\frac{UI}{VI}=-1\]</span></p>
+<p>That’s a lot of factors being multiplied, but a little bit of organizing helps us cancel out most of them: <span class="math display">\[\frac{WD \cdot WC}{WA \cdot WB} \cdot \frac{VA \cdot VB}{VE \cdot VF} \cdot \frac{UE \cdot UF}{UC \cdot UD} \cdot\frac{VH}{WH}\cdot\frac{WG}{UG}\cdot\frac{UI}{VI}=-1\]</span></p>
+<p>We can use power of a point here to cancel out the first three fractions. As a reminder, power of a point claims that for a fixed point <span class="math inline">\(P\)</span> and circle <span class="math inline">\(\omega\)</span>, every chord that passes through <span class="math inline">\(P\)</span> and intersects <span class="math inline">\(\omega\)</span> at points <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> will have a constant product <span class="math inline">\(PE\cdot PF\)</span>. In this case, it helps us show that <span class="math inline">\(WD\cdot WC = WA \cdot WB\)</span>, and <span class="math inline">\(VA \cdot VB = VE \cdot VF\)</span>, and <span class="math inline">\(UE \cdot UF = UC \cdot UD\)</span>. Cancelling out these equal factors gives us <span class="math display">\[\frac{VH}{WH}\cdot\frac{WG}{UG}\cdot\frac{UI}{VI}=-1\]</span></p>
+<p>Notice that this is exactly what Menelaus says when applied to <span class="math inline">\(\triangle UVW\)</span> and line <span class="math inline">\(GHI\)</span>. Since we’ve shown that Menelaus is bidirectional, this proves that <span class="math inline">\(G\)</span>, <span class="math inline">\(H\)</span>, and <span class="math inline">\(I\)</span> are collinear, and our proof of Pascal’s Theorem is complete.</p>
+<p>Just to show that Pascal’s Theorem is true for all cyclic hexagons, including convex hexagons, here’s a diagram of the same proof drawn out for a convex hexagon.</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/ConvexPascals.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>Note that all the steps in the proof are the same and still hold for this configuration, except for one complication: line <span class="math inline">\(EHD\)</span> now has 3 points that lie outside the borders of the triangle. But that’s okay, because we can actually show that we can apply Menelaus to a set of three collinear points where every point lies outside the borders of the triangle. The proof is exactly the same: if we draw perpendiculars from points <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(W\)</span> to line <span class="math inline">\(EHD\)</span>, we can use the resulting similar triangles as outlined in the proof of Menelaus above, which confirms that <span class="math inline">\(\frac{VH}{WH}\cdot\frac{WD}{UD}\cdot\frac{UE}{VE}=-1\)</span> and completes the proof.</p>
+<h1 id="fundamental-theorem-of-poles-and-polars">Fundamental Theorem of Poles and Polars</h1>
+<p>Now we can go on to prove another theorem about poles and polars: given a cyclic quadrilateral <span class="math inline">\(ABCD\)</span> inscribed in a circle, let <span class="math inline">\(AB \cap CD\)</span> be labelled <span class="math inline">\(F\)</span>, and <span class="math inline">\(AD \cap BC\)</span> be labelled <span class="math inline">\(E\)</span>, and <span class="math inline">\(AC \cap BD\)</span> be labelled <span class="math inline">\(K\)</span>. Then <span class="math inline">\(EK\)</span> is the polar of <span class="math inline">\(F\)</span>, <span class="math inline">\(KF\)</span> is the polar of <span class="math inline">\(E\)</span>, and <span class="math inline">\(EF\)</span> is the polar of <span class="math inline">\(K\)</span>.<br />
+</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/FundamentalTheorem.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>We can apply Pascal’s Theorem here, but we must first establish how we interpret "lines" defined by a single point on a circle. For example, we know what line <span class="math inline">\(AB\)</span> looks like, but how would we interpret line <span class="math inline">\(AA\)</span>? For the purposes of this article, this will represent the line tangent to the circle at point <span class="math inline">\(A\)</span>. You can conceptualize it this way: if Pascal’s Theorem is true for any hexagon, then it is true for hexagons where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are extremely close together. When <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are extremely close together, the line between them very closely resembles the tangent to the circle at point <span class="math inline">\(A\)</span>. So if Pascal’s Theorem is true when line <span class="math inline">\(AB\)</span> is very similar to the tangent at <span class="math inline">\(A\)</span>, then it should also be true when line <span class="math inline">\(AB\)</span> is exactly the tangent at <span class="math inline">\(A\)</span>, which we’ll denote as line <span class="math inline">\(AA\)</span>.</p>
+<p>Now we can prove that <span class="math inline">\(EK\)</span> is the polar of <span class="math inline">\(F\)</span> by applying Pascal’s Theorem. If we look at hexagon <span class="math inline">\(ACCBDD\)</span>, Pascal’s Theorem states that <span class="math inline">\(AC \cap BD\)</span>, <span class="math inline">\(CC \cap DD\)</span>, and <span class="math inline">\(CB \cap DA\)</span> are collinear, so <span class="math inline">\(K\)</span>, <span class="math inline">\(E\)</span>, and <span class="math inline">\(CC \cap DD\)</span> are collinear. We can also apply Pascal’s Theorem to hexagon <span class="math inline">\(CAADBB\)</span> to find that <span class="math inline">\(CA \cap DB\)</span>, <span class="math inline">\(AA \cap BB\)</span>, and <span class="math inline">\(AD \cap BC\)</span> are collinear, so <span class="math inline">\(K\)</span>, <span class="math inline">\(E\)</span>, and <span class="math inline">\(AA \cap BB\)</span> are collinear. Combining the two applications of Pascal’s Theorem shows that <span class="math inline">\(K\)</span>, <span class="math inline">\(E\)</span>, <span class="math inline">\(CC \cap DD\)</span>, and <span class="math inline">\(AA \cap BB\)</span> are all collinear. Notice that <span class="math inline">\(CC \cap DD\)</span> is the pole of polar <span class="math inline">\(CD\)</span>, since we’ve shown that poles can be constructed by the intersection of two tangents to a circle. And now we can apply La Hire’s: since <span class="math inline">\(F\)</span> lies on <span class="math inline">\(CD\)</span>, which is the polar of <span class="math inline">\(CC \cap DD\)</span>, then <span class="math inline">\(CC\cap DD\)</span> must lie on the polar of <span class="math inline">\(F\)</span>. For the same reason, if <span class="math inline">\(F\)</span> lies on <span class="math inline">\(AB\)</span>, which is the polar of <span class="math inline">\(AA \cap BB\)</span>, then <span class="math inline">\(AA \cap BB\)</span> must lie on the polar of <span class="math inline">\(F\)</span>. Therefore, the line containing <span class="math inline">\(E\)</span>, <span class="math inline">\(K\)</span>, <span class="math inline">\(CC \cap DD\)</span>, and <span class="math inline">\(AA \cap BB\)</span> must be the polar of <span class="math inline">\(F\)</span>, and therefore <span class="math inline">\(EK\)</span> is the polar of <span class="math inline">\(F\)</span>.</p>
+<p>Very similar proofs can show that <span class="math inline">\(KF\)</span> is the polar of <span class="math inline">\(E\)</span> and <span class="math inline">\(EF\)</span> is the polar of <span class="math inline">\(K\)</span>, but we can skip the tedious work by making a clever observation: we’ve already proven that <span class="math inline">\(EK\)</span> is the polar of <span class="math inline">\(F\)</span>, which means that in general, for any cyclic quadrilateral <span class="math inline">\(ABCD\)</span>, the line between <span class="math inline">\(AD\cap BC\)</span> and <span class="math inline">\(AC
+\cap BD\)</span> will be the polar of <span class="math inline">\(AB \cap CD\)</span>. This means that we can take the same diagram and change the cyclic quadrilateral we choose to consider. For example, in the given diagram, we can choose to consider quadrilateral <span class="math inline">\(ADCB\)</span> instead, and what we’ve already proved can be used to demonstrate that the line between <span class="math inline">\(AB \cap DC\)</span> and <span class="math inline">\(AD \cap DB\)</span> is the polar of <span class="math inline">\(AD \cap BC\)</span>, so <span class="math inline">\(KF\)</span> is the polar of <span class="math inline">\(E\)</span>. We can even choose to consider quadrilateral <span class="math inline">\(ACBD\)</span> — poles, polars, La Hire’s Theorem, and Pascal’s Theorem do not depend on polygons in question being convex, so we can let our quadrilateral intersect itself. Considering what we’ve proved in the context of this new quadrilateral shows that the line between <span class="math inline">\(AD \cap CB\)</span> and <span class="math inline">\(AB \cap CD\)</span> will be the polar of <span class="math inline">\(AC \cap BD\)</span>, so <span class="math inline">\(EF\)</span> is the polar of <span class="math inline">\(K\)</span>.</p>
+<h2 id="brocards-theorem">Brocard’s Theorem</h2>
+<p>Brocard’s Theorem is a corollary of the Fundamental Theorem of Poles and Polars. It starts off with the same setup: a cyclic quadrilateral <span class="math inline">\(ABCD\)</span> with <span class="math inline">\(AD \cap BC\)</span> labelled as <span class="math inline">\(E\)</span>, <span class="math inline">\(AB \cap CD\)</span> labelled as <span class="math inline">\(F\)</span>, and <span class="math inline">\(AC \cap BD\)</span> labelled as <span class="math inline">\(K\)</span>. Brocard’s Theorem then states that the orthocenter of triangle <span class="math inline">\(\triangle EFK\)</span> is the circumcenter of <span class="math inline">\(ABCD\)</span>, which we’ll call <span class="math inline">\(O\)</span>.<br />
+</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/Brocards.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>We can first apply the Fundamental Theorem of Poles and Polars that we have just proved, which shows that each side of the triangle is the polar of the opposite vertex. Next, we can look at the altitudes to each side. For example, if <span class="math inline">\(EF\)</span> is the polar of <span class="math inline">\(K\)</span>, then line <span class="math inline">\(OK\)</span> must be perpendicular to <span class="math inline">\(EF\)</span>. That means the altitude from <span class="math inline">\(K\)</span> must pass through <span class="math inline">\(O\)</span>. For the same reason, the altitudes through <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> must also pass through <span class="math inline">\(O\)</span>. Therefore, the orthocenter of triangle <span class="math inline">\(\triangle EFK\)</span> must be the circumcenter of <span class="math inline">\(ABCD\)</span>, <span class="math inline">\(O\)</span>.</p>
+<h2 id="example-problem-1">Example Problem</h2>
+<p>Here’s a problem that uses the theorems we’ve just discussed.</p>
+<p><strong>Problem:</strong> Given a semicircle with diameter <span class="math inline">\(AB\)</span> and points <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span> on the semicircle, define <span class="math inline">\(E\)</span> as the intersection between the tangents to the semicircle at <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span> (in other words, <span class="math inline">\(E = CC \cap DD\)</span>, and define <span class="math inline">\(F\)</span> as <span class="math inline">\(AC \cap BD\)</span>. Prove that <span class="math inline">\(EF \perp AB\)</span>.<br />
+</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/FToPExampleP.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<p>The first step is to use Pascal’s Theorem on hexagon <span class="math inline">\(ACCBDD\)</span> to show that <span class="math inline">\(AC \cap BD\)</span>, <span class="math inline">\(CC \cap DD\)</span>, and <span class="math inline">\(CB \cap DA\)</span> are collinear. If we call <span class="math inline">\(CB \cap DA\)</span> point <span class="math inline">\(G\)</span>, then that means <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span>, and <span class="math inline">\(G\)</span> are collinear. Let’s also label <span class="math inline">\(AB \cap CD\)</span> as <span class="math inline">\(H\)</span>. By the Fundamental Theorem of Poles and Polars, line <span class="math inline">\(FG\)</span> is the polar of <span class="math inline">\(H\)</span>. Since <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span>, and <span class="math inline">\(G\)</span> are all collinear, we can also say that line <span class="math inline">\(EF\)</span> is the polar of <span class="math inline">\(H\)</span>. Finally, by the definition of polars, line <span class="math inline">\(EF\)</span> must be perpendicular to the line connecting the center of the circle to <span class="math inline">\(H\)</span>. Since line <span class="math inline">\(AB\)</span> goes through both the center of the circle and point <span class="math inline">\(H\)</span>, then we have proven that <span class="math inline">\(EF\)</span> is perpendicular to <span class="math inline">\(AB\)</span>.<br />
+</p>
+<div class="center">
+<center><p><img src="/articles/problemsolving/Vol2_No3/poles-and-polars/FToPExample.JPG" style="width: 45%; min-width: 300px;" alt="image" /></p></center>
+</div>
+<h1 class="unnumbered" id="citations">Citations</h1>
+<ol style="word-wrap: break-word;">
+<li><p>AoPS user Potla, 3-12-2012, "Poles and Polars - Another Useful Tool!",https://artofproblemsolving.com/community/c1642h1027724_poles_and_polars__another_useful_tool</p></li>
+<li><p>Kin Y. Li, November 2006, "Pole and Polar", Mathematical Excalibur Volume 11 Number 4, https://www.math.ust.hk/excalibur/v11_n4.pdf</p></li>
+<li><p>Tyler Zhu, 10-22-2015, "Poles and Polars", Irvington Math Club,https://tylerzhu.com/assets/handouts/poles_and_polars.pdf</p></li>
+<li><p>Pascal’s Theorem. Brilliant.org. Retrieved January 18, 2021, fromhttps://brilliant.org/wiki/pascals-theorem/</p></li>
+<li><p>Wellesley math Professor CONCEIVES formulas for health, wealth, and love. (2017, July 07). Retrieved April 01, 2021, from https://www.wellesley.edu/news/2017/stories /node/120511</p></li>
+</ol>
+</main>
+</body>
+
+<script>
+var maxHeight = 0;
+
+$(".row").each(function () {
+    if ($(this).height() > maxHeight) {
+        maxHeight = $(this).height();
+    }
+});
+
+$(".row").height(maxHeight);
+</script>
+
+
+<footer class="blog-footer">
+  <a href="https://us7.list-manage.com/contact-form?u=bd1a0a18ff760b00bf541b12d&form_id=b47981c22ebecdf4a32acfec1a5f0fc7">Contact Us</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a><br>
+Copyright © 2021 Math and CS Research.
+</footer>
+  </body>
+</html>
+</body><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></html>
+
