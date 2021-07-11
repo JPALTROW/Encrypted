@@ -436,7 +436,7 @@ Remember <span class="math inline">\(\lvert z-(3+4i)\rvert=3\)</span> from secti
 <p>The second factor is now: <span class="math display">\[(5^{\frac{3}{2}})^i (i)^i = e^{\frac{-\pi}{2}}cis({\frac{3}{2}}ln{\frac{16}{3}})\]</span></p>
 <p>Multiplying the factors, we find the final solution set:</p>
 <div class="center">
-<p><span class="math inline">\(\sqrt[4]{\frac{16}{3}}(cis({\frac{\pi}{12}} + {\pi}k))e^{\frac{-\pi}{2}}cis({\frac{3}{2}}ln{\frac{16}{3}})= \sqrt[4]{\frac{16}{3}}e^{\frac{-\pi}{2}}cis({\frac{\pi}{12}}+{\frac{3}{2}}ln{\frac{16}{3}} + {\pi}k)\)</span> where <span class="math inline">\(k \in\mathbb\)</span> {1,0}</p>
+<p><span class="math inline">\(\sqrt[4]{\frac{16}{3}}(cis({\frac{\pi}{12}} + {\pi}k))e^{\frac{-\pi}{2}}cis({\frac{3}{2}}ln{\frac{16}{3}})= \sqrt[4]{\frac{16}{3}}e^{\frac{-\pi}{2}}cis({\frac{\pi}{12}}+{\frac{3}{2}}ln{\frac{16}{3}} + {\pi}k)\)</span> where <span class="math inline">\(k \in\mathbb{1,0}\)</span></p>
 </div>
 <p>To summarize this process, when raising a complex number to another complex number, it’s best to separate the exponent into two factors - a factor with a real power and a factor with a complex power. To evaluate the factor with the real power, you just change the base into the polar form and employ the strategies from the last section to raise a complex number to a real power. For the second factor (the one with the complex power), you should first simplify until you have a complex number to the power of i. Then you should use the complex polar form and use the <span class="math inline">\(e^{ln(x)}=x\)</span> property to finish the evaluation of the second factor.<br />
 There’s a general formula that can do this process much faster:</p>
@@ -466,8 +466,8 @@ There’s a general formula that can do this process much faster:</p>
 <p><span class="math display">\[(a+bi)^n =\sum^{n}_{k=0}\binom{n}{k}a^{n-k}(bi)^ k = \sum^{[\frac{n}{2}]}_{k=0}(\binom{n}{2k})(-1)^{k}a^{n-2k} b^{2k} + i\sum^{[\frac{n-1}{2}]}_{k=0}\binom{n}{2k+1}(-1)^{k}a^{n-2k-1}b^{2k+1}\]</span></p>
 <p>Substituting back <span class="math inline">\(\cos{\theta} = a\)</span> and <span class="math inline">\(\sin{\theta} = b\)</span>, we derive our formulas.</p>
 <p><span class="math display">\[(a+bi)^n = (\cos{\theta}+i\sin{\theta})^n = \cos{(n\theta)}+i\sin{(n\theta)}\]</span></p>
-<p><span class="math display">\[Re(\cos{\theta} + i\sin{\theta})^n = \cos{(n\theta)} =\sum^{\floor{\frac{n}{2}}}_{k=0}\binom{n}{2k}(-1)^{k}\cos^{n-2k}{\theta} \sin^{2k}{\theta}\]</span></p>
-<p><span class="math display">\[Im(\cos{\theta} + i\sin{\theta})^n = \sin{(n\theta)} = \sum^{\floor{\frac{n+1}{2}}}_{k=0}\binom{n}{2k+1}(-1)^{k}\cos^{n-2k-1}{\theta} \sin^{2k+1}{\theta}\]</span></p>
+<p><span class="math display">\[Re(\cos{\theta} + i\sin{\theta})^n = \cos{(n\theta)} =\sum^{\floor*{\frac{n}{2}}}_{k=0}\binom{n}{2k}(-1)^{k}\cos^{n-2k}{\theta} \sin^{2k}{\theta}\]</span></p>
+<p><span class="math display">\[Im(\cos{\theta} + i\sin{\theta})^n = \sin{(n\theta)} = \sum^{\floor*{\frac{n+1}{2}}}_{k=0}\binom{n}{2k+1}(-1)^{k}\cos^{n-2k-1}{\theta} \sin^{2k+1}{\theta}\]</span></p>
 <p>Some of the common multiple angle formulas are listed below:</p>
 <div class="center">
 <p><span class="math inline">\(\sin{(2x)} = 2\cos{x} sin{x}\)</span></p>
