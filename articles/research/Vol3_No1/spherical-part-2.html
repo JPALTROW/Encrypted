@@ -250,33 +250,33 @@ img {
 <p>The Modified Single Spiral method worked on the three spherical fullerenes I looked at in part 1: C20 (the (1,0) fullerene), C60 (the (1,1) fullerene), and C80 (the (2,0) fullerene). However, as I only decided to test three spherical fullerenes (the <span class="math inline">\((m,n)\)</span> fullerenes with <span class="math inline">\(m + n \le 2\)</span>) I could not draw any conclusions.</p>
 <h2 class="unnumbered" id="c140-or-the-21-fullerene">C140 or the (2,1) fullerene</h2>
 <div class="center">
-<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C140.png" style="width: 45%; min-width: 300px;" alt="image" /></center></p>
+<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C140.png" style="width: 45%; min-width: 300px;" alt="C140" /></center></p>
 </div>
 <p>The modified spiral method did not work in the (2,1) fullerene.</p>
 <h2 class="unnumbered" id="c180-or-the-30-fullerene">C180 or the (3,0) fullerene</h2>
 <div class="center">
-<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C180.png" style="width: 45%; min-width: 300px;" alt="image" /> <img src="/articles/research/Vol3_No1/spherical-part-2/C180-spiral.png" style="width: 45%; min-width: 300px;" alt="image" /></center></p>
+<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C180.png" style="width: 45%; min-width: 300px;" alt="C180" /> <img src="/articles/research/Vol3_No1/spherical-part-2/C180-spiral.png" style="width: 45%; min-width: 300px;" alt="C180 spiral" /></center></p>
 </div>
 <p>The modified spiral method worked in the (3,0) fullerene.</p>
 <h2 class="unnumbered" id="c240-or-the-22-fullerene">C240 or the (2,2) fullerene</h2>
 <div class="center">
-<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C240.png" style="width: 45%; min-width: 300px;" alt="image" /> <img src="/articles/research/Vol3_No1/spherical-part-2/C240-spiral.png" style="width: 45%; min-width: 300px;" alt="image" /></center></p>
+<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C240.png" style="width: 45%; min-width: 300px;" alt="C240" /> <img src="/articles/research/Vol3_No1/spherical-part-2/C240-spiral.png" style="width: 45%; min-width: 300px;" alt="C240 spiral" /></center></p>
 </div>
 <p>The modified spiral method worked in the (2,2) fullerene. In fact, the single spiral method would work in it too.</p>
 <h2 class="unnumbered" id="c260-or-the-31-fullerene">C260 or the (3,1) fullerene</h2>
 <div class="center">
-<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C260.png" style="width: 45%; min-width: 300px;" alt="image" /></center></p>
+<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C260.png" style="width: 45%; min-width: 300px;" alt="C260" /></center></p>
 </div>
 <p>The modified spiral method did not work in the (3,1) fullerene.</p>
 <h2 class="unnumbered" id="c320-or-the-40-fullerene">C320 or the (4,0) fullerene</h2>
 <div class="center">
-<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C320.png" style="width: 45%; min-width: 300px;" alt="image" /> <img src="/articles/research/Vol3_No1/spherical-part-2/C320-spiral.png" style="width: 45%; min-width: 300px;" alt="image" /></center></p>
+<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C320.png" style="width: 45%; min-width: 300px;" alt="C320" /> <img src="/articles/research/Vol3_No1/spherical-part-2/C320-spiral.png" style="width: 45%; min-width: 300px;" alt="C320 spiral" /></center></p>
 </div>
 <p>The modified spiral method worked in the (4,0) fullerene.</p>
 <h1 class="unnumbered" id="analysis">Analysis</h1>
 <p>This revealed that the modified spiral method doesn’t work in all cases. I looked into the (2,1) fullerene and the (3,1) fullerene, the two that didn’t work, to see what went wrong. It turned out that an assumption I made earlier was wrong. When I created the rings of polygons that were a distance <span class="math inline">\(d\)</span> away from some fixed pentagon, I assumed that no three polygons in a ring would share a vertex. However, as the images below show, that is not the case for the (2,1) fullerene and the (3,1) fullerene.</p>
 <div class="center">
-<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C140-2.png" style="width: 45%; min-width: 300px;" alt="image" /> <img src="/articles/research/Vol3_No1/spherical-part-2/C260-2.png" style="width: 45%; min-width: 300px;" alt="image" /></center></p>
+<p><center><img src="/articles/research/Vol3_No1/spherical-part-2/C140-2.png" style="width: 45%; min-width: 300px;" alt="C140 Rings" /> <img src="/articles/research/Vol3_No1/spherical-part-2/C260-2.png" style="width: 45%; min-width: 300px;" alt="C260 rings" /></center></p>
 </div>
 <p>I will try to prove that the modified single spiral method always works when no three polygons in a ring share a vertex (these are cases in which every polygon in a ring borders exactly two other polygons in that ring, which don’t border each other).</p>
 <h1 class="unnumbered" id="showing-that-the-modified-single-spiral-method-actually-creates-a-hamiltongon">Showing that the Modified Single Spiral Method actually creates a Hamiltongon</h1>
