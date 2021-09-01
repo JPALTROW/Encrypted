@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -317,76 +316,86 @@ The key to this data structure is the word “segment". Essentially, after calcu
 <p>Since segment trees follow this branched structure, whenever the length of the array, <span class="math inline">\(n\)</span>, is not a power of 2, not all levels of the segment tree will be equally or completely filled. In general, however, the height of any segment tree will be <span class="math inline">\(O(\log n)\)</span> due to the fact that the size of the segments is cut in half for every level that you go down the tree.</p>
 <h1 class="unnumbered" id="implementation">Implementation</h1>
 <p>Now that we’ve seen the logic behind a segment tree, lets implement one in Python to answer our sum queries. After importing necessary modules, and , the first step is to implement a function to get the middle index of the array from the bounds <span class="math inline">\(s\)</span> and <span class="math inline">\(e\)</span>.</p>
-<div class="minted">
-<p><span>python</span> from math import ceil, log2</p>
-<p>def getMid(s, e): return s + (e - s) // 2</p>
-</div>
+<div class="sourceCode" id="cb1" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> ceil, log2</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> getMid(s, e): </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s <span class="op">+</span> (e <span class="op">-</span> s) <span class="op">//</span> <span class="dv">2</span> </span></code></pre></div>
 <p>We can then create a recursive function to get the sum of values in the given range of the array. This function requires a variety of parameters, where is the pointer to the segment tree, is the index of the current node, and are the starting and ending indexes represented by the current node, and and are the starting and ending indices of the queried range.<br />
 <br />
 In this function, if a segment of the given node is a part of the given range, then the sum of the segment should be returned. If the segment of the node is outside the given range, the function returns 0. If a part of the segment overlaps with the given range, then we get the mid of and using the function we defined previously and recursively call this function until one of the previous conditionals become true.</p>
-<div class="minted">
-<p><span>python</span> def getSumUtil(st, ss, se, qs, qe, si): if (qs &lt;= ss and qe &gt;= se): return st[si]</p>
-<p>if (se &lt; qs or ss &gt; qe): return 0</p>
-<p>mid = getMid(ss, se)</p>
-<p># 2 * si + 1 and 2 * si + 2 are the child nodes of si return (getSumUtil(st, ss, mid, qs, qe, 2 * si + 1) + getSumUtil(st, mid + 1, se, qs, qe, 2 * si + 2))</p>
-</div>
+<div class="sourceCode" id="cb2" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> getSumUtil(st, ss, se, qs, qe, si): </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (qs <span class="op">&lt;=</span> ss <span class="kw">and</span> qe <span class="op">&gt;=</span> se): </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> st[si]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (se <span class="op">&lt;</span> qs <span class="kw">or</span> ss <span class="op">&gt;</span> qe): </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span> </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    mid <span class="op">=</span> getMid(ss, se)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2 * si + 1 and 2 * si + 2 are the child nodes of si</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (getSumUtil(st, ss, mid, qs, qe, <span class="dv">2</span> <span class="op">*</span> si <span class="op">+</span> <span class="dv">1</span>) <span class="op">+</span> </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>           getSumUtil(st, mid <span class="op">+</span> <span class="dv">1</span>, se, qs, qe, <span class="dv">2</span> <span class="op">*</span> si <span class="op">+</span> <span class="dv">2</span>))</span></code></pre></div>
 <p>The next step is to define a recursive function that will update nodes that have the given indexes, and , in their range. For this function, two new parameters, and , need to be introduced. The first one, , is the index of the element to be updated. The second one, , is the value to be added to all nodes which have index in their range.<br />
 <br />
 The function will return nothing as a base case if the input index lies outside the range of the given segment. If the input index is in the range of the given node, the we need to update the value of this node and its children. In essence, this function is used to update the segment tree. By recursively calling this function on the child nodes of the current node, which are indicated by indices and , a loop is created and it continues until the input index lies outside the range of the given segment.</p>
-<div class="minted">
-<p><span>python</span> def updateValueUtil(st, ss, se, i, diff, si): if (i &lt; ss or i &gt; se): return;</p>
-<p>st[si] = st[si] + diff</p>
-<p>if se != ss: mid = getMid(ss, se) updateValueUtil(st, ss, mid, i, diff, 2 * si + 1) updateValueUtil(st, mid + 1, se, i, diff, 2 * si + 2)</p>
-</div>
+<div class="sourceCode" id="cb3" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> updateValueUtil(st, ss, se, i, diff, si): </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (i <span class="op">&lt;</span> ss <span class="kw">or</span> i <span class="op">&gt;</span> se): </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span><span class="op">;</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    st[si] <span class="op">=</span> st[si] <span class="op">+</span> diff</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> se <span class="op">!=</span> ss: </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        mid <span class="op">=</span> getMid(ss, se) </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        updateValueUtil(st, ss, mid, i, diff, <span class="dv">2</span> <span class="op">*</span> si <span class="op">+</span> <span class="dv">1</span>) </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        updateValueUtil(st, mid <span class="op">+</span> <span class="dv">1</span>, se, i, diff, <span class="dv">2</span> <span class="op">*</span> si <span class="op">+</span> <span class="dv">2</span>)</span></code></pre></div>
 <p>Using this function, another function can be created that will update a value in the input array and thus the segment tree. Nothing is returned if the input index is invalid. Otherwise, the function will proceed to get the difference between the new and old values and then update the value in the array. Finally, it will update the values of the nodes in the segment tree. This allows for easy update queries within the segment tree. While using utility functions within other functions is an unnecessary part of the implementation, they make it much easier.</p>
-<div class="minted">
-<p><span>python</span> def updateValue(arr, st, n, i, new_val): if (i &lt; 0 or i &gt; n): print("invalid input", end = "") return</p>
-<p>diff = new_val - arr[i] arr[i] = new_val updateValueUtil(st, 0, n - 1, i, diff, 0)</p>
-</div>
+<div class="sourceCode" id="cb4" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> updateValue(arr, st, n, i, new_val): </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (i <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">or</span> i <span class="op">&gt;</span> n): </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;invalid input&quot;</span>, end <span class="op">=</span> <span class="st">&quot;&quot;</span>) </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    diff <span class="op">=</span> new_val <span class="op">-</span> arr[i] </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    arr[i] <span class="op">=</span> new_val</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    updateValueUtil(st, <span class="dv">0</span>, n <span class="op">-</span> <span class="dv">1</span>, i, diff, <span class="dv">0</span>)</span></code></pre></div>
 <p>To answer sum queries, a function will be created that uses the previously define utility function that returns the sum. The point of having this function make use of a utility function is to ensure that there are no erroneous input values. Thus, the code is not only much cleaner but also less prone to error. If there are any values that are erroneous, -1 is returned but otherwise the output of the sum utility function is returned. In essence, the sum of elements in the range of index to is being returned.</p>
-<div class="minted">
-<p><span>python</span> def getSum(st, n, qs, qe): if (qs &lt; 0 or qe &gt; n - 1 or qs &gt; qe): print("invalid input", end = "") return -1</p>
-<p>return getSumUtil(st, 0, n - 1, qs, qe, 0)</p>
-</div>
+<div class="sourceCode" id="cb5" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> getSum(st, n, qs, qe): </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (qs <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">or</span> qe <span class="op">&gt;</span> n <span class="op">-</span> <span class="dv">1</span> <span class="kw">or</span> qs <span class="op">&gt;</span> qe):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;invalid input&quot;</span>, end <span class="op">=</span> <span class="st">&quot;&quot;</span>) </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> getSumUtil(st, <span class="dv">0</span>, n <span class="op">-</span> <span class="dv">1</span>, qs, qe, <span class="dv">0</span>) </span></code></pre></div>
 <p>With all the functions to perform operations on the segment tree finished, the only thing left to do is to actually construct a segment tree. First, a recursive utility function is needed that constructs a segment tree given an array . Here, parameter is the index of the current node in the segment tree . If there is one element in the array, the function will store it in the current node of the segment tree and return the value of the starting index . However, if more than 1 element is present, the function will get the middle index of the array and recursively call the child nodes on the left and right, storing the sum of the values in the given node.</p>
 <p>Then, a final constructor function is needed to make use of this utility function. It finds the height of the segment tree, calculates the maximum size, allocates the required memory, and fills the allocated memory with segment tree , returning the segment tree using the constructor utility function.</p>
-<div class="minted">
-<p><span>python</span> def constructSTUtil(arr, ss, se, st, si): if ss == se: st[si] = arr[ss] return arr[ss]</p>
-<p>mid = getMid(ss, se) st[si] = (constructSTUtil(arr, ss, mid, st, si * 2 + 1) + constructSTUtil(arr, mid + 1, se, st, si * 2 + 2))</p>
-<p>return st[si]</p>
-<p>def constructST(arr, n): x = int(ceil(log2(n))) max_size = 2 * int(2 ** x) - 1 st = [0] * max_size constructSTUtil(arr, 0, n - 1, st, 0) return st</p>
-</div>
+<div class="sourceCode" id="cb6" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> constructSTUtil(arr, ss, se, st, si):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ss <span class="op">==</span> se: </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        st[si] <span class="op">=</span> arr[ss]</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> arr[ss]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    mid <span class="op">=</span> getMid(ss, se) </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    st[si] <span class="op">=</span> (constructSTUtil(arr, ss, mid, st, si <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">+</span> </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>             constructSTUtil(arr, mid <span class="op">+</span> <span class="dv">1</span>, se, st, si <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span>))</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> st[si]</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> constructST(arr, n):</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="bu">int</span>(ceil(log2(n)))</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    max_size <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> <span class="bu">int</span>(<span class="dv">2</span> <span class="op">**</span> x) <span class="op">-</span> <span class="dv">1</span> </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    st <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> max_size </span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    constructSTUtil(arr, <span class="dv">0</span>, n <span class="op">-</span> <span class="dv">1</span>, st, <span class="dv">0</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> st </span></code></pre></div>
 <p>With that, everything needed to make a segment tree is finished. We can put some driver code need to actually make use of it. First, we build the segment tree from the given array and answer a sum query given a starting and ending index. Then, we can perform update queries on the segment tree by updating a given index and its corresponding nodes, and then finding the new value after it is updated.</p>
-<div class="minted">
-<p><span>python</span> if __name__ == "__main__": arr = [-3, 2, 4, 9, 6, -8] n = len(arr)</p>
-<p>st = constructST(arr, n) print("sum: ", getSum(st, n, 2, 5))</p>
-<p>updateValue(arr, st, n, 3, 12) print("updated sum: ", getSum(st, n, 2, 5), end = "")</p>
-</div>
+<div class="sourceCode" id="cb7" data-language="Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    arr <span class="op">=</span> [<span class="op">-</span><span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">6</span>, <span class="op">-</span><span class="dv">8</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(arr) </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    st <span class="op">=</span> constructST(arr, n)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;sum: &quot;</span>, getSum(st, n, <span class="dv">2</span>, <span class="dv">5</span>))</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    updateValue(arr, st, n, <span class="dv">3</span>, <span class="dv">12</span>) </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;updated sum: &quot;</span>, getSum(st, n, <span class="dv">2</span>, <span class="dv">5</span>), end <span class="op">=</span> <span class="st">&quot;&quot;</span>) </span></code></pre></div>
 <p>The final output is <span class="math inline">\(11\)</span>, as this is the sum of the given values, and subsequently <span class="math inline">\(14\)</span>, as it’s the updated sum of the values. This is correct, as the sum of all the numbers from index <span class="math inline">\(2\)</span> to <span class="math inline">\(5\)</span> is <span class="math inline">\(11\)</span>, and when index <span class="math inline">\(3\)</span> is updated to <span class="math inline">\(12\)</span>, the sum increases by 3 to 14.</p>
 <h1 class="unnumbered" id="conclusion">Conclusion</h1>
 <p>The segment tree has proved to be very interesting, and its features allow for efficient queries of various types. Its binary tree like methodology allows for time complexities far superior than that of other data structures and algorithms that use loops and perform operations linearly. Hopefully, this introduction to segment trees has shown you a different and unique view at the world of data structures and algorithms.</p>
 </main>
 </body>
-<script>
-var maxHeight = 0;
-
-$(".row").each(function () {
-    if ($(this).height() > maxHeight) {
-        maxHeight = $(this).height();
-    }
-});
-
-$(".row").height(maxHeight);
-</script>
-
-
-<footer class="blog-footer">
-  <a href="https://us7.list-manage.com/contact-form?u=bd1a0a18ff760b00bf541b12d&form_id=b47981c22ebecdf4a32acfec1a5f0fc7">Contact Us</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a><br>
-Copyright © 2021 Math and CS Research.
-</footer>
-  </body>
 </html>
-</body><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></html>
-
