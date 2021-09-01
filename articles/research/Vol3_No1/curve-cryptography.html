@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Elliptic Curve Cryptography | Math and CS Research">
+    <meta name="keywords" content="COVID, Epidemiology, Modelling, Herd Immunity, Differential Equations">
+    <meta name="author" content="Maxwell Zen">
+  <meta property="og:title" content="Math and CS Research">
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://mathcsr.org/soc.png">
+  <meta property="og:description" content="A Math and CS Research Publication">
+  <meta property="og:url" content="">
+  <meta property="fb:app_id" content="712553486189960">
+    <title>Elliptic Curve Cryptography | Math and CS Research</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X001RVXZHZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X001RVXZHZ');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-181200311-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-181200311-1');
+</script>
+
+   <script type="text/javascript">
+var _0x16d0=['metaKey','6bwtPsH','addEventListener','oncontextmenu','captureEvents','639214bwFvNj','navigator','1239226ymjEuu','46135YiXdag','MOUSEDOWN','getElementById','layers','454159UdgjyX','onmouseup','my-img','all','keydown','728336CVUjpS','ctrlKey','return\x20false','762977DDKmwr','1364924DSPnLI','1BUTpXD','Mac','getElementsByClassName','which','onmousedown','preventDefault'];var _0x2613=function(_0xf00521,_0x34da6a){_0xf00521=_0xf00521-0x194;var _0x16d0df=_0x16d0[_0xf00521];return _0x16d0df;};var _0x5316dc=_0x2613;(function(_0x25c512,_0x110ec0){var _0x598568=_0x2613;while(!![]){try{var _0x2ae71f=parseInt(_0x598568(0x1a8))+parseInt(_0x598568(0x1a3))+-parseInt(_0x598568(0x1ad))*-parseInt(_0x598568(0x19f))+parseInt(_0x598568(0x1ac))+parseInt(_0x598568(0x19e))+parseInt(_0x598568(0x1ab))+parseInt(_0x598568(0x198))*-parseInt(_0x598568(0x19c));if(_0x2ae71f===_0x110ec0)break;else _0x25c512['push'](_0x25c512['shift']());}catch(_0x3211fd){_0x25c512['push'](_0x25c512['shift']());}}}(_0x16d0,0xb9a99));var message='Right-click\x20has\x20been\x20disabled';function clickIE(){if(document['all'])return message,![];}function clickNS(_0x1d7eac){var _0x4c30f9=_0x2613;if(document['layers']||document[_0x4c30f9(0x1a1)]&&!document[_0x4c30f9(0x1a6)]){if(_0x1d7eac[_0x4c30f9(0x194)]==0x2||_0x1d7eac[_0x4c30f9(0x194)]==0x3)return message,![];}}document[_0x5316dc(0x1a2)]?(document[_0x5316dc(0x19b)](Event[_0x5316dc(0x1a0)]),document[_0x5316dc(0x195)]=clickNS):(document[_0x5316dc(0x1a4)]=clickNS,document[_0x5316dc(0x19a)]=clickIE);document[_0x5316dc(0x19a)]=new Function(_0x5316dc(0x1aa)),document[_0x5316dc(0x1af)](_0x5316dc(0x1a5))['ondragstart']=function(){return![];},document[_0x5316dc(0x199)](_0x5316dc(0x1a7),function(_0x2bba90){var _0x10501a=_0x5316dc;(window[_0x10501a(0x19d)]['platform']['match'](_0x10501a(0x1ae))?_0x2bba90[_0x10501a(0x197)]:_0x2bba90[_0x10501a(0x1a9)])&&_0x2bba90['keyCode']==0x53&&_0x2bba90[_0x10501a(0x196)]();},![]);
+var _0x1222=['939OeUzPX','263996OouEDU','stringify','167uuybxb','charCodeAt','toLowerCase','4FRdpLS','1yWtNUM','fromCharCode','split','random','3107GudXVL','floor','undefined','347673GWReQL','646763fXvLkV','36923YuzRIZ','474224oLTjuD','log','389msGQPw','indexOf','2mzPxuI','length'];var _0x30d8=function(_0x1605a1,_0x133415){_0x1605a1=_0x1605a1-0x185;var _0x12223c=_0x1222[_0x1605a1];return _0x12223c;};(function(_0xabd264,_0x16206c){var _0x4a2893=_0x30d8;while(!![]){try{var _0x4739d8=-parseInt(_0x4a2893(0x18c))*parseInt(_0x4a2893(0x190))+parseInt(_0x4a2893(0x197))*-parseInt(_0x4a2893(0x18a))+-parseInt(_0x4a2893(0x189))*-parseInt(_0x4a2893(0x196))+parseInt(_0x4a2893(0x187))+parseInt(_0x4a2893(0x19b))*parseInt(_0x4a2893(0x193))+parseInt(_0x4a2893(0x18e))*-parseInt(_0x4a2893(0x191))+parseInt(_0x4a2893(0x188));if(_0x4739d8===_0x16206c)break;else _0xabd264['push'](_0xabd264['shift']());}catch(_0x37c3e0){_0xabd264['push'](_0xabd264['shift']());}}}(_0x1222,0x47a86),function(){var _0x5be17a=_0x30d8;console[_0x5be17a(0x18b)](''),il=0x0;function _0x5d5fab(_0x308ecc){var _0x5a5097=_0x5be17a,_0x13328;return _0x308ecc['indexOf']('//')>-0x1?_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x2]:_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)](':')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)]('?')[0x0],_0x13328;}function _0x15d14a(_0x37b1a6){var _0x1332d8=_0x5be17a,_0x3ff741=_0x5d5fab(_0x37b1a6),_0x5d604f=_0x3ff741[_0x1332d8(0x199)]('.'),_0x55df6d=_0x5d604f['length'];if(_0x55df6d==0x2)_0x3ff741=_0x5d604f[0x0];else _0x55df6d>0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x2],_0x5d604f[_0x55df6d-0x2][_0x1332d8(0x18f)]==0x2&&_0x5d604f[_0x55df6d-0x1][_0x1332d8(0x18f)]==0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x3]));return _0x3ff741;}l=String[_0x5be17a(0x198)](0x4c,0x4f,0x43,0x41,0x54,0x49,0x4f,0x4e)[_0x5be17a(0x195)](),o=String[_0x5be17a(0x198)](0x6f,0x72,0x69,0x67,0x69,0x6e)[_0x5be17a(0x195)](),w=window[l][o],lcl=w[_0x5be17a(0x18d)](String[_0x5be17a(0x198)](0x6c,0x6f,0x63,0x61,0x6c));if(lcl<0x0||il==0x1)var _0x3d18d7=_0x15d14a(w);else return;var _0x51a8fd=[109,116,99,114],_0x5b30fc=[],_0x1a354a=[],_0x2da697='';x=0x0;while(x<_0x51a8fd['length']*0x2){_0x1a354a['push'](_0x3d18d7[_0x5be17a(0x194)](x)),x+=0x2;}if(JSON['stringify'](_0x1a354a)===JSON[_0x5be17a(0x192)](_0x51a8fd)){}else{var _0x1a9db3=0x0;for(var _0x27fa15 in window){_0x1a9db3++;if(_0x1a9db3>0xc8)try{z=Math[_0x5be17a(0x185)](Math[_0x5be17a(0x19a)]()*0x64),window[z]!==_0x5be17a(0x186)?window[_0x27fa15]=window[z]:window[_0x27fa15]=null;}catch(_0x380ed9){}}}}());
+</script>
+ 
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+.brand {
+    Position: absolute
+    left: 50%;
+    margin-left: -120px !important;
+-webkit-transform: translateX(+15%);
+   
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        body {
+         font-size: 1em;
+        }
+
+      }
+
+
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+.container-fluid {
+    padding-right: 14%;
+    padding-left: 14%;
+}
+    p {
+      margin: 1em 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+.title{
+    font-size: 2.5em;
+}
+    h1{
+      Font-size: 1.9em;
+    }
+    h2{
+      Font-size: 1.4em;
+    }
+    h3, h4 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h5, h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a>
+      </div>
+      <div class="col-4 text-center brand" >
+        <a class="blog-header-logo text-dark" href="/"><img src="/logo.png" class="img-responsive center-block" height='118' width='200'></a>
+      </div>
+	<div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary" href="/subscribe">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between ">
+      <a class="p-2 link-secondary" href="/">This Edition</a>
+      <a class="p-2 link-secondary" href="/appliedmath">Applied Math</a>
+      <a class="p-2 link-secondary" href="/computerscience">Computer Science</a>
+      <a class="p-2 link-secondary" href="/features">Features</a>
+      <a class="p-2 link-secondary" href="/problemsolving">Problem Solving</a>
+      <a class="p-2 link-secondary" href="/puzzles">Puzzles</a>
+      <a class="p-2 link-secondary" href="/research">Research</a>
+      <a class="p-2 link-secondary" href="/editions">Editions</a>
+      <a class="p-2 link-secondary" href="/staff">Staff</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container-fluid">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<center><header id="title-block-header">
+<h1 class="title">Elliptic Curve Cryptography</h1>
+<p class="author">Maxwell Zen</p>
+</header></center>
+<h1 class="unnumbered" id="introduction">Introduction</h1>
+<h2 class="unnumbered" id="what-is-cryptography">What is Cryptography?</h2>
+<p>Cryptography is the study of how to securely communicate a message even when a third party can intercept all transmissions. Plaintext is the original message to be sent. Encryption converts plaintext into ciphertext, which hides the original message. Finally, decryption converts ciphertext back into plaintext to reveal the initial message.<br />
+<br />
+An important issue arises when this process happens on the Internet: how can we communicate securely when we must assume that eavesdroppers are able to intercept all communications, including the method of encryption? For example, it may be relatively difficult to crack a substitution cipher (a cipher in which each character is substituted for another) in a vacuum, but if the eavesdropper was able to intercept everything being sent, then they would also be able to intercept the cipher!<br />
+<br />
+This problem is actually impossible to solve the way it is currently stated. If an eavesdropper has access to both the ciphertext and the method of encryption, they can simply encrypt every possible plaintext message until it matches the ciphertext. The goal is to make it computationally infeasible for the message to be intercepted. For example, trying trillions of possible messages is infeasible. However, smarter techniques can reverse engineer the plaintext input from the ciphertext, or at least narrow down the possibilities until trying each one becomes feasible.<br />
+<br />
+This brings us to the concept of a trapdoor function. A trapdoor function is easy to calculate but difficult to find the inverse of, without some private secret. This is useful in cryptography: the recipient can generate a trapdoor function along with the private key needed to solve it, and only send out the details of the function. The sender can then use the function to encode plaintext into ciphertext, and the recipient can use their private key to invert it back into plaintext. The eavesdropper, however, does not know the private key, and so must manually find the function’s inverse, which takes far too long.</p>
+<h2 class="unnumbered" id="why-not-rsa">Why Not RSA?</h2>
+<p>RSA encryption is a popular method used today that uses the above principle to safely communicate messages. If you don’t know anything about it, there is another article, "Modular arithmetic and public-key cryptography," dedicated to explaining how it works. That article also introduces mods, so if even if you’re not interested in RSA, it will still be helpful to read the first two sections.<br />
+<br />
+RSA still has not been cracked, but many advancements have made it more feasible to solve. The algorithm’s safety relies on the difficulty of tasks such as factoring large numbers, which is something many mathematicians have made important progress in solving. As a result, the keys used in RSA encryption must get progressively larger to deter attacks. While this maintains security, it makes encryption and decryption less convenient. Elliptic curves, however, don’t have algorithms that are as effective in solving them, thus allowing for smaller keys with the same level of protection and faster processing.</p>
+<h1 class="unnumbered" id="elliptic-curves">Elliptic Curves</h1>
+<p>So what exactly is an elliptic curve, and why is it so useful in cryptography?<br />
+<br />
+An elliptic curve is the graph of the equation <span class="math inline">\(y^2=x^3+ax+b\)</span>. A couple examples are displayed below:</p>
+<p><center><img src="/articles/research/Vol3_No1/curve-cryptography/curves.png" style="width: 45%; min-width: 300px;" alt="image" /></center></p>
+<p>We can define a group using the points on the elliptic curve. A group is a set of objects which are connected by some binary operation. In this case, we’ll define what it means to add points together. This operation must have certain properties:</p>
+<ul>
+<li><p><strong>Closure:</strong> Performing the operation on any two elements of the set must yield another element of the set.</p></li>
+<li><p><strong>Commutativity and Associativity:</strong> For a particular expression, no matter how you order the terms or perform the operations, the result must be the same.</p></li>
+<li><p><strong>Identity:</strong> There must exist some identity 0 such that for all elements <span class="math inline">\(a\)</span> in the group, <span class="math inline">\(a+0=a\)</span>.</p></li>
+<li><p><strong>Inverse:</strong> For every element in the set <span class="math inline">\(a\)</span>, there exists another element in in the group <span class="math inline">\(-a\)</span> such that <span class="math inline">\(a + -a = 0\)</span>.</p></li>
+</ul>
+<p>Let’s define this function. The identity is represented with <span class="math inline">\(0\)</span>, which doesn’t represent a specific point on the curve but will still be important. For every point <span class="math inline">\((x, y)\)</span>, the inverse will be the point <span class="math inline">\((x, -y)\)</span>, or the point that lies opposite the x-axis on the curve. Finally, three points <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, and <span class="math inline">\(R\)</span> on the curve are collinear if and only if <span class="math inline">\(P+Q+R=0\)</span>.<br />
+<br />
+This equation allows us to define the sum of two points: <span class="math inline">\(P+Q=-R\)</span>. This can be represented with the following process: draw the line <span class="math inline">\(PQ\)</span> on the curve, then find the point <span class="math inline">\(R\)</span> which is the third point where the line intersects the curve, and then flip it across the x-axis to get the point <span class="math inline">\(-R\)</span>, which is the sum of the two points <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>!</p>
+<center><div class="center">
+<p><img src="/articles/research/Vol3_No1/curve-cryptography/EllipticAddition.jpg" style="width: 45%; min-width: 300px;" alt="image" /></p>
+</div></center>
+<h2 class="unnumbered" id="algebraic-addition">Algebraic Addition</h2>
+<p>The above definition works fine with a pen and paper, but how can a computer perform this addition? Firstly, let’s define the coordinates of the points <span class="math inline">\(P=(x_P, y_P)\)</span> and <span class="math inline">\(Q=(x_Q, y_Q)\)</span>. We then define the slope <span class="math inline">\(m = \frac{y_P-y_Q}{x_P-x_Q}\)</span>, and let <span class="math inline">\(k\)</span> be the <span class="math inline">\(y\)</span>-intercept of the line passing through <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> (which we don’t need to calculate for now). Then the line through <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> has equation <span class="math inline">\(y = mx+k\)</span>, and we want the third point which lies on this line and the elliptic curve. We can solve for it using the following process: <span class="math display">\[y^2=x^3+ax+b\]</span> <span class="math display">\[(mx+k)^2=x^3+ax+b\]</span> <span class="math display">\[x^3+ax+b-(mx+k)^2=0\]</span> We can now use Vieta’s formulas to find the third root <span class="math inline">\(x_R\)</span>. In a monic cubic, the sum of the roots is equal to <span class="math inline">\(-b\)</span>, where <span class="math inline">\(b\)</span> is the coefficient of the <span class="math inline">\(x^2\)</span> term. Therefore, <span class="math display">\[x_P+x_Q+x_R=-(-m^2)\]</span> <span class="math display">\[x_R=m^2-x_P-x_Q\]</span> And once we find <span class="math inline">\(x_R\)</span>, we can use our knowledge that this point lies on the line through <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> to solve for <span class="math inline">\(y_R\)</span>: <span class="math display">\[m=\frac{y_R-y_P}{x_R-x_P}\]</span> <span class="math display">\[m(x_R-x_P)=y_R-y_P\]</span> <span class="math display">\[y_R=y_P+m(x_R-x_P)\]</span> Then, once we get the point <span class="math inline">\(R\)</span> that’s collinear with <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, the answer to <span class="math inline">\(P+Q\)</span> is <span class="math inline">\(-R\)</span>, or the point <span class="math inline">\((x_R, -y_R)\)</span>. These equations will work for almost every case. There is one exception, however: what if <span class="math inline">\(P=Q\)</span>? First of all, we’re going to interpret the line through <span class="math inline">\(PQ\)</span> as the line tangent to the curve at point <span class="math inline">\(P\)</span> in this instance. And since the slope is now going to be the slope of the tangent line rather than the slope between <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, we need a new formula for this case. <span class="math display">\[m=\frac{3x_P^2+a}{2y_P}\]</span> For those who are familiar with calculus, you may recognize that this formula for <span class="math inline">\(m\)</span> corresponds with the first derivative of the function <span class="math inline">\(y=\pm \sqrt{x_P^3+ax_P+b}\)</span>.</p>
+<h2 class="unnumbered" id="scalar-multiplication">Scalar Multiplication</h2>
+<p>If we can successfully define an addition operation, then we can also define a scalar multiplication operation: for an integer <span class="math inline">\(n\)</span> and a point <span class="math inline">\(P\)</span> on an elliptic curve, the expression <span class="math inline">\(nP\)</span> is the result of adding <span class="math inline">\(P\)</span> to itself <span class="math inline">\(n\)</span> times.<br />
+<br />
+How can we do this operation on a computer? One technique is to simply add <span class="math inline">\(P\)</span> to itself <span class="math inline">\(n\)</span> times. But as <span class="math inline">\(n\)</span> gets extremely large, this technique no longer becomes feasible. For example, <span class="math inline">\(n\)</span> can get as large as <span class="math inline">\(2^{512}\)</span>, but adding a point to itself that number of times is far too difficult for any computer to do.<br />
+<br />
+We can introduce a new algorithm to quickly perform scalar multiplication. The procedure looks something like this: for a point <span class="math inline">\(P\)</span>, first calculate <span class="math inline">\(2P\)</span>, then <span class="math inline">\(4P\)</span>, <span class="math inline">\(8P\)</span>, and so on, adding the result to itself at each each step to get the next result in the sequence. Then, for each power of 2, if that power of 2 shows up in the bit representation of the desired coefficient <span class="math inline">\(n\)</span>, then we add it to a running total. By doing this, we ensure that the amount of time we take is proportional to the number of powers of 2 we must cycle through in order to get the result. To be more precise, the time complexity of this algorithm is <span class="math inline">\(O(\log_2n)\)</span>.</p>
+<h1 class="unnumbered" id="finite-fields">Finite Fields</h1>
+<p>We can now apply a new concept to add another layer of complexity to the groups we have just defined. This particular section will use modular arithmetic to show how an elliptic curve can be limited to a finite field.<br />
+<br />
+First, a finite field <span class="math inline">\(\mathbb{F}_p\)</span> is a group of the nonnegative integers less than <span class="math inline">\(p\)</span> that are connected by addition, subtraction, and multiplication in modular arithmetic. So for example, if we were dealing with <span class="math inline">\(\mathbb{F}_5\)</span> we could say that <span class="math inline">\(4\cdot3 = 12 \equiv 2 \pmod{5}\)</span>.<br />
+<br />
+Now we can define the elliptic curve over a finite field: for two nonnegative integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> both less than <span class="math inline">\(p\)</span>, we say that the point <span class="math inline">\((x, y)\)</span> lies on the elliptic curve if <span class="math inline">\(y^2 \equiv x^3+ax+b \pmod{p}\)</span>. Now can we define addition over the finite field as well: we’ll still say that three points <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, and <span class="math inline">\(R\)</span> are collinear if they lie on the same line, but this time the line will be defined as the set of points satisfying <span class="math inline">\(ax+by+c \equiv 0 \pmod{p}\)</span>, the form of a line in a field. The algebraic equations for finding the sum <span class="math inline">\(P+Q\)</span> will be very similar: we once again look for the point <span class="math inline">\(R\)</span> on the curve that’s collinear with <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> using the following formulas: <span class="math display">\[x_R = (m^2 - x_P - x_Q)\pmod{p}\]</span> <span class="math display">\[y_R = y_P+m(x_R-x_P)\pmod{p}\]</span> Where if <span class="math inline">\(P \neq Q\)</span>, then <span class="math display">\[m = \frac{y_P-y_Q}{x_P-x_Q}\pmod{p}\]</span> And if <span class="math inline">\(P=Q\)</span>, then <span class="math display">\[m=\frac{3x_P^2+a}{2y_P}\pmod{p}\]</span> Note that in a finite field, division is defined as multiplying by the modular inverse rather than actually dividing. This is done to ensure that we remain within the field of integers.<br />
+<br />
+Once we calculate the coordinates <span class="math inline">\(R=(x_R, y_R)\)</span>, we can now flip it to get <span class="math inline">\(P+Q=-R=(x_R, -y_R)\)</span>, reaching our answer.<br />
+<br />
+For an elliptic curve taken on a finite field (aka an elliptic curve group), we will define the order of the elliptic curve group as the number of distinct points on the curve. Schoof’s algorithm was designed to calculate this quantity fast enough to justify using it. While the algorithm is too complex to lie within the scope of this article, just know that it exists and is able to calculate this useful quantity.</p>
+<h2 class="unnumbered" id="cyclic-subgroups">Cyclic Subgroups</h2>
+<p>In a finite field, the multiples of a given point <span class="math inline">\(P\)</span>, called the base point, will eventually form an infinite loop. It’s important to note that the points that lie along that loop form a cyclic subgroup, because adding any two multiples of <span class="math inline">\(P\)</span> will yield another multiple of <span class="math inline">\(P\)</span> that also lies within the subgroup. We can define the order of that subgroup as the number of points in the subgroup, but we can also create an equivalent definition that may be easier to use: the order of a cyclic subgroup generated with the multiples of <span class="math inline">\(P\)</span> is the lowest number <span class="math inline">\(n\)</span> such that <span class="math inline">\(nP=0\)</span>.<br />
+<br />
+How do we find the order of a subgroup when that order is potentially very large? Well, we can make use of Lagrange’s theorem, which states that the order of a subgroup is always a divisor of the order of the group. If we know the order of the group, <span class="math inline">\(N\)</span> (which can be calculated with Schoof’s algorithm), then we can generate all the divisors of that number and individually test each possibility to find the smallest <span class="math inline">\(n\)</span> where <span class="math inline">\(nP=0\)</span>.<br />
+<br />
+Next, the goal is to find a base point that generates a cyclic subgroup with a large, prime order. With the right approach, we can actually pick the order we want, and then go about finding a base point that creates a subgroup with that order. We can make use of the <strong>cofactor</strong> of <span class="math inline">\(n\)</span>, or the integer quantity <span class="math inline">\(\frac{N}{n}\)</span>, which we’ll call <span class="math inline">\(h\)</span>. For every point <span class="math inline">\(P\)</span>, we know that <span class="math inline">\(NP=0\)</span>, since the order of the cyclic subgroup generated by <span class="math inline">\(P\)</span> must divide <span class="math inline">\(N\)</span>. We can express that statement as <span class="math inline">\(nhP=0\)</span>, since <span class="math inline">\(h\)</span> is defined as <span class="math inline">\(\frac{N}{n}\)</span>. Finally, this can be expressed as <span class="math inline">\(n(hP)=0\)</span>, which can be true in two different ways: either <span class="math inline">\(hP=0\)</span> and the equation is trivially true, or <span class="math inline">\(hP\)</span> is a nonzero point, in which case we can use it as a base point to generate a cyclic subgroup of order <span class="math inline">\(n\)</span>. The probability that <span class="math inline">\(hP=0\)</span> is sufficiently small enough that picking random points <span class="math inline">\(P\)</span> and checking if <span class="math inline">\(hP\)</span> is a valid base point for a cyclic subgroup of order <span class="math inline">\(n\)</span> will yield an answer very quickly.</p>
+<h2 class="unnumbered" id="the-discrete-logarithm-problem">The Discrete Logarithm Problem</h2>
+<p>After establishing the properties of this elliptic field, we can finally create a trapdoor function that’s easy to create but very difficult to solve: Given two points <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, what’s the integer <span class="math inline">\(k\)</span> such that <span class="math inline">\(kP=Q\)</span>? At the current moment, no classical computing algorithm can solve this problem in a feasible amount of time. This is a discrete logarithm problem: discrete because it relates to finite fields and cyclic subgroups, and logarithmic because it’s similar to the original logarithm, which determines how many times to repeat the operation of multiplication to get the result. What separates elliptic curve cryptography from other discrete logarithm problems is that it’s uniquely difficult to break, which allows for smaller keys with the same level of security, as well as faster computation.</p>
+<h1 class="unnumbered" id="applications-of-elliptic-curve-cryptography">Applications of Elliptic Curve Cryptography</h1>
+<h2 class="unnumbered" id="elliptic-curve-diffie-hellman">Elliptic-curve Diffie-Hellman</h2>
+<p>Elliptic-curve Diffie-Hellman is a key-agreement protocol that allows two parties to agree on a key without an eavesdropper knowing that key. Once the two parties can achieve this, they can go on to communicate via some other encryption algorithm, like AES encryption, which requires a secret key that’s unknown to any eavesdroppers. The process goes as follows:</p>
+<ul>
+<li><p>Alice and Bob publicly agree on an elliptic curve field to perform their calculations on, as well as a base point <span class="math inline">\(P\)</span> which generates a cyclic subgroup with a large, prime order.</p></li>
+<li><p>Alice and Bob then each privately pick numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, respectively. Alice calculates and publicly sends the point <span class="math inline">\(aP\)</span>, and Bob calculates and publicly sends the point <span class="math inline">\(bP\)</span>.</p></li>
+<li><p>Alice then multiplies the point <span class="math inline">\(bP\)</span> by <span class="math inline">\(a\)</span> to get <span class="math inline">\(abP\)</span>. Bob does the same, multiplying the point <span class="math inline">\(aP\)</span> by <span class="math inline">\(b\)</span> to get <span class="math inline">\(abP\)</span>.</p></li>
+</ul>
+<p>Note that the value of the end result, <span class="math inline">\(abP\)</span>, is completely random and unintentional. But if both parties have the same secret information, that’s enough to use it for a different form of encryption with, for example, the <span class="math inline">\(x\)</span>-coordinate being used as the key for that encryption method.</p>
+<h2 class="unnumbered" id="authenticating-signatures">Authenticating Signatures</h2>
+<p>Let’s say I want to transfer some bitcoin from my account to a friend’s account. I would create and send an instruction that initiates that transaction. But anybody else can also create these instructions, which would perform the transfer whether I want to or not. So we must introduce a signature, some confirmation that I am the person intending to make the transaction. If I have a private key that nobody else knows, then my signature would involve demonstrating my knowledge of the private key without revealing the true value of this key. This is a very tough problem, but we can solve it using elliptic curves.<br />
+<br />
+Let’s first define a hash function <span class="math inline">\(hash(m, R)\)</span> that takes an integer <span class="math inline">\(m\)</span> and a point <span class="math inline">\(R\)</span> on an elliptic curve to produce a pseudorandom integer output. There are many necessary properties of good hash functions, but the main one that matters here is that trying to reverse engineer the input from the output of a hash function is computationally infeasible.<br />
+<br />
+Let’s give each user a private key <span class="math inline">\(x\)</span> that only they know. We can also take a predetermined base point <span class="math inline">\(P\)</span> and calculate <span class="math inline">\(X = x \cdot P\)</span>, which will be publicly available. We can publish <span class="math inline">\(X\)</span> without revealing <span class="math inline">\(x\)</span> because of the discrete logarithm problem having no known solution.<br />
+<br />
+The user will first privately pick integers <span class="math inline">\(m\)</span> and <span class="math inline">\(r\)</span>. Then they will calculate the point <span class="math inline">\(R = r \cdot P\)</span>, and then calculate the integer <span class="math inline">\(s = hash(m, R) \cdot x + r\)</span>. Notice that the following equalities all hold true: <span class="math display">\[hash(m, r \cdot P) \cdot x \cdot P + r \cdot P = (hash(m, r \cdot P) \cdot x+r) \cdot P\]</span> <span class="math display">\[hash(m, R) \cdot X + R = (hash(m, R) \cdot x+r) \cdot P\]</span> <span class="math display">\[hash(m, R) \cdot X + R = s \cdot P\]</span> So the signature works in the following manner: if the user really does have access to the private key <span class="math inline">\(x\)</span>, then they will easily be able to generate <span class="math inline">\(m\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(s\)</span> which satisfy this final equation using the above process. Even though nobody else knows the value of <span class="math inline">\(x\)</span>, they can use the public point <span class="math inline">\(X\)</span> to confirm that the generated solution does indeed work.<br />
+<br />
+The security of this method has two parts to it: first, nobody else should be able to feasibly generate this working solution with only knowledge of <span class="math inline">\(X\)</span>, and second, publicly releasing this solution <span class="math inline">\(m\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(s\)</span> should not reveal anything about the original value of <span class="math inline">\(x\)</span>.<br />
+<br />
+The first part relies on the security of both the elliptic curve discrete logarithm and the hash function. This prevents a hacker from randomly picking <span class="math inline">\(m\)</span> and <span class="math inline">\(R\)</span>, and trying to reverse engineer some value <span class="math inline">\(s\)</span> such that <span class="math inline">\(s \cdot P = hash(m, R) \cdot X+R\)</span>. It also prevents them from randomly selecting <span class="math inline">\(s\)</span> and <span class="math inline">\(R\)</span>, then trying to find an <span class="math inline">\(m\)</span> which satisfies <span class="math inline">\(hash(m, R) \cdot X+R=s \cdot P\)</span>.<br />
+<br />
+The second part uses the security of the discrete logarithm problem. Note that <span class="math inline">\(m\)</span> and <span class="math inline">\(R\)</span> are completely random, and so they reveal nothing about <span class="math inline">\(x\)</span>. We have that <span class="math inline">\(s = hash(m, R) \cdot x+r\)</span>, so <span class="math inline">\(x = \frac{s-r}{hash(m, R)})\)</span>. In order to evaluate that expression, we must know the value of <span class="math inline">\(r\)</span>, but that requires being able to solve the discrete logarithm problem for the given point <span class="math inline">\(R\)</span>. In fact, Bitcoin and Ethereum both use this algorithm to facilitate secure transactions, in which a user requesting a transfer of cryptocurrency from them to another user can confirm that they are indeed the one requesting this transfer.</p>
+<h1 class="unnumbered" id="citations">Citations</h1>
+<ol style="word-wrap: break-word;">
+<li><p>Corbellini, Andrea. “Elliptic Curve Cryptography: a Gentle Introduction,” May 17, 2015. https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/.</p></li>
+<li><p>Knutson, Hans. “What Is the Math behind Elliptic Curve Cryptography?” Hacker Noon, April 16, 2018. https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3.</p></li>
+<li><p>Silverman, Joseph H. An Introduction to the Theory of Elliptic Curves. Laramie, Wyoming: University of Wyoming, 2006.<br />
+https://www.math.brown.edu/johsilve/Presentations/WyomingEllipticCurve.pdf.</p></li>
+</ol>
+</main>
+</body>
+
+<script>
+var maxHeight = 0;
+
+$(".row").each(function () {
+    if ($(this).height() > maxHeight) {
+        maxHeight = $(this).height();
+    }
+});
+
+$(".row").height(maxHeight);
+</script>
+
+
+<footer class="blog-footer">
+  <a href="https://us7.list-manage.com/contact-form?u=bd1a0a18ff760b00bf541b12d&form_id=b47981c22ebecdf4a32acfec1a5f0fc7">Contact Us</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a><br>
+Copyright © 2021 Math and CS Research.
+</footer>
+  </body>
+</html>
+</body><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></html>
+
+
