@@ -243,7 +243,7 @@ img {
 <h1 class="unnumbered" id="introduction">Introduction</h1>
 <p>A state diagram is a visual representation of the behavior of a system. The diagram takes certain input states and returns output states. State diagrams are very commonly used in computer science, as machines can identify inputs to create outputs. This article will focus on a certain type of state diagram called a Markov Chain.<br />
 <br />
-Markov Chains are special in a few ways. They have no “memory," meaning the output for time <span class="math inline">\(t=n\)</span> is determined solely by the state at <span class="math inline">\(t=n-1\)</span>. They are probabilistic, so there are fixed probabilities to determine the chances of going to certain states. This means for a certain chain, we can write out the probability of going from every state to every other state. We could represent this data in a drawn out diagram. Let’s make a Markov Chain for the following problem: In tennis, players can reach a score of deuce, where a player needs to win two more points than their opponent in order to win the game. Let’s calculate the probability of player 1 winning after three moves starting at deuce, given that they win <span class="math inline">\(\frac{2}{3}\)</span> of the points. The diagram would look like: <center><img src="/articles/applied/Vol3_No1/markov-chains/Markov_1.png" style="width: 45%; min-width: 300px;" alt="image" /></center> We start at the central "Deuce," and proceed along the chain according to the probabilistic rules. We could set up equations for each of the states and use algebra to solve. However, there is an easier way. We can store the information in a matrix, like the one below, and use that to assist our solving.</p>
+Markov Chains are special in a few ways. They have no “memory," meaning the output for time <span class="math inline">\(t=n\)</span> is determined solely by the state at <span class="math inline">\(t=n-1\)</span>. They are probabilistic, so there are fixed probabilities to determine the chances of going to certain states. This means for a certain chain, we can write out the probability of going from every state to every other state. We could represent this data in a drawn out diagram. Let’s make a Markov Chain for the following problem: In tennis, players can reach a score of deuce, where a player needs to win two more points than their opponent in order to win the game. Let’s calculate the probability of player 1 winning after three moves starting at deuce, given that they win <span class="math inline">\(\frac{2}{3}\)</span> of the points. The diagram would look like: <center><img src="/articles/applied/Vol3_No1/markov-chains/Markov_1.png" style="width: 45%; min-width: 300px;" alt="image" /></center> We start at the central "Deuce," and proceed along the chain according to the probabilistic rules. We could set up equations for each of the states and use algebra to solve. However, there is an easier way. We can store the information in a matrix, like the one below, and use that to assist our solving.</p><center>
 <div class="center">
 <p><span class="math inline">\(\begin{bmatrix}
 P_{11} &amp; P_{12} &amp; P_{13} &amp; \dots &amp; P_{1n} \\
@@ -252,11 +252,11 @@ P_{31} &amp; P_{32} &amp; P_{33} &amp; \dots &amp; P_{3n} \\
 \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
 P_{n1} &amp; P_{n2} &amp; P_{n3} &amp; \dots &amp; P_{nn}
 \end{bmatrix}\)</span></p>
-</div>
+</div></center>
 <p>In the matrix, entry <span class="math inline">\(P_{ij}\)</span>. represents the probability of going to state <span class="math inline">\(j\)</span>, given that we are at state <span class="math inline">\(i\)</span>. So the first entry in the upper left is he probability of staying at state 1 once we are at state 1. We can make some key observations about this matrix. Since probabilities must sum to 1, each row must sum to 1. This is called a stochastic matrix.</p>
 <h1 class="unnumbered" id="operating-on-matrices">Operating on Matrices</h1>
 <p>As we are going to use matrices, it is important to review how to operate on the matrices. The most important operation for our purposes is multiplication. If we have two square matrices of the same size:</p>
-<div class="center">
+<center><div class="center">
 <p><span class="math inline">\(\begin{bmatrix}
 P_{11} &amp; P_{12} &amp; P_{13} &amp; \dots &amp; P_{1n} \\
 P_{21} &amp; P_{22} &amp; P_{23} &amp; \dots &amp; P_{2n} \\
@@ -270,9 +270,9 @@ Q_{31} &amp; Q_{32} &amp; Q_{33} &amp; \dots &amp; Q_{3n} \\
 \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
 Q_{n1} &amp; Q_{n2} &amp; Q_{n3} &amp; \dots &amp; Q_{nn}
 \end{bmatrix}\)</span></p>
-</div>
+</div></center>
 <p>their product is a matrix:</p>
-<div class="center">
+<center><div class="center">
 <p><span class="math inline">\(\begin{bmatrix}
 R_{11} &amp; R_{12} &amp; R_{13} &amp; \dots &amp; R_{1n} \\
 R_{21} &amp; R_{22} &amp; R_{23} &amp; \dots &amp; R_{2n} \\
@@ -280,11 +280,11 @@ R_{31} &amp; R_{32} &amp; R_{33} &amp; \dots &amp; R_{3n} \\
 \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
 R_{n1} &amp; R_{n2} &amp; R_{n3} &amp; \dots &amp; R_{nn}
 \end{bmatrix}\)</span></p>
-</div>
+</div></center>
 <p>where <span class="math inline">\(R_{ij}=P_{i1} \cdot Q_{1j} + P_{i2} \cdot Q_{2j} + \dots + P_{in} \cdot P_{nj}\)</span>. Essentially, to find the entry in the <span class="math inline">\(i^{th}\)</span> row and <span class="math inline">\(j^{th}\)</span> column, we multiply the <span class="math inline">\(i^{th}\)</span> row of the first matrix by the <span class="math inline">\(j^{th}\)</span> row of the the second matrix.<br />
 <br />
 For practice, try to find the product of the following two matrices.</p>
-<div class="center">
+<center><div class="center">
 <p><span class="math inline">\(\begin{bmatrix}
 2 &amp; 4 &amp; 6 \\
 1 &amp; 3 &amp; 5 \\
@@ -295,13 +295,13 @@ For practice, try to find the product of the following two matrices.</p>
 3 &amp; 2 &amp; 1 \\
 4 &amp; 3 &amp; 1 \\
 \end{bmatrix}\)</span></p>
-</div>
+</div></center>
 <p>The answer is at the end of the article.</p>
 <h1 class="unnumbered" id="applying-ideas">Applying Ideas</h1>
 <p>If we have the information for our Markov Chain contained in a matrix, we can find the probabilities of multiple iterations of the Chain by multiplying the matrix with the probabilities by itself. This makes sense if we examine the mechanism for multiplication. When we find the probability for a certain entry, we multiply the probability of getting from a certain state to an intermediary, to the state we want. So, if we want to find the probability of state 4 of a certain chain on move three, given that we started on state 1, we would need to multiply the matrix by itself twice, and find the entry in the first row, fourth column.<br />
 <br />
 When solving problems using Markov Chains, it is important to identify the information, keeping in mind that some of the entries may be 0 if it is impossible to get from one state to another. Let’s go back to the tennis example. If we label the states from left to right, the matrix would look like:</p>
-<div class="center">
+<center><div class="center">
 <p><span class="math inline">\(\begin{bmatrix}
 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
 \frac{1}{3} &amp; 0 &amp; \frac{2}{3} &amp; 0 &amp; 0 \\
@@ -309,9 +309,9 @@ When solving problems using Markov Chains, it is important to identify the infor
 0 &amp; 0 &amp; \frac{1}{3} &amp; 0 &amp; \frac{2}{3} \\
 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
 \end{bmatrix}\)</span></p>
-</div>
+</div></center>
 <p>If we cube this matrix, we would get:</p>
-<div class="center">
+<center><div class="center">
 <p><span class="math inline">\(\begin{bmatrix}
 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
 \frac{11}{27} &amp; 0 &amp; \frac{8}{27} &amp; 0 &amp; \frac{8}{27} \\
@@ -319,7 +319,7 @@ When solving problems using Markov Chains, it is important to identify the infor
 \frac{1}{27} &amp; 0 &amp; \frac{4}{27} &amp; 0 &amp; \frac{22}{27} \\
 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
 \end{bmatrix}\)</span></p>
-</div>
+</div></center>
 <p>So, if we start at deuce, the probability of winning is <span class="math inline">\(\frac{4}{9}\)</span>.</p>
 <h1 class="unnumbered" id="final-comments">Final Comments</h1>
 <p>The matrix representation of Markov Chains is also very useful in computer science. Computers are very well prepared in dealing with matrices, and can multiply them without difficulty. It is much more difficult to try to program a more complex probabilistic system. Markov Chains have been utilized in many wide ranging ways, from financial modeling to particle motion.</p>
@@ -334,24 +334,24 @@ When solving problems using Markov Chains, it is important to identify the infor
 34 &amp; 26 &amp; 12 \\
 \end{bmatrix}\)</span><br />
 <br />
-. We can make a matrix to represent the probabilities of the weather events, where state 1 is sunny, state 2 is cloudy, and state 3 is rainy. The matrix would look like this:</p>
-<div class="center">
+We can make a matrix to represent the probabilities of the weather events, where state 1 is sunny, state 2 is cloudy, and state 3 is rainy. The matrix would look like this:</p>
+<center><div class="center">
 <p><span class="math inline">\(\begin{bmatrix}
 \frac{3}{4} &amp; \frac{1}{4} &amp; 0 \\
 \frac{2}{5} &amp; \frac{2}{5} &amp; \frac{1}{5} \\
 0 &amp; \frac{1}{3} &amp; \frac{2}{3} \\
 \end{bmatrix}\)</span></p>
-</div>
+</div></center>
 <p>After multiplying this matrix by itself twice, we get that the first entry of the first row is <span class="math inline">\(\boxed{\frac{53}{80}}\)</span>.<br />
 <br />
-. (Solution courtesy of AOPS) We can write the probabilities as an exponentiation of the matrix</p>
-<div class="center">
+(Solution courtesy of AOPS) We can write the probabilities as an exponentiation of the matrix</p>
+<center><div class="center">
 <p><span class="math inline">\(\begin{bmatrix}
 0 &amp; .5 &amp; .5 \\
 .5 &amp; 0 &amp; .5 \\
 .5 &amp; .5 &amp; 0 \\
 \end{bmatrix}\)</span></p>
-</div>
+</div></center>
 <p>We can factor out the .5 to get <span class="math inline">\(\frac{1}{2}
 \begin{bmatrix}
 0 &amp; 1 &amp; 1 \\
