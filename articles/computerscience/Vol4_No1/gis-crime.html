@@ -300,86 +300,35 @@ pre > code.sourceCode { white-space: pre; position: relative; }
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+
 <center><header id="title-block-header">
-<h1 class="title">Bellman-Ford Algorithm</h1>
-<p class="author">Naowal Rahman</p>
+<h1 class="title">GIS and Crime</h1>
+<p class="author">Ian Bae</p>
 </header></center>
-<p>Graph theory is an important aspect of computer science; it is used to model pairwise relations between objects. Different algorithms are used to process graphs with different features. One such algorithm is the Bellman-Ford algorithm, which is of particular interest because of its ability to deal with and identify negative weight cycles.</p>
-<p>Before discussing the Bellman-Ford algorithm, we first assert some definitions: a <em>digraph</em> is short for a directional graph; it is a graph made of vertices that are connected in a specific direction. The vertices can also be called <em>nodes</em>. The connectors between the vertices are called <em>edges</em>. On a directed graph, a path along a graph can only follow the direction of the edge while traversing. It cannot go the other way.</p>
-<center><figure>
-<img src="/articles/computerscience/Vol4_No1/bellman/diagram1.png" style="width: 45%; min-width: 300px;" alt="If a path starts from vertex 2, it can only go to vertex 3, and from there can only go to vertex 4. It cannot go to vertex 1 because that goes against the directed edge." /><figcaption aria-hidden="true">If a path starts from vertex 2, it can only go to vertex 3, and from there can only go to vertex 4. It cannot go to vertex 1 because that goes against the directed edge.</figcaption>
-</figure></center>
-<p>The way a node is represented in computers is through a 3-tuple or 3-long list containing the set <span class="math inline">\(\{u, v, w\}\)</span>. Here, <span class="math inline">\(u\)</span> represents the source vertex, <span class="math inline">\(v\)</span> represents the destination vertex, and <span class="math inline">\(w\)</span> contains the weight associated with going from <span class="math inline">\(u\)</span> to <span class="math inline">\(v\)</span>. To represent a weighted digraph containing all of those nodes, we use an adjacency matrix: a <span class="math inline">\(3\times n\)</span> 2-dimensional array <code>graph</code> containing a number of sub-lists <code>[u, v, w]</code>, representing all the nodes in the graph, where <span class="math inline">\(n\)</span> is the number of nodes on the graph. A graph with 4 nodes and one unconnected node would look like the following:</p>
-<center><table>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><pre><code>graph = [[0, 1, 3],
-         [1, 2, 2],
-         [2, 3, 4]]</code></pre></td>
-</tr>
-</tbody>
-</table></center>
-<table>
-<tbody>
-<tr class="odd">
-<center><td style="text-align: center;"><img src="/articles/computerscience/Vol4_No1/bellman/diagram3.png" style="width: 45%; min-width: 300px;" title="fig:" alt="Graph representation" /></td></center>
-</tr>
-</tbody>
-</table>
-<center><div class="wrapfigure">
-<p><span>r</span><span>0.3</span> <img src="/articles/computerscience/Vol4_No1/bellman/diagram2.png" style="width: 45%; min-width: 300px;" alt="image" /></p>
-</div></center>
-<p>The purpose of Bellman-Ford is to compute the shortest path from a particular vertex (the source) to all of the other vertices in a weighted digraph. It is quite versatile because it can detect and deal with negative weights, which is something that other graph-traversing algorithms, like Dijkstra’s algorithm, cannot. This is when a particular edge or number of edges with negative weights causes a search to find the shortest path to continue on forever. It occurs in certain graphs where there are enough negative weights in a loop such that the cumulative sum of all the weights in that loop is negative. To further clarify, let us consider an example.</p>
-<center><figure>
-<img src="/articles/computerscience/Vol4_No1/bellman/negative-weight-cycle.jpg" id="fig:my_label" style="width: 45%; min-width: 300px;" alt="A negative weight cycle occurs when going from s to p" /><figcaption aria-hidden="true">A negative weight cycle occurs when going from <span class="math inline">\(s\)</span> to <span class="math inline">\(p\)</span></figcaption>
-</figure></center>
-<p>When attempting to calculate the shortest path from vertex <span class="math inline">\(s\)</span> to vertex <span class="math inline">\(g\)</span> via <span class="math inline">\(e\)</span> and <span class="math inline">\(f\)</span>, the first step is to move from <span class="math inline">\(s\)</span> to <span class="math inline">\(e\)</span>, since the cost of moving from <span class="math inline">\(s\)</span> to <span class="math inline">\(e\)</span> (2) is lower than the cost of moving from <span class="math inline">\(s\)</span> to <span class="math inline">\(c\)</span> (5). From <span class="math inline">\(e\)</span> there is only one choiceto move to <span class="math inline">\(f\)</span>. However, once we are at <span class="math inline">\(f\)</span>, we have two choicesto move to <span class="math inline">\(g\)</span>, which costs 7, or move back to <span class="math inline">\(e\)</span>, which actually reduces our total cost by -6. An algorithm unlike Bellman-Ford is fit to pick the shortest path, so it will always move back to <span class="math inline">\(e\)</span>. As we continue, the total cost keeps on decreasing. Thus, the shortest path is never found.</p>
-<p>This ability of the Bellman-Ford algorithm is the main reason for why it may be favored over other algorithms, as it otherwise has a relatively large time complexity of <span class="math inline">\(\mathcal O (VE)\)</span> when compared to algorithms like Dijkstra’s Algorithm and breadth-first search, which have runtimes of <span class="math inline">\(\mathcal O ((V+E)\log V)\)</span> and <span class="math inline">\(\mathcal{O}(V+E)\)</span>, respectively.</p>
-<p>Bellman-Ford essentially overestimates the lengths of paths between the vertices in a graph, and then iterates over the graph, decreasing the estimates over time as it finds shorter paths. By the time the final iteration is complete, the result is optimized. The first iteration is an assigning of high distance values, and the second is a correction of those distances. The following iterations are for optimization. Thus the algorithm takes these steps:</p>
+<h1 id="what-is-gis">What is GIS?</h1>
+<p>A geographic information system (GIS) is a technological tool for comprehending geography and making intelligent decisions. GIS organizes geographical data so that a person reading a map can select the data necessary for a project or task. A thematic map has a table of contents that allows the reader to add layers of information to a base map of real-world locations. When the GIS connects to a certain location, it can map out the area’s exact location, weather, and climate, as well as where certain landmarks are and other types of descriptive information. GIS allows users to find patterns in specific changes and to understand relationships, and it is used in almost all fields of science and in many industries. They help gain insightful knowledge about diseases, climate change, racial inequality, and technological innovations. As technology in this world improves, using GIS can improve communication, efficiency, and management. GIS is used in almost all fields, ranging from archaeology to engineering.</p>
+<h1 id="how-does-gis-work">How does GIS work?</h1>
+<p>There are several components to a GIS that allow the user to analyze its data. The major components of GIS are outlined below:</p>
+<h2 id="the-input-system">The Input System</h2>
+<p>Its function is to collect the required data (including maps, coordinates, and landmarks) to show the desired analysis and results.</p>
+<h2 id="computer-hardware-and-software-systems">Computer Hardware and Software Systems</h2>
+<p>Software is then used to process the data and do the following:</p>
 <ol>
-<li><p>Given a weighted digraph, choose a starting vertex and assign infinity as the distance to all the other vertices.</p></li>
-<li><p>Traversing the graph, at each path correct the distances from infinity if they are inaccurate.</p></li>
-<li><p>Repeat step 1 for at most <span class="math inline">\(n-1\)</span> times (the worst-case scenario), with <span class="math inline">\(n\)</span> being the number of vertices in the graph.</p></li>
-<li><p>Check if a negative weight cycle is present.</p></li>
+<li><p>To store the data.</p></li>
+<li><p>To manage and analyze the data.</p></li>
+<li><p>To display a visualization of the data.</p></li>
 </ol>
-<p>When implementing this in code, there are three things to calculate or storethe path distance of each vertex, the shortest path, and its length. The path distance of each vertex will be stored in an array called <code>distanceArray</code>. The shortest path is obtained by associating each vertex with the previous one and backtracking from the destination vertex to the source vertex. The presence of a negative weight cycle is determined by comparing the total distance of the source vertex and the weight with the distance of the destination vertex. The algorithm is implemented as follows:</p>
-<div class="pseudo">
-<p>def bellmanFord(graph, source) distanceArray = list of size n previousArray = list of size n</p>
-<p>for each vertex V in graph distanceArray[V] = infinite previousArray[V] = null distanceArray[source] = 0</p>
-<p>for V - 1 times for each value (u, v, w) in graph tempDistance = distanceArray[u] + w if tempDistance &lt; distanceArray[v] distanceArray[v] = tempDistance previousArray[v] = u</p>
-<p>for each vertex V with values (u, v, w) in graph if distanceArray[u] + w &lt; distanceArray[v] output "negative weight cycle detected"</p>
-<p>return distanceArray, previousArray</p>
-</div>
-<p>The algorithm iterates over all of the edges for a total of <span class="math inline">\(V-1\)</span> times, with <span class="math inline">\(V\)</span> as the number of vertices, as indicated by the nested for-loop. Thus, as the number of vertices increases, the number of operations increases by <span class="math inline">\(E\)</span>, the number of edges, making the total time complexity <span class="math inline">\(O(VE)\)</span>.</p>
-<p>The Bellman-Ford algorithm is useful in many communication scenarios. It works well in distributed systems, since the algorithm is node-based and distributed systems have require communication between components on multiple machines. In an area where distance and cost are major factors to consider, the Bellman-Ford excels. It is also used in distance-vector routing protocols, which determine the best path that packets of data should take based on distance. This is a situation where cost of routing data from one place to another can have significant impacts of speed of transfer and the presence of network traffic.</p>
-<p>The Bellman-Ford algorithm is a unique and useful pathfinding algorithm in graph theory; in this paper, we shed some light on how Bellman-Ford works and its implementation. As noted, this may be flexibly applied to many problems.</p>
+<h2 id="output-system">Output System</h2>
+<p>The function of this component is to generate hard copies of maps, images and other types of outputs.</p>
+<p>In GIS, there are two commonly used data types. These are:</p>
+<ol>
+<li><p>Data on real world events and features that have a few types of spatial dimension. This data is shown in the form of points, polygons, or lines, which are represented in the coordinate system in a geographic manner. For the GIS to display this type of data, scanners, GPS, and satellite imagery may be used.</p></li>
+<li><p>Data called attributes, which are in the forms of lines, polygons, and maps, and are in specific pieces. Most data sources can be used to display attributes and they are directly entered into the GIS computer software.</p></li>
+</ol>
+<p>GIS uses many sources of geographic data and maps to track spatial location. To put it into simpler terms, picture a bird’s eye view of a simple street map. This map has all the street names, intersections, and buildings. However, what if we display what’s under and above the ground, like gas lines, sewer pipes, electric wires, telecommunications lines? Now the map is jumbled and very hard to decipher. GIS allows you to organize all that information into layered data. Everything on the map can be added to the GIS map as location-based data. In two-dimensional maps, it is borderline impossible to neatly display this much information. That’s why geographic information systems were invented: to concisely describe a surrounding area using a three dimensional map. The amazing thing about GIS is that it can process nearly all types of locational data types, from spreadsheets, photographs, and blueprints to aerial images and topographic maps.</p>
+<h1 id="how-can-gis-be-applied-today">How Can GIS Be Applied Today?</h1>
+<p>In all fields of science and in a majority of other fields, GIS is applied on a daily basis to more effectively gain insight on various topics. For example, GIS can be used in large cities to effectively calculate the best area to advertise a product, or in the oil industry to plot out all the areas where pipelines exist and where there is space available to construct more. However, in the law enforcement area, there is only a vague idea as to how GIS can be used to reduce crime. A study details four major uses for GIS in policing. Crime mapping identifies the geographical distribution of crime to deploy officers to “hot spots" of activity and to develop other intervention plans. Many departments have developed computerized statistics or CompStat systems to help manage the decision-making process. The system assists with instant crime analysis, deployment techniques, active enforcement of trivial crimes, monitoring of emerging patterns, and accountability programs for law enforcement managers. GIS is also used to create geographical profiles of offenders, an investigative method that allows police to identify locations of connected crimes to help determine where an offender may live; this is particularly useful in serial cases. While these practices are widespread, especially in larger departments, little research is available to measure their effectiveness in policing. Current studies indicate that GIS is used mainly to aid in the design of policing strategies and to evaluate the decision-making processes at law enforcement agencies.</p>
 <h1 id="citations">Citations</h1>
-<ol>
-<p>Dr. Roy Marsten, Emcien. “Is Graph Theory Key to Understanding Big Data?” Wired, Conde Nast, 7 Aug. 2015, https://www.wired.com/insights/2014/03/graph-theory-key-understanding-big-data/.</p>
-</ol>
-</main>
+<p>https://techacute.com/deepfake-geography-the-problem-of-ai-falsifying-satellite-photos/</p>
 </body>
-
-<script>
-var maxHeight = 0;
-
-$(".row").each(function () {
-    if ($(this).height() > maxHeight) {
-        maxHeight = $(this).height();
-    }
-});
-
-$(".row").height(maxHeight);
-</script>
-
-
-<footer class="blog-footer">
-  <a href="https://us7.list-manage.com/contact-form?u=bd1a0a18ff760b00bf541b12d&form_id=b47981c22ebecdf4a32acfec1a5f0fc7">Contact Us</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a><br>
-Copyright © 2021 Math and CS Research.
-</footer>
-  </body>
 </html>
-</body><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></html>
-
