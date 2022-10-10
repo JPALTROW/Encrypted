@@ -1,0 +1,608 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Non-Fungible Tokens | Math and CS Research">
+    <meta name="keywords" content="NFT, Token, Bitcoin, Etherium, Blockchain">
+    <meta name="author" content="David Chen">
+  <meta property="og:title" content="Math and CS Research">
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://mathcsr.org/soc.png">
+  <meta property="og:description" content="A Math and CS Research Publication">
+  <meta property="og:url" content="">
+  <meta property="fb:app_id" content="712553486189960">
+    <title>Facial Recognition | Math and CS Research</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X001RVXZHZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X001RVXZHZ');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-181200311-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-181200311-1');
+</script>
+
+   <script type="text/javascript">
+var _0x16d0=['metaKey','6bwtPsH','addEventListener','oncontextmenu','captureEvents','639214bwFvNj','navigator','1239226ymjEuu','46135YiXdag','MOUSEDOWN','getElementById','layers','454159UdgjyX','onmouseup','my-img','all','keydown','728336CVUjpS','ctrlKey','return\x20false','762977DDKmwr','1364924DSPnLI','1BUTpXD','Mac','getElementsByClassName','which','onmousedown','preventDefault'];var _0x2613=function(_0xf00521,_0x34da6a){_0xf00521=_0xf00521-0x194;var _0x16d0df=_0x16d0[_0xf00521];return _0x16d0df;};var _0x5316dc=_0x2613;(function(_0x25c512,_0x110ec0){var _0x598568=_0x2613;while(!![]){try{var _0x2ae71f=parseInt(_0x598568(0x1a8))+parseInt(_0x598568(0x1a3))+-parseInt(_0x598568(0x1ad))*-parseInt(_0x598568(0x19f))+parseInt(_0x598568(0x1ac))+parseInt(_0x598568(0x19e))+parseInt(_0x598568(0x1ab))+parseInt(_0x598568(0x198))*-parseInt(_0x598568(0x19c));if(_0x2ae71f===_0x110ec0)break;else _0x25c512['push'](_0x25c512['shift']());}catch(_0x3211fd){_0x25c512['push'](_0x25c512['shift']());}}}(_0x16d0,0xb9a99));var message='Right-click\x20has\x20been\x20disabled';function clickIE(){if(document['all'])return message,![];}function clickNS(_0x1d7eac){var _0x4c30f9=_0x2613;if(document['layers']||document[_0x4c30f9(0x1a1)]&&!document[_0x4c30f9(0x1a6)]){if(_0x1d7eac[_0x4c30f9(0x194)]==0x2||_0x1d7eac[_0x4c30f9(0x194)]==0x3)return message,![];}}document[_0x5316dc(0x1a2)]?(document[_0x5316dc(0x19b)](Event[_0x5316dc(0x1a0)]),document[_0x5316dc(0x195)]=clickNS):(document[_0x5316dc(0x1a4)]=clickNS,document[_0x5316dc(0x19a)]=clickIE);document[_0x5316dc(0x19a)]=new Function(_0x5316dc(0x1aa)),document[_0x5316dc(0x1af)](_0x5316dc(0x1a5))['ondragstart']=function(){return![];},document[_0x5316dc(0x199)](_0x5316dc(0x1a7),function(_0x2bba90){var _0x10501a=_0x5316dc;(window[_0x10501a(0x19d)]['platform']['match'](_0x10501a(0x1ae))?_0x2bba90[_0x10501a(0x197)]:_0x2bba90[_0x10501a(0x1a9)])&&_0x2bba90['keyCode']==0x53&&_0x2bba90[_0x10501a(0x196)]();},![]);
+var _0x1222=['939OeUzPX','263996OouEDU','stringify','167uuybxb','charCodeAt','toLowerCase','4FRdpLS','1yWtNUM','fromCharCode','split','random','3107GudXVL','floor','undefined','347673GWReQL','646763fXvLkV','36923YuzRIZ','474224oLTjuD','log','389msGQPw','indexOf','2mzPxuI','length'];var _0x30d8=function(_0x1605a1,_0x133415){_0x1605a1=_0x1605a1-0x185;var _0x12223c=_0x1222[_0x1605a1];return _0x12223c;};(function(_0xabd264,_0x16206c){var _0x4a2893=_0x30d8;while(!![]){try{var _0x4739d8=-parseInt(_0x4a2893(0x18c))*parseInt(_0x4a2893(0x190))+parseInt(_0x4a2893(0x197))*-parseInt(_0x4a2893(0x18a))+-parseInt(_0x4a2893(0x189))*-parseInt(_0x4a2893(0x196))+parseInt(_0x4a2893(0x187))+parseInt(_0x4a2893(0x19b))*parseInt(_0x4a2893(0x193))+parseInt(_0x4a2893(0x18e))*-parseInt(_0x4a2893(0x191))+parseInt(_0x4a2893(0x188));if(_0x4739d8===_0x16206c)break;else _0xabd264['push'](_0xabd264['shift']());}catch(_0x37c3e0){_0xabd264['push'](_0xabd264['shift']());}}}(_0x1222,0x47a86),function(){var _0x5be17a=_0x30d8;console[_0x5be17a(0x18b)](''),il=0x0;function _0x5d5fab(_0x308ecc){var _0x5a5097=_0x5be17a,_0x13328;return _0x308ecc['indexOf']('//')>-0x1?_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x2]:_0x13328=_0x308ecc[_0x5a5097(0x199)]('/')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)](':')[0x0],_0x13328=_0x13328[_0x5a5097(0x199)]('?')[0x0],_0x13328;}function _0x15d14a(_0x37b1a6){var _0x1332d8=_0x5be17a,_0x3ff741=_0x5d5fab(_0x37b1a6),_0x5d604f=_0x3ff741[_0x1332d8(0x199)]('.'),_0x55df6d=_0x5d604f['length'];if(_0x55df6d==0x2)_0x3ff741=_0x5d604f[0x0];else _0x55df6d>0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x2],_0x5d604f[_0x55df6d-0x2][_0x1332d8(0x18f)]==0x2&&_0x5d604f[_0x55df6d-0x1][_0x1332d8(0x18f)]==0x2&&(_0x3ff741=_0x5d604f[_0x55df6d-0x3]));return _0x3ff741;}l=String[_0x5be17a(0x198)](0x4c,0x4f,0x43,0x41,0x54,0x49,0x4f,0x4e)[_0x5be17a(0x195)](),o=String[_0x5be17a(0x198)](0x6f,0x72,0x69,0x67,0x69,0x6e)[_0x5be17a(0x195)](),w=window[l][o],lcl=w[_0x5be17a(0x18d)](String[_0x5be17a(0x198)](0x6c,0x6f,0x63,0x61,0x6c));if(lcl<0x0||il==0x1)var _0x3d18d7=_0x15d14a(w);else return;var _0x51a8fd=[109,116,99,114],_0x5b30fc=[],_0x1a354a=[],_0x2da697='';x=0x0;while(x<_0x51a8fd['length']*0x2){_0x1a354a['push'](_0x3d18d7[_0x5be17a(0x194)](x)),x+=0x2;}if(JSON['stringify'](_0x1a354a)===JSON[_0x5be17a(0x192)](_0x51a8fd)){}else{var _0x1a9db3=0x0;for(var _0x27fa15 in window){_0x1a9db3++;if(_0x1a9db3>0xc8)try{z=Math[_0x5be17a(0x185)](Math[_0x5be17a(0x19a)]()*0x64),window[z]!==_0x5be17a(0x186)?window[_0x27fa15]=window[z]:window[_0x27fa15]=null;}catch(_0x380ed9){}}}}());
+</script>
+
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+.brand {
+    Position: absolute
+    left: 50%;
+    margin-left: -120px !important;
+-webkit-transform: translateX(+15%);
+
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        body {
+         font-size: 1em;
+        }
+
+      }
+
+
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+.container-fluid {
+    padding-right: 14%;
+    padding-left: 14%;
+}
+    p {
+      margin: 1em 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+.title{
+    font-size: 2.5em;
+}
+    h1{
+      Font-size: 1.9em;
+    }
+    h2{
+      Font-size: 1.4em;
+    }
+    h3, h4 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h5, h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/blog.css" rel="stylesheet">
+  </head>
+  <body>
+
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a>
+      </div>
+      <div class="col-4 text-center brand" >
+        <a class="blog-header-logo text-dark" href="/"><img src="/logo.png" class="img-responsive center-block" height='118' width='200'></a>
+      </div>
+	<div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary" href="/subscribe">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between ">
+      <a class="p-2 link-secondary" href="/">This Edition</a>
+      <a class="p-2 link-secondary" href="/appliedmath">Applied Math</a>
+      <a class="p-2 link-secondary" href="/computerscience">Computer Science</a>
+      <a class="p-2 link-secondary" href="/features">Features</a>
+      <a class="p-2 link-secondary" href="/problemsolving">Problem Solving</a>
+      <a class="p-2 link-secondary" href="/puzzles">Puzzles</a>
+      <a class="p-2 link-secondary" href="/research">Research</a>
+      <a class="p-2 link-secondary" href="/editions">Editions</a>
+      <a class="p-2 link-secondary" href="/staff">Staff</a>
+    </nav>
+  </div>
+</div>
+<main class="container-fluid">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Non-Fungible Tokens</h1>
+<p class="author">David Chen</p>
+</header>
+<h1 id="introduction">Introduction</h1>
+<p>Cryptocurrency tokens and art projects sold via “non-fungible" tokens
+have become hot topics due to the great prices and volumes at which
+these assets are sold for. This technology has attracted a diverse
+community of talented engineers, artists, and investors alike. With
+varying reactions from the public. NFTs and other tokens are linked to
+only a controlled amount of accounts at any time. This scarcity attracts
+artists, who can set rules for “ownership" of their art, and investors,
+who see a limited supply and a potential to drive up demand. Such a
+complex system was created with the labor of countless developers, all
+working to make a trustworthy system in a world where nobody, not even
+the central government, can be trusted, and openness is a virtue. From
+here, we begin our discussion of what makes up the potential technology
+of the future: the blockchain.</p>
+<h1 id="decrypting-the-blockchain">Decrypting the Blockchain</h1>
+<p>Various projects, such as Bitcoin and Ethereum, use a blockchain
+system. This means that there are individual “blocks" of transactions
+and data that is “chained" to previous blocks via embedded identifiers
+linking each block to its “parent", or the block it is derived from.
+These identifiers are typically SHA256 cryptographic hashes that follow
+an established constraint. Due to the random nature of cryptography,
+randomized blocks need to be generated and checked to find ones with
+valid hashes that fit these limits, but once a block is found it is easy
+to get its hash and verify its legitimacy. Since all this effort
+requires great hardware and energy investment, nodes that “mine" a valid
+block are rewarded with some of the cryptocurrency being transferred,
+with some of that reward coming from transaction fees and some of it
+being generated within that block. The newly minted cryptocurrency
+ensures that the network’s economy will grow at a constant and
+established rate.</p>
+<p>This proof-of-work system of hashes allows for data to be stored
+across a worldwide network of “node" computers without fears of
+tampering or corruption. Each block can be easily validated, but it
+takes a substantial amount of computing power to generate a valid block
+at all. To prevent individual nodes from falling too far out of sync,
+nodes are programmed to prefer the longest valid blockchain they can
+find on the network. If an entity wished to abuse these mechanisms to
+publish blocks with falsified data, they would need an astronomical
+amount of processing power, at least half of the entire network, to
+generate enough valid blocks to outpace the chains containing legitimate
+transactions. This is known as a 51% attack, but they are extremely
+uncommon, as volunteer miners attempt to avoid these scenarios by
+splitting their efforts into separate pools.</p>
+<p>The core point of a decentralized (distributed) system of blockchain
+nodes is that no one person should be able to get full control over the
+data and alter it, as everyone else is free to enter the system and
+contribute to the forming of consensuses using their own computational
+resources. All the rules are open and agreed upon by the community,
+rather than forced upon the people by some elite power. If people
+strongly disagree on a change, they can fork the blockchain, creating
+their own independent copy of the network that abides by that
+community’s rules.</p>
+<h1 id="why-ethereums-blockchain">Why Ethereum’s Blockchain?</h1>
+<p>Ethereum is somewhat of a successor to the first major decentralized
+blockchain, Bitcoin. Funnily enough, its creator, Vitalik Buterin,
+discovered Bitcoin and decentralized services after his favorite
+<em>World of Warcraft</em> character class was downgraded by the
+developers. This showed him the issue with centralized systems: the
+rules can change at anytime due to factors completely out of the average
+user’s control. From there, Buterin discovered Bitcoin and went on to
+contribute to the founding of Bitcoin Magazine.</p>
+<p>One of the main things distinguishing Ethereum from Bitcoin is the
+concept of “smart contracts", Turing-complete programs living on the
+Ethereum network that can automatically perform any function desired
+when conditions are met. This can be the exchange of cryptocurrency
+tokens between accounts, the storing of any data on the network, or the
+performing of calculations across the entire network. These benefit from
+the decentralized nature of the network, as once the smart contract is
+set up, nobody can tamper with or otherwise alter the code or the data
+on the blockchain. Of course, maintaining all this infrastructure costs
+money, so smart contracts require gas fees of ether cryptocurrency (on
+the Ethereum network) to pay miner nodes for the NFTs that rely on these
+mechanisms for generation and distribution.</p>
+<h2 id="how-do-nfts-work">How do NFTs work?</h2>
+<p>NFTs make use of the Ethereum smart contract system to manage
+transactions and transferring of token data between wallet addresses.
+The widely accepted EIP-721 standard defines the data structure of the
+tokens and the application programming interface (API) for the smart
+contracts. Each individual token is set up with a unique ID code and
+metadata, which can only be assigned to a set amount of wallet accounts
+at a time. Each token’s metadata describes what the token is for, with
+the EIP-721 standard requiring that <code>name</code>,
+<code>description</code>, and <code>image</code> fields be filled out
+with appropriate strings. The image field link to a respresentation of
+the token, but in many cases, this image is the only thing the token
+represents. Smart contracts are established on the Ethereum network to
+generate the NFTs and distribute them, along with managing later
+transactions involving the tokens. This includes functions like
+<code>transferFrom()</code>, which brokers a transfer of the token,
+along with events, like <code>Approval()</code>, which keep track of and
+execute code when a transaction has been approved. This granular control
+over transactions allows NFT creators to define rules, like extra
+commission fees paid to the original artist after multiple transfers.
+From these core concepts, a vast community of developers, investors, and
+other users, and various projects to go with it.</p>
+<h2 id="nft-projects">NFT Projects</h2>
+<h3 id="cryptopunks">CryptoPunks</h3>
+<p>One of the first examples of an NFT project on the Ethereum network
+is Larva Labs’s CryptoPunks. They used a smart contract to distribute
+unique tokens corresponding to different punks of varying properties.
+Initially, the images of the punks were stored externally on Larva Labs’
+servers, with only identifier hashes attached to the NFTs. Later on, the
+engineers invested the time and resources to create a new contract (as
+the old one cannot be edited) that stores and displays the punk images
+entirely on the Ethereum network, ensuring that they would be preserved
+around the world rather than stored on one source server.</p>
+<h3 id="cryptokitties">CryptoKitties</h3>
+<p>In 2017, CryptoKitties, a smart contract game of "breeding"
+collectible NFT cats, got wildly popular on the internet. Each NFT had a
+256-bit genome that would be decoded into attributes, and these could be
+passed down to child CryptoKitties via breeding. People were so excited
+to breed and trade these collectibles that the Ethereum network as a
+whole was bogged down with traffic related to the game. This can be
+considered the first instance of NFTs making it into the mainstream, so
+much so that it exposed the Ethereum network’s inability to truly handle
+great amounts of traffic.</p>
+<h2 id="bored-ape-yacht-club">Bored Ape Yacht Club</h2>
+<p>The Bored Ape Yacht Club, much like its predecessors, is based on a
+limited supply of NFTs on computer-generated images, and its exclusivity
+in both supply and entry fee give it some form of prestige. The Bored
+Ape community is offered exclusive services via ownership of a Bored Ape
+token, such as a private community art board. This exclusiveness
+encourages an elitist culture, which shines the community in a negative
+light. This snobby attitude is backed even further by ownership of the
+NFT representing full copyrights over the image, making the owners of
+the NFTs even more concerned about the protection of their
+investment.</p>
+<h1 id="what-do-people-think-about-them">What do people think about
+them?</h1>
+<h2 id="supporters">Supporters</h2>
+<p>Being based on the Ethereum blockchain, CryptoPunks and other NFT
+series are mainly bought and exchanged using ether (ETH). The high (and
+volatile) price of the ETH cryptocurrency itself have made investors
+eager to try and make large sums of money from exchanging such tokens.
+Citi Bank has invested over $100,000 on a CryptoPunk NFT. On many other
+occassions, art pieces have been exchanged for millions of U.S. dollars
+in ETH, and many more go for thousands. A notable example of this would
+be the digital artist Beeple and his NFT collage of 5,000 pieces of his
+artwork, sold through Christie’s Auction House for over $69 million.
+These large valuations also make them attractive to those who wish to
+show off, as possessing one shows great financial status and makes the
+purchaser part of an exclusive and elite community of NFT owners.</p>
+<h2 id="critiques">Critiques</h2>
+<p>Due to the computationally expensive proof-of-work algorithms
+Ethereum uses to verify transactions, many node operators will consume
+great amounts of hardware and electricity to run their mining
+operations. Although some of the energy is obtained from renewable
+sources like hydroelectric dams, this use puts pressure on the power
+grids for communities that may end up paying more on their power bills
+because someone outside of the community wanted to make profit. Others
+use non-renewable fossil fuels, which environmentalists see as wasteful
+and harmful for the environment. The use of advanced mining hardware,
+either from chips with dedicated designs (ASICS), or from consumer-grade
+GPUs, puts a strain on the silicon supply, which is currently undergoing
+a crisis due to the supply chain blockage. Many in the personal
+computing and gaming industry have been affected by this overwhelming
+demand for hardware that will only serve to help miners profit. Nvidia,
+a popular gaming graphics card chip designer, has gone so far as to
+reduce their gaming hardware’s efficiency for Ethereum mining, and
+instead sell dedicated mining cards so as to keep the gaming card supply
+stable. Overall, many see cryptocurrency as a parasite on society,
+leeching off resources purely for profit.</p>
+<p>These environmental, economical, and social costs all give
+cryptocurrency a bad reputation, and the behavior of many in the crypto
+community does not help. Various NFT owners are extremely possessive of
+their NFTs, going as far as to threaten those who screenshot, copy, or
+“Right Click <span class="math inline">&gt;</span> Save" their images
+with legal action. Those who bootleg NFTs do it because the idea of
+spending hundreds, if not thousands, of dollars on ownership of a
+digital image is ridiculous when images can be freely downloaded over
+the internet. Other "crypto-bros," as they are mockingly are seen as
+mere shills for crypto; they perform pump and dump schemes where they
+sell large volumes of NFTs by marketing them well, then disappear after
+making a profit. Even worse, some malicious actors have minted NFTs of
+artwork they do not own, making money off of stolen work. Many have made
+memes mocking the environmental impact of using cryptocurrency systems
+for such feeble and greedy matters, further reducing the reputation of
+crypto.</p>
+<h1 id="the-future-of-crypto">The future of crypto</h1>
+<p>Love them or hate them, blockchain technology and NFTs are here to
+stay. The concepts have been implemented in decentralized and
+open-source manners that allow anybody to start their own blockchain or
+help maintain an existing one. Ethereum has been working towards a
+“web3" concept, where websites are stored on peer-to-peer systems like
+the Ethereum network so no one can block, censor, or limit the freedoms
+and expressions of users. NFTs would be the main manner of keeping user
+assets.</p>
+<p>Meta has plans to use NFTs on their own platforms to represent
+virtual objects and properties, and various other tech startups have
+already done so in a bid to help create the metaverse.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Overall, NFTs are a novel technology with the potential to represent
+major things. However, the current climate of the crypto community is
+leaning towards more trivial matters, like images and personal financial
+gain, tarnishing the reputation of a technology full of potential. The
+environmental costs are still quite heavy, and in order to be
+sustainable, blockchains must move away from proof-of-work methods, and
+instead to less energy-consuming methods like proof-of-stake, which
+Ethereum intends to replace PoW with in the 2.0 revision. As we head
+further into the future, who knows what new, meaningful innovations will
+be made off of today’s concepts?</p>
+<h1 id="works-cited">Works Cited</h1>
+<ol>
+<li><p>Browne, Ryan. “Visa buys ’CryptoPunk’ NFT for $150000.” CNBC, 23
+August 2021,
+https://www.cnbc.com/2021/08/23/visa-buys-cryptopunk-nft-for-150000.html.
+Accessed 29 December 2021.</p></li>
+<li><p>Christie’s Auction House. “Beeple: A Visionary Digital Artist at
+the Forefront of NFTs.” Christie’s,
+https://www.christies.com/features/Monumental-collage-by-Beeple-is-first-purely-digital-artwork-NFT-to-come-to-auction-11510-7.aspx.
+Accessed 29 December 2021.</p></li>
+<li><p>Buterin, Vitalik. “Vitalik Buterin - Zug, Switzerland, Egora,
+KryptoKit, Ethereum, Bitcoin Magazine, Cryptocurrency Research Group,
+University of Waterloo, The Abelard School, Life | about.me.” about.me |
+your personal homepage, https://about.me/vitalik_buterin. Accessed 29
+December 2021.</p></li>
+<li><p>Entriken, William, et al. “EIP-721: Non-Fungible Token Standard.”
+Ethereum Improvement Proposals, 24 January 2018,
+https://eips.ethereum.org/EIPS/eip-721. Accessed 29 December
+2021.</p></li>
+<li><p>Ethereum.org. “ERC-721 Non-Fungible Token Standard.”
+Ethereum.org,
+https://ethereum.org/en/developers/docs/standards/tokens/erc-721/.
+Accessed 29 December 2021.</p></li>
+<li><p>Ethereum.org. “Ethereum Whitepaper.” Ethereum.org,
+https://ethereum.org/en/whitepaper/. Accessed 29 December 2021.</p></li>
+<li><p>Ethereum.org. “Non-fungible tokens (NFT).” Ethereum.org,
+https://ethereum.org/en/nft/. Accessed 29 December 2021.</p></li>
+<li><p>Ethereum.org. “Smart contracts.” Ethereum.org,
+https://ethereum.org/en/smart-contracts/. Accessed 29 December
+2021.</p></li>
+<li><p>Ethereum.org. “Web2 vs Web3.” Ethereum.org, 11 December 2021,
+https://ethereum.org/en/developers/docs/web2-vs-web3/. Accessed 29
+December 2021.</p></li>
+<li><p>Finzer, Devin. “The Non-Fungible Token Bible: Everything you need
+to know about NFTs.” OpenSea, 10 January 2020,
+https://opensea.io/blog/guides/non-fungible-tokens/. Accessed 29
+December 2021.</p></li>
+<li><p>Griffiths, Paul. “NFT Schemes, Scams, &amp; Rugs: The insides of
+a NFT Pump &amp; Dump Group.” Caught In 4K, 2 October 2021,
+https://caughtin4k.org/nft-cashgrab-ring-at-large/. Accessed 29 December
+2021.</p></li>
+<li><p>Hayton, Phil. “Nvidia’s flagship crypto mining GPU is going for
+double the price of RTX 3090.” PCGamesN, 25 October 2021,
+https://www.pcgamesn.com/nvidia/CMP-170HX-price-double-RTX-3090.
+Accessed 29 December 2021.</p></li>
+<li><p>Irfan, Umair. “Bitcoin mining: a report finds the network mostly
+runs on renewables.” Vox, 18 June 2019,
+https://www.vox.com/2019/6/18/18642645/bitcoin-energy-price-renewable-china.
+Accessed 29 December 2021.</p></li>
+<li><p>Larva Labs. “Larva Labs’ CryptoPunks.” CryptoPunks,
+https://www.larvalabs.com/cryptopunks. Accessed 29 December
+2021.</p></li>
+<li><p>Munster, Ben. “DeviantArt Is Now Using AI to Spot People Selling
+Stolen Art as NFTs.” VICE, 18 August 2021,
+https://www.vice.com/en/article/v7enyb/deviantart-is-now-using-ai-to-spot-people-selling-stolen-art-as-nfts.
+Accessed 29 December 2021.</p></li>
+<li><p>Ong, Jie Yee. “What Is ASIC Mining?” MakeUseOf, 10 May 2021,
+https://www.makeuseof.com/what-is-asic-mining/. Accessed 29 December
+2021.</p></li>
+<li><p>Tepper, Fitz. “People have spent over $1M buying virtual cats on
+the Ethereum blockchain.” TechCrunch, 3 December 2017,
+https://techcrunch.com/2017/12/03/people-have-spent-over-1m-buying-virtual-cats-on-the-ethereum-blockchain/.
+Accessed 29 December 2021.</p></li>
+<li><p>Thurman, Andrew. “Here’s Why a CryptoPunk Sold for $530M.”
+CoinDesk, 29 October 2021,
+https://www.coindesk.com/tech/2021/10/29/heres-why-a-cryptopunk-sold-for-530m/.
+Accessed 29 December 2021.</p></li>
+<li><p>Vincent, James. “<span
+class="math inline">300, 000<em>B</em><em>o</em><em>r</em><em>e</em><em>d</em><em>A</em><em>p</em><em>e</em><em>N</em><em>F</em><em>T</em><em>S</em><em>o</em><em>l</em><em>d</em><em>f</em><em>o</em><em>r</em></span>3,000
+Because of Misplaced Decimal Point.” The Verge, The Verge, 13 Dec. 2021,
+https://www.theverge.com/2021/12/13/22832146/bored-ape-nft-accidentally-sold-300000-fat-finger.</p></li>
+<li><p>Yuga Labs. “Bored Ape Yacht Club.” BAYC,
+https://boredapeyachtclub.com/. Accessed 29 December 2021.</p></li>
+<li><p>Zuckerberg, Mark. “Founder’s Letter, 2021.” Meta, 28 October
+2021, https://about.fb.com/news/2021/10/founders-letter/. Accessed 29
+December 2021.</p></li>
+</ol>
+</body>
+<script>
+var maxHeight = 0;
+
+$(".row").each(function () {
+    if ($(this).height() > maxHeight) {
+        maxHeight = $(this).height();
+    }
+});
+
+$(".row").height(maxHeight);
+</script>
+
+
+<footer class="blog-footer">
+  <a href="https://us7.list-manage.com/contact-form?u=bd1a0a18ff760b00bf541b12d&form_id=b47981c22ebecdf4a32acfec1a5f0fc7">Contact Us</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScARm0MoVGwxdH0w9PWmZNzjIf4CUJPzLcqDJ0UGob88ALIBg/viewform">Join Us</a><br>
+Copyright © 2021 Math and CS Research.
+</footer>
+  </body>
+</html>
+</body><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></html>
