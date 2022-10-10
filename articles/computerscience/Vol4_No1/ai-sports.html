@@ -2,16 +2,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=" Stuxnet or Slammer | Math and CS Research">
-    <meta name="keywords" content="Stuxnet, Malware, Bug, Security, Virus">
-    <meta name="author" content="Daniel Lyalin">
+    <meta name="description" content=" Artificial Intelligence in Sports | Math and CS Research">
+    <meta name="keywords" content="Sports, AI, Artificial intelligence, Robots, Prediction">
+    <meta name="author" content="Daniel Gabai">
   <meta property="og:title" content="Math and CS Research">
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://mathcsr.org/soc.png">
   <meta property="og:description" content="A Math and CS Research Publication">
   <meta property="og:url" content="">
   <meta property="fb:app_id" content="712553486189960">
-    <title>Stuxnet or Slammer | Math and CS Research</title>
+    <title> Artificial Intelligence in Sports | Math and CS Research</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X001RVXZHZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -302,188 +302,109 @@ pre > code.sourceCode { white-space: pre; position: relative; }
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Stuxnet</h1>
-<p class="author">Daniel Lyalin</p>
+<h1 class="title">Artificial Intelligence in Sports</h1>
+<p class="author">Daniel Gabai</p>
 </header>
-<h1 class="unnumbered" id="introduction">Introduction</h1>
-<p>Early in July 2009, Gholam Reza Aghazedah, then head of the Atomic
-Energy Organization of Iran, resigned following a “serious nuclear
-accident" that had forced the removal of 900 to 1,000 centrifuges used
-for uranium enrichment at Iran’s Natanz facilities. In fact, the
-computer virus that took out these centrifuges was not "accidental," but
-the result of a coherent, long-term cyberattack on the Iranian nuclear
-program, likely the result of joint NSA-CIA-Mossad operations.
-Exploiting four (!) zero-day vulnerabilities, the Stuxnet virus, as it
-would come to be called, is considered one of the most advanced pieces
-of malware written, with the flaws it exposed still salient
-cybersecurity issues — Windows released a patch in May 2020 addressing
-zero-day #4, the spooler subsystem bug that Stuxnet took advantage
-of.</p>
-<h1 class="unnumbered" id="stuxnets-spread">Stuxnet’s Spread</h1>
-<p>Unlike most modern viruses, Stuxnet initially spread not via email
-attachments or similar Internet mechanisms, but via USB drives, a more
-reliable method of closing the air-gap and infecting devices. Having
-installed itself onto a Windows-running machine, Stuxnet exploited four
-Windows zero-days (explained below) to escalate privilege, or increase
-the security clearance it had, until it had a rootkit installed;
-rootkits are programs loaded before the OS is activated with a root
-security clearance, usually used by malware to prevent detection and
-interact with low-level computer components. Stuxnet, being a virus
-designed to target centrifuge controllers, scanned the Windows
-environment of infected machines to detect whether those machines were
-running Siemens’ Step 7 SCADA system, the control software used to
-interact with centrifuges in enrichment facilities. If the SCADA system
-was found, Stuxnet installed a wrapper on the driver DLL (a file
-containing instructions for a program to execute) for the communications
-between the SCADA and the logic controllers interacting with the
-centrifuges, launching a Man-in-the-Middle attack. However, Stuxnet was
-designed not to destroy the Natanz facility, but to control and
-deteriorate it; to achieve this goal effectively, it had to avoid
-detection. Because of this, Stuxnet, after installation, spent
-approximately 27 days monitoring and recording SCADA activity. This was
-intended to make sure that Stuxnet had infected the right machine, as
-well as to fake legitimate data for the SCADA when it began messing with
-the centrifuges, which it only did for 21 seconds at a time in between
-its 27-day monitoring periods. During these brief attacks, Stuxnet
-either sped the centrifuges up to their maximum rotor speed to cause
-maximum fatigue, or slowed them down dramatically; while not directly
-damaging the centrifuges, the induced fatigue wore them down rapidly and
-eventually caused them to break during normal operations. Regardless of
-whether Stuxnet detected the Step 7 software or not, though, it
-continued spreading by exploiting a Windows bug that let it infect all
-computers connected to a remote printing network, thus searching for
-devices that were running Siemens’ software.</p>
-<h1 class="unnumbered" id="zero-day-1-lnk-files">Zero-Day #1: LNK
-Files</h1>
-<p>The first of the four zero-day vulnerabilities Stuxnet exploited
-concerned LNK files, which are shortcuts used to refer to original file
-targets. The USBs used to spread Stuxnet installed LNK files containing
-links to a remotely hosted DLL file in the pathname that they used to
-store icon locations; because control panel links can have dynamic
-icons, the shell got the icon by running <code>LoadLibrary()</code> on
-the LNK target, automatically accessing the remotely hosted DLL file and
-executing <code>DllMain()</code>. Because the shell did not validate
-where the DLL was being loaded from, Stuxnet got code execution in the
-context of EXPLORER.exe, Windows’ file manager. While this attack did
-not provide elevation of privilege, it did provide the opportunity for
-rootkit installation via another bug exploit. Depending on whether the
-OS was Windows Vista and above or Windows XP and below,
-<code>DllMain()</code> either used Zero-Day #2 or #3 to obtain root
-access.</p>
-<h1 class="unnumbered" id="zero-day-2-task-scheduler">Zero-Day #2: Task
-Scheduler</h1>
-<p>The task scheduler used by Windows Vista and higher stored scheduled
-tasks in XML files with lax user privileges, allowing both reading and
-writing. <code>DllMain()</code> would create a task which the scheduler
-would checksum, hash, and save; after this, <code>DllMain()</code>
-edited the XML file so the principal executor of the task would be
-LocalSystem rather than the current user. To force a hash collision
-after the editing, the XML file was padded and hashed until its hash
-matched the original one. This collision was so easy to create because
-the task scheduler used the CRC32 algorithm, a notoriously weak one.
-After the edited XML file was hashed and saved, the task would
-eventually be executed by the LocalSystem, which, due to its high
-security clearance, would be allowed to install two rootkits onto the
-device.</p>
-<h1 class="unnumbered" id="zero-day-3-keyboard-layout">Zero-Day #3:
-Keyboard Layout</h1>
-<p>Alternatively, in Windows XP and lower, Stuxnet would find the base
-memory address of the array used to store function pointers for loading
-various keyboard layouts; it would traverse the array until it found a
-memory address capable of storing a DWORD (a datatype used to store
-unsigned integers on Windows) in usermode. It would then allocate memory
-to that address and assign a function pointer to the rootkit
-installation code. The system call to load keyboards was done from
-kernel mode and without checking whether the integer provided was out of
-bounds, meaning that <code>DllMain()</code> called for a nonexistent
-keyboard layout and was instead provided rootkit installation.</p>
-<h1 class="unnumbered" id="zero-day-4-spooler-subsystem">Zero-Day #4:
-Spooler Subsystem</h1>
-<p>To spread, Stuxnet exploited a vulnerability in remote printer
-spooler RPCs, which are remote-procedure calls (RPCs). The print spooler
-would register RPC endpoints for printing protocols, where routines
-would create and execute MOF and EXE files. However, because Guests did
-not have access to file creation or execution, when Guest accounts on
-computers tried to print something on the remote printer, the RPCs would
-execute the request by impersonating a system user. Thus, Stuxnet would
-drop MOF and EXE files onto the printer, and from there onto other
-networked devices, by simply using guest-mode.</p>
-<h1 class="unnumbered" id="bug-5-input-process-images">Bug #5: Input
-Process Images</h1>
-<p>To fake legitimate data when Stuxnet launched its attack, it
-exploited a naïve programming error: the process images were read/write,
-meaning it could simply overwrite the data being sent from the logic
-controllers to the SCADA and back.</p>
-<h1 class="unnumbered" id="evidence-towards-cyberwarfare">Evidence
-Towards Cyberwarfare</h1>
-<p>Apart from the sophistication of Stuxnet, evidence towards its being
-a government project specifically targeting Iranian facilities is
-embedded in the data structures it used, DB 8063 and 8061, which utilize
-164 element arrays, two-dimensional arrays with length 15 axes, and
-commonly repeat the number 6. The head of Iran’s nuclear program leaked
-that Natanz contained 164 centrifuges grouped into 15 stages of
-enrichment; on top of that, 6 is considered a special number in Iranian
-culture and was utilized in Natanz construction. In fact, the feed stage
-of enrichment was stage 6 of 15. In addition, the code made repeated use
-of 315, which happens to be the drive speed necessary for maximum rotor
-fatigue.</p>
-<h1 class="unnumbered" id="aftermath">Aftermath</h1>
-<p>As one of the first cyberweapons employed by a national government,
-Stuxnet is seen as the beginning of the modern age of cyberwarfare, the
-precedent to China’s GhostNet and Russian election interference in 2016;
-the absence of a ‘kill’ command in Stuxnet enabled its eventual
-deconstruction and analysis by security firms, begetting an open source
-version that propagated among criminal groups and would be modified for
-dozens of high-profile attacks, including Duqu, Flame, and and Gauss,
-employed not only on the international level, but also for industrial
-sabotage and espionage. The greatest legacy of Stuxnet, however, was not
-the precedent it set, but the lessons it taught to the cybersecurity
-community regarding basic patching — three of the four zero-days Stuxnet
-exploited were easily patched — in fact, the Microsoft team that
-dissected Stuxnet claims most bugs were fixed within the hour they were
-discovered. Stuxnet sent a clear message it was basic protection that
-was integral to cybersecurity, not high-level threats.</p>
-<div class="thebibliography">
-<p><span>9</span></p>
-<p>Fisher, D. (2020, May 13). Stuxnet’s Legacy Lives on in New Windows
-Bug. Duo Security. Retrieved December 23, 2021, from <a
-href="https://duo.com/decipher/stuxnets-legacy-lives-on-in-new-windows-bug"
-class="uri">https://duo.com/decipher/stuxnets-legacy-lives-on-in-new-windows-bug</a>
-Man-in-the-middle attack. (n.d.). Wikipedia. Retrieved December 23,
-2021, from <a
-href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack"
-class="uri">https://en.wikipedia.org/wiki/Man-in-the-middle_attack</a>
-Myrtus and Guava, Episode 5. (2010, July 23). Securelist. Retrieved
-December 23, 2021, from <a
-href="https://securelist.com/myrtus-and-guava-episode-5/29547/"
-class="uri">https://securelist.com/myrtus-and-guava-episode-5/29547/</a>
-Myrtus and Guava, Episode MS10-061. (2010, September 14). Securelist.
-Retrieved December 23, 2021, from <a
-href="https://securelist.com/myrtus-and-guava-episode-ms10-061/29747/"
-class="uri">https://securelist.com/myrtus-and-guava-episode-ms10-061/29747/</a>
-Nguyen, T. (2011, July 11). Infographic: How Stuxnet supervirus works.
-ZDNet. Retrieved December 23, 2021, from <a
-href="https://www.zdnet.com/article/infographic-how-stuxnet-supervirus-works/"
-class="uri">https://www.zdnet.com/article/infographic-how-stuxnet-supervirus-works/</a>
-Privilege escalation. (n.d.). Wikipedia. Retrieved December 23, 2021,
-from <a href="https://en.wikipedia.org/wiki/Privilege_escalation"
-class="uri">https://en.wikipedia.org/wiki/Privilege_escalation</a>
-Secure, F., &amp; Guide, S. (n.d.). Stuxnet. Wikipedia. Retrieved
-December 23, 2021, from <a
-href="https://en.wikipedia.org/wiki/Stuxnet#Operation"
-class="uri">https://en.wikipedia.org/wiki/Stuxnet#Operation</a></p>
-<p>“The Biggest Hacks in the History of the Industrial IOT.” TTI, 9 Mar.
-2020,
-https://www.turn-keytechnologies.com/blog/article/from-stuxnet-to-industroyer-the-biggest-hacks-in-the-history-of-the-industrial-iot/.
-27C3: Adventures in analyzing Stuxnet (Bruce Dang from Microsoft).
-(2010, December 29). YouTube. Retrieved December 23, 2021, from <a
-href="https://www.youtube.com/watch?v=rOwMW6agpTI"
-class="uri">https://www.youtube.com/watch?v=rOwMW6agpTI</a> Vigliarolo,
-B. (2017, August 15). Stuxnet: The smart person’s guide. TechRepublic.
-Retrieved December 23, 2021, from <a
-href="https://www.techrepublic.com/article/stuxnet-the-smart-persons-guide/"
-class="uri">https://www.techrepublic.com/article/stuxnet-the-smart-persons-guide/</a></p>
-</div>
+<p>Sports have remained unchanged for decades or even centuries.
+Although rule changes may occur, games are still fundamentally played
+the same way. Now, however, new technology is revolutionizing our
+approach to sports and it’s raising the level of play to unprecedented
+heights. Everything from a player’s fitness to refereeing and predicting
+games is being boosted with the power of artificial intelligence (AI)
+technology.</p>
+<h1 class="unnumbered" id="fitness">Fitness</h1>
+<p>Before an athlete even steps onto the field, they have already been
+training for possibly weeks or months. For an athlete, every small
+health detail matters; they need to be performing their best and
+therefore they need to feel their best. One of the best ways athletes in
+the modern day improve their fitness and overall performance is by using
+3D inertial sensors and trackers to analyze every movement they make.
+This can allow them and their team to work on every small movement and
+fine-tune it perfectly. For example, IMeasureU is a company that
+develops a large array of sensors and trackers for different needs. Some
+of their uses include helping injured players return to their sport,
+preventing injuries in the future, and capturing precise movement which
+can be further analyzed. After this data is captured, it can be
+thoroughly inspected by professionals to determine any inefficiencies in
+an athlete’s movement which might be harmful in the long run. Not only
+can this data prevent and help treat injuries, but it can also instruct
+the athlete on the next steps in improving their game. One possible way
+to do this is to feed the data into AI virtual analysts in order to
+automatically show key weaknesses and strengths. Furthermore, AI is also
+able to instruct on the best way to become stronger and faster by
+analyzing a large group of similar athletes. This is one of the best
+aspects of this new technology, its ability to turn a large data set
+into understandable and potentially game-changing information. All of
+this happens way before game day and it is one of the reasons why
+athletes are so much faster and stronger today than they were 100 years
+ago.</p>
+<h1 class="unnumbered" id="game-predictions">Game Predictions</h1>
+<p>Ever wonder how sports networks on TV are able to display predictions
+for the outcome of the upcoming game? While the athletes are training
+with their virtual assistants, computers are going through and analyzing
+almost every previous game played. By factoring in every statistic
+available, from previous match-ups to measurable player statistics such
+as height, weight, speed, and likelihood of injury, algorithms can
+predict which team is more likely to win before the game has even
+started. Although many factors are at play during any sports game, from
+the players’ moods to the wind, an algorithm is able to predict with a
+high degree of accuracy regardless. For instance, in NFL games, AI
+algorithms were able to predict outcomes with a success rate of over
+75%, significantly better than the 60% most experts in the sport can
+manage. One way they do this is by going through every game a certain
+team has ever played. For example, if team A beats team B and team C and
+both team B and team C beat team D, then the algorithm will likely
+predict that team A has a high chance of beating team D. Another
+important statistic to consider is what players are actually playing. A
+player who is injured or simply not playing may have a decisive impact
+on the outcome of the game. Finally, the thing that sets AI apart from
+any other computer program is its ability to learn from itself. One of
+AI’s best ways of improving its predictions is by running massive
+simulations against itself and determining its own factors which it
+considers to be important. All in all, when one is able to examine every
+possible data point involved, they are going to be better than someone
+going off intuition and surface observations.</p>
+<h1 class="unnumbered" id="refereeing">Refereeing</h1>
+<p>One of the most practical uses of AI has actually been in refereeing
+sports games. In many sports, things simply play out too fast for most
+humans to comprehend. Although in-person referees are usually the ones
+who will initially make the calls, if a more in-depth examination is
+needed, special computer systems will need to be used. While the game is
+going on, high-speed cameras watch every play. Although for most sports
+a simple camera is enough, some sports need the power of AI in an
+attempt to make the fairest judgments possible. For example, in tennis,
+when a relatively small ball can be moving at speeds over 100 mph,
+humans can often misjudge where the ball landed because of factors like
+speed, wind, and air density. Most high-level tennis tournaments end up
+employing a system known as Hawkeye (also used in several other sports,
+most notably, cricket). Hawkeye employs advanced AI models to construct
+an almost perfect 3D model of the ball’s flight path. Afterward, it can
+analyze this in order to show where the ball landed within 0.04
+inches.</p>
+<h1 class="unnumbered" id="conclusion">Conclusion</h1>
+<p>Ultimately, the addition of AI-powered technology in sports has
+proved to be an incredibly useful asset for athletes and the entire
+industry. AI can improve every aspect of an athlete’s performance,
+well-being, and more. It can analyze every second of a game to determine
+the best strategies. AI can also predict the outcome of future games
+while refereeing present events. Ultimately, AI has positively changed
+sports forever and it will continue to improve the level of play as our
+technology improves.</p>
+<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<ol>
+<li><p>https://www.day1tech.com/ai-in-sports-are-you-game-for-artificial-intelligence/</p></li>
+<li><p>https://imeasureu.com/2019/08/29/best-wearable-technology-athletes/</p></li>
+<li><p>http://whatnextglobal.com/post/ai-based-nutrition-and-personalized-diet-plan</p></li>
+<li><p>https://www.infofit.ca/athletes-getting-better/</p></li>
+<li><p>https://medium.com/@mygreatlearning/how-is-ai-used-in-sports-cdfbdd97ad82</p></li>
+<li><p>https://www.sciencedirect.com/science/article/pii/S2210832717301485</p></li>
+<li><p>https://sportsmedicine-open.springeropen.com/articles/10.1186/s40798-019-0202-3</p></li>
+<li><p>https://www.day1tech.com/ai-in-sports-are-you-game-for-artificial-intelligence/</p></li>
+<li><p>https://spectrum.ieee.org/hawkeye-in-the-crosshairs-at-wimbledon-again</p></li>
+<li><p>https://www.lcp.uk.com/our-viewpoint/2019/07/is-hawkeye-an-example-of-artificial-intelligence/</p></li>
+<li><p>https://www.youtube.com/watch?v=8emUyzczThY</p></li>
+<li><p>https://medium.com/@mygreatlearning/how-is-ai-used-in-sports-cdfbdd97ad82</p></li>
+</ol>
 </body>
 <script>
 var maxHeight = 0;
